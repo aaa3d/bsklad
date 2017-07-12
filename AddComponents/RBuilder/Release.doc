@@ -1,0 +1,167 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}}{\colortbl;\red0\green0\blue0;
+\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;
+\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}}{\*\listtable{\list\listtemplateid-1865269756
+\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat3\levelold\levelspace0\levelindent360{\leveltext\'02\'00.;}{\levelnumbers\'01;}\f0\fbias0 }{\listname ;}\listid813183557}{\list\listtemplateid882142358\listsimple{\listlevel\levelnfc0
+\leveljc0\levelfollow0\levelstartat1\levelold\levelspace0\levelindent360{\leveltext\'02\'00.;}{\levelnumbers\'01;}\f0\fbias0 }{\listname ;}\listid956184272}}{\*\listoverridetable{\listoverride\listid813183557\listoverridecount0\ls1}
+{\listoverride\listid956184272\listoverridecount0\ls2}}{\info{\author Preferred Customer}{\operator Preferred Customer}{\creatim\yr2000\mo3\dy25\hr9\min38}{\revtim\yr2000\mo3\dy25\hr10\min1}{\version4}{\edmins0}{\nofpages6}{\nofwords1636}{\nofchars9329}
+{\*\company Micron Electronics, Inc.}{\nofcharsws11456}{\vern89}}\widowctrl\ftnbj\aenddoc\hyphcaps0\viewkind4\viewscale100 \fet0\sectd \linex0\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2
+\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}\pard\plain \nowidctlpar\tx360\adjustright \fs20\cgrid {\b\f1\fs32\cgrid0 ReportBuilder for Delphi 5
+\par }{\b\f1\fs32\cgrid0 Enterprise}{\b\f1\fs32\cgrid0  Edition
+\par Release Notes
+\par }\pard \nowidctlpar\adjustright {\b\f1\cgrid0 
+\par }{\fs24\cgrid0 Digital Metaphors
+\par 16775 Addison Road, Suite 613
+\par Addison, TX 75001
+\par }\pard \nowidctlpar\tx1800\adjustright {\fs24\cgrid0 
+\par }\pard \nowidctlpar\tx1440\adjustright {\fs24\cgrid0 E-Mail: \tab support@digital-metaphors.com
+\par Telephone:\tab 972.931.1941
+\par Facsimile:\tab 972.931.7865
+\par }\pard \nowidctlpar\adjustright {\fs24\cgrid0 Web-Site:\tab www.digital-metaphors.com
+\par }\pard \nowidctlpar\tx360\adjustright {\b\f1\cgrid0 
+\par 
+\par }{\f1\fs32\cgrid0 Version 5.0}{\f1\fs24\cgrid0 
+\par }{\fs24\cgrid0 For information regarding what's new for this version, please see the 'What's New' section of the on-line help.
+\par }{\cgrid0 
+\par }\pard \nowidctlpar\adjustright {\b\fs28\cgrid0 New Installation Program 
+\par }{\fs24\cgrid0 As of version 5, the installation program 
+will automatically detect and delete any existing version of ReportBuilder installed on your system.  The entire root directory in which ReportBuilder is installed will be deleted.  It is therefore imperative that you backup any custom work  that may resi
+de in this directory before installing this version.  Also, the default install directory is now:
+\par 
+\par }\pard \li720\nowidctlpar\adjustright {\fs24\cgrid0 $(DELPHI)\\RBuilder
+\par }\pard \nowidctlpar\adjustright {\fs24\cgrid0 
+\par This directory is used regardless of whether you are installing ReportBuilder Standard, Professional, or Enterprise.
+\par }\pard \nowidctlpar\tx360\adjustright {\f1\fs32\cgrid0 
+\par 
+\par Delphi 5 Release Notes:}{\b\f1\fs24\cgrid0 
+\par }{\b\fs28\cgrid0 
+\par 1. New for Delphi 5
+\par }{\fs24\cgrid0 
+\par ReportBuilder contains full support for the InterBase Express (IBX) and ADO components that ship with some versions of Delphi 5. 
+\par 
+\par When using IBX or ADO components with a ReportBuilder report, simply connect a DBPipeline to a standard Delphi DataSource component.
+\par 
+\par When using the query tools available within the Data workspace of the Report Designer, configure the Designer component as shown in the end-user database examples provided in \'85RBuilder\\Demos\\EndUser Databases.
+\par 
+\par }{\b\fs28\cgrid0 2. Issues with Frames}{\b\f1\cgrid0 
+\par }{\fs24\cgrid0 
+\par Delphi 5 Frames (TFrame) are containers that enable collections of components to be visually configured and re-used. Unlike form inheritance, ho
+wever, Delphi 5 does not permit new components to be added to frame descendants (i.e. frames embedded on forms or other frames). 
+\par 
+\par Therefore, if a Report object is placed on a frame, the report layout must be maintained entirely in the top level ancestor. You cannot access a form containing the frame and add report components, nor can new report layouts be loaded from templates. 
+
+\par 
+\par ReportBuilder's DBPipeline and BDEPipeline components cannot currently be used with frames. Both of these components automatical
+ly create Field components (i.e. AutoCreateFields) when a dataset is opened. This behavior will cause access violations if a data pipeline is placed in a descendant frame.
+\par 
+\par }{\f1\fs32\cgrid0 
+\par Installation Notes}{\b\f1\cgrid0 
+\par }{\f1\cgrid0 
+\par }{\b\fs28\cf1\cgrid0 1. Install ReportBuilder}{\b\f1\cf1\cgrid0 
+\par }{\fs24\cf1\cgrid0 The installation program will copy files into the ..\\
+RBuilder directory, add the ReportBuilder components to a 'RBuilder' tab of the Delphi component palette, install the ReportBuilder help into the Delphi help system, and install TeeChart support (if you have TeeChart installed). 
+\par 
+\par If after 
+installing ReportBuilder and launching Delphi, you do not see the RBuilder tab on the Delphi component palette, access the Component | Install Packages menu option, go to the bottom of the package list, and check each of the ReportBuilder packages.  If th
+e packages are already checked, access the Component | Configure Palette\'85
+ menu option and move the RBuilder tab up the list, positioning it right before the 'Data Controls' tab.  This will allow you to see the RBuilder tab without scrolling right on the Delphi component palette.
+\par }{\f1\fs24\cf1\cgrid0 
+\par }{\b\fs28\cf1\cgrid0 2. Review the on-line help}{\b\f1\cf1\cgrid0 
+\par }{\fs24\cf1\cgrid0 If it appears that ReportBuilder is not installed correctly, use the information in the on-line help to troubleshoot your installation.  The on-line help is located in the RBuilder.hlp file in the RBuilder\\
+Help directory.  From the table of contents, select 'Installing ReportBuilder'.
+\par }{\b\f1\fs24\cf1\cgrid0  
+\par }{\b\fs28\cf1\cgrid0 3. Convert 3.5x Reports}{\b\f1\cf1\cgrid0 
+\par }{\fs24\cf1\cgrid0 ReportBuilder will convert reports that were created with previous versions. Please back-up your existing reports before beginning the conversion pro
+cess.  Reports converted to the current version will not be useable by previous versions of ReportBuilder.
+\par 
+\par The first time you open your reports, a conversion routine will run, assigning the values of discontinued properties to their new counterparts.  Sim
+ply opening and closing a form (and saying Yes to the Save Changes? dialog) is enough to convert the reports contained therein to the current format.  If you have reports in RTM files, load the RTMs into a report object at Delphi design-time and then save
+ the RTM to file.
+\par 
+\par Due to the nature of the conversion routine, it will take at least 1-2 seconds for the routine to run when converting reports created with a version previous to ReportBuilder 4.0.  When opening reports within Delphi, you may notice that T
+ppCalc declarations at the top of your form appear momentarily and then disappear.  This is normal.  The TppCalc component was discontinued as of version 4.0 and has been replaced by the TppVariable and TppSystemVariable components respectively.
+\par 
+\par 
+\par }{\f1\fs32\cf1\cgrid0 Version 5 - 3/25/2000}{\b\f1\fs24\cf1\cgrid0 
+\par }{\fs24\cf1\cgrid0 
+\par }{\b\fs28\cf1\cgrid0 Fixes
+\par }{\b\f1\fs24\cf1\cgrid0 
+\par }\pard \fi-360\li360\nowidctlpar\tx360\adjustright {\fs24\cgrid0 1.\tab When the title band is used as a cover page (i.e. the NewPage property is set to True), then the PageSetDesc always returns 'Page 1 of 1'.
+\par 
+\par 2.\tab When a page style is used in a one-pass report, the page style will not appear on the last page of the report.
+\par 
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 3.\tab}}\pard \fi-360\li360\nowidctlpar\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec\pnstart3\pnindent360 {\pntxta .}}\ls1\adjustright {\fs24\cgrid0 
+When printing all pages to the printer for a two-pass report, only the last page is printed.
+\par }\pard \fi-360\li360\nowidctlpar\tx360\adjustright {\fs24\cgrid0 
+\par 4.\tab When attempting to edit the SQL in a dataview, an error was raised.
+\par }{\fs24\cf1\cgrid0 
+\par }{\fs24\cgrid0 5.\tab When using the Designer in an MDI application, no components were shown on the palette and closing down the MDI application sometimes caused an error to be raised.
+\par }{\fs24\cf1\cgrid0 
+\par }\pard \nowidctlpar\tx360\adjustright {\b\f1\fs24\cf1\cgrid0 
+\par }\pard \fi-270\li270\nowidctlpar\adjustright {\b\fs28\cf1\cgrid0 Enhancements}{\f1\cf1\cgrid0 \tab 
+\par 
+\par {\pntext\pard\plain\cf1 \hich\af0\dbch\af0\loch\f0 1.\tab}}\pard \fi-360\li360\nowidctlpar\tx360{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec\pnstart1\pnindent360 {\pntxta .}}\ls2\adjustright {\fs24\cf1\cgrid0 
+RAP.  Report Application Pascal debuts in ReportBuilder Enterprise.  Be the envy of your friends and relatives - code Object Pascal at run-time. For comprehensive information about RAP, see the RAP Reference in the on-line help.
+\par }\pard \fi-360\li360\nowidctlpar\tx360\adjustright {\fs24\cf1\cgrid0 
+\par 2.\tab The Report Explorer now
+ has FolderOptions, ItemOptions, and an ItemAction property, which allow you to control the capabilities of the Explorer. For example, you can configure these properties such that the user can print reports, but cannot create new reports or folders. Or yo
+u can change the double-click behavior such that the Print Preview form is displayed instead of the Report Designer.
+\par 
+\par 3.\tab The AutoSearch Dialog now provides a \lquote Show All Values\rquote  feature, which allows the user to easily disable search criteria that they do not
+ need.  The feature is essentially the opposite of Mandatory, and is not available for search criteria where Mandatory is True.
+\par 
+\par 4.\tab LookAhead totals.  You can now display totals that would normally appear in the group footer, footer or summary bands in the
+ group header, header and title bands.  Simply configure a Variable or DBCalc as you normally would, place it in the header band, and set the LookAhead property to True. 
+\par 
+\par 5.\tab Label Wizard. A new Label Template Wizard has been added to the Report Designer. You can select from over 300 pre-defined label templates with the Label Template Wizard. 
+\par }{\b\fs28\cf1\cgrid0 
+\par }{\fs24\cf1\cgrid0 6. \tab Simplified JITPipeline. We added new public properties RecordCount, RecordIndex,
+ and InitialIndex to enable the JITPipeline to automatically track record indexing. In addition, using Master/Detail JITPipelines no longer requires the user to code event-handlers related to data linkage. Please see the main report demo application for e
+xamples.
+\par 
+\par 7. \tab The PrinterSetup.Copies setting is now handled internally by ReportBuilder rather than relying on the printer driver.
+\par 
+\par 8.\tab Crosstab Styles. We added new Style property to Crosstab. Current options are Standard and Repeated Captions. When the Repeated Captions style is selected, the appropriate row or column captions are repeatable on all relevant pages.
+\par 
+\par 9.\tab Crosstab Events. We added new 'GetText' events to the Crosstab component to enable more customization of output. See ct0128.pas of the Demos\\
+Crosstab project for an example of using these new events: OnGetCaptionText, OnGetTotalCaptionText, OnGetValueText, and OnGetTotalValueText.
+\par 
+\par 10.\tab AutoJoin.  We added 'disabled tables' to the Query Wizard and Query Designer when AutoJoin is being used. Whe
+n a table is selected for a query, the 'available tables list' automatically disables tables that have no pre-defined relationship with the selected table(s).
+\par 
+\par 11.\tab AutoSearch - The new AutoSearch dialog allows you to display search criteria values in a 'Qu
+ery-by-Form' format before printing a report. You can assign the search criteria values entered by the user to standard Delphi data access components. The end-user can visually define AutoSearch criteria in the Query Designer.  For examples of this new fe
+ature, see the ...RBuilder Pro 4\\Demos\\AutoSearch directory.
+\par 
+\par 12.\tab The new DataDictionary Builder can be accessed by double-clicking on the Data Dictionary component.  This utility allows you to quickly and easily generate and maintain the entries in your data dictionary tables.
+\par 
+\par 13.\tab The Data Dictionary now contains a new feature called AutoJoin. AutoJoin allows you to specify the valid relationships between the tables of your database.  These relationships are then used to automatically build joins when end-
+users select more than one table in the Query Wizard or Query Designer.
+\par 
+\par 14.\tab New database-specific end-user examples have been developed for Access 97, Advantage, InterBase, Oracle 8, SQL Server 7, Sybase ASE 11, Sybase ASA 6, SQL Anywhere 5.  You can find these examples in the \'85RBuilder Pro 4\\Demos\\
+EndUser Databases directory.
+\par 
+\par 15.\tab TeeChart support  has been enhanced.  Based on the version of TeeChart that you have installed in Delphi, the ReportBuilder installation program will install support for either 
+the Tee50 package (for the TeeChart delivered with Delphi) or the new Tee45 package (for TeeChart Pro 4.03 for Delphi 5 from TeeMach).
+\par 
+\par 16.\tab The Print Dialog has been updated to the Office97 'look-and-feel'.  Also, a new capability that allows the printing of odd or even pages has been added.
+\par 
+\par 17.\tab International language support has been updated.  The translation application (rbStringTranslator) has been redesigned and the resource files (rbPrint.rc, rbIDE.rc and rbDADE.rc) have been updated to contain all of
+ the strings in the user-interface. In order to create your own custom translation, download the new application from:
+\par 
+\par }{\f1\cf1\cgrid0 \tab \tab }{\fs24\cf1\cgrid0 http://www.digital-metaphors.com/lang/rbLang.exe
+\par 
+\par 18.\tab A new public property called EnableProcessMessages has been added to the Report and ArchiveReader components. This property controls whether or not ReportBuilder will make calls to Application.ProcessMessages when generating report pages.
+\par 
+\par 19.\tab The TSpinButton control has been replaced with the TUpDown control throughout the ReportBuilder user-interface.
+\par 
+\par 20.\tab A new set of options has been introduced on the File menu for opening and saving subreports. When you are working within a subreport layout (i.e. you h
+ave clicked a subreport tab), the Open and Save menu options will now refer to the entire report (i.e. main) instead of the subreport. This means that selecting Save from within a subreport will save the entire report.  The new menu options 'Load SubRepor
+t' and 'Save SubReport' refer only to the currently active subreport and replace the previous behavior of the Open and Save menu options.
+\par 
+\par 21.\tab The Print Preview form now displays the message Page 'X' until the last page of the report has been previewed.  On
+ce the last page of the report has been previewed (or if the report has been set to psTwoPass), the message will display in the format Page 'X' of 'X'.
+\par }{\fs28\cf1\cgrid0 
+\par }{\fs24\cf1\cgrid0 22.\tab The Report Explorer now uses RBuilder.ini, rather than RExplore.ini, to save the state of the form.}{\f1\cf1\cgrid0 
+\par }}

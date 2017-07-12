@@ -1,0 +1,106 @@
+
+  frAsaComponents это набор компонент для использование их в диалоге
+FastReport'a (www.fastreport.ru), самого лучшего генератора отчетов.
+Он основан на библиотеке NativeDB (www.nativedb.com) лучшей на мой взгляд 
+библиотеке нативных компонентов для доступа к SAW и ASA.
+
+  Все published свойства которые есть у AsaSession, AsaDataSet, AsaStoredProc 
+я соответственно перенес в frAsaSession, frAsaDataSet, frAsaStoredProc для 
+их использования в OI. 
+Из public свойств есть: EOF, RecordCount, IsEmpty, FieldCount, StillInProc, 
+Fields.
+Из методов есть: Open, Close, ExecSQL, Next, Prior, First, Last, Resume,
+Locate, LocateNext, ExecProc.
+
+  В frAsaDataSet, frAsaStoredProc так же добавлены новые методы для более 
+удобной работы с ними в скрипте: GetString,  GetInteger, GetFloat
+
+GetString(<Имя поля|Номер поля>)  -> Возвращает значение в виде строки (String)
+GetInteger(<Имя поля|Номер поля>) -> Возвращает значение в виде целого числа (LongInt)
+GetFloat(<Имя поля|Номер поля>)   -> Возвращает значение в виде числа с плавающей 
+                                     запятой (Double)
+Если значение пустое, то  GetString возвращает пустую строку (""), 
+а GetInteger и GetFloat возвращают ноль (0).
+
+
+Особенности работы Locate (LocateNext) в frAsaDataSet (frAsaStoredProc)
+- Он ищет только по одному полю, так как при поиске по нескольким полям надо
+передавать, что искать в виде Variant массива, а как это сделать из скрипта
+я не знаю.
+- В качестве LocateOption, надо указывать в кавычках константы
+loCaseInsensitive, loPartialKey.
+Например так:
+TestAsaDataSet.Locate(Edit1.Text, Edit2.Text, 'loCaseInsensitive,loPartialKey')
+или так:
+TestAsaDataSet.Locate(Edit1.Text, Edit2.Text, 'loCaseInsensitive' )
+или так если хотите искать без параметров: 
+TestAsaDataSet.Locate(Edit1.Text, Edit2.Text, '')
+
+
+  Кроме того, у frAsaDataSet и frAsaStoredProc еще есть свойство Fields к
+которому  можно  обращаться  как  по   индексу  поля, так и по его имени. 
+  К свойству Fields привязаны еще пять  свойства:
+DisplayLabel,  DisplayWidth,  Visible, FieldName, IsNull  к  которым так же
+можно обращаться по номеру и по имени, например :
+
+{ Это кусок кода из скрипта FR }
+begin
+
+ Memo2.Lines.Add(TestAsaDataSet.Fields.FieldName[1]);
+ Memo3.Lines.Add(TestAsaDataSet.Fields[1]);
+ Memo4.Lines.Add(TestAsaDataSet.Fields.DisplayLabel[1]);
+ Memo5.Lines.Add(TestAsaDataSet.Fields.DisplayWidth[1]);
+ Memo6.Lines.Add(TestAsaDataSet.Fields.Visible[1]);
+ Memo7.Lines.Add(TestAsaDataSet.Fields.IsNull[1]);
+
+ Memo2.Lines.Add(TestAsaDataSet.Fields.FieldName['TEST']);
+ Memo3.Lines.Add(TestAsaDataSet.Fields['TEST']);
+ Memo4.Lines.Add(TestAsaDataSet.Fields.DisplayLabel['TEST']);
+ Memo5.Lines.Add(TestAsaDataSet.Fields.DisplayWidth['TEST']);
+ Memo6.Lines.Add(TestAsaDataSet.Fields.Visible['TEST']);
+ Memo6.Lines.Add(TestAsaDataSet.Fields.IsNull['TEST']);
+  
+end
+
+
+А свойствам DisplayLabel, DisplayWidth, Visible можно в скрипте даже 
+присваивать новые значения, например:
+
+{ Это кусок кода из скрипта FR} 
+begin
+ TestAsaDataSet.Fields.Visible[1] := not TestAsaDataSet.Fields.Visible[1];
+ TestAsaDataSet.Fields.DisplayLabel[1] := Edit2.Text;
+ TestAsaDataSet.Fields.DisplayWidth[1] := Edit2.Text;
+
+ TestAsaDataSet.Fields.Visible[Edit1.Text] := not TestAsaDataSet.Fields.Visible[Edit1.Text];
+ TestAsaDataSet.Fields.DisplayLabel[Edit1.Text] := Edit2.Text;
+ TestAsaDataSet.Fields.DisplayWidth[Edit1.Text] := Edit2.Text;
+end
+
+
+Касательно работы с frAsaStoredProc:
+
+  Компонент frAsaStoredProc был введен в библиотеку, для того что бы можно 
+было запускать SP которые возвращают out-параметры, хотя конечно и любые 
+другие SP он тоже умеет выполнять как и обычный AsaStoredProc
+  Соответственно был расширен редактор параметров для frAsaStoredProc, туда 
+была добавлена возможность указывать вид параметра (ParamType). При 
+выполнении SP, с помощью методов Open или ExecProc, обрабатываются только 
+параметры вида Input и InputOutput. Для получения значения out-параметра
+надо использовать метод GetOutParam(<Имя параметра>|<Номер параметра>). 
+Если out-параметр пустой, т.е. равный null, то возвращается пустая строка.
+Например:
+
+{ Это кусок кода из скрипта FR} 
+begin
+ Label1.Caption := TestAsaStoredProc.GetOutParam('p1');
+ Label1.Caption := TestAsaStoredProc.GetOutParam(1);
+end
+
+
+Ну вот вроде бы пока и все. Если найдете какие либо глюки или есть 
+предложения пишите:
+
+stalker@miac.dp.ua
+Толик Гусин aka Stalker
+

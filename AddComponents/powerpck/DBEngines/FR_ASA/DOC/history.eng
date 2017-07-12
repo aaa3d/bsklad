@@ -1,0 +1,53 @@
+* Changed
++ Added
+- Corrected
+! Remark
+
+ver 1.22
+02.10.2002
++ Add support Delphi 7.
+
+ver 1.21
+14.05.2002
++ The methods are added to the successors TfrNativeDataSet 
+  GetString(<Name of field|Number of field>), 
+  GetInteger(< Name of field|Number of field>), 
+  GetFloat(<Name of field|Number of field>). If the value empty, GetString returns 
+  Empty string (""), and GetInteger and GetFloat return zero (0).
+! The compatibility with NativeDB 1.91a is checked up.
+
+ver 1.2
+22.08.2001
++ Added component frAsaStoredProc for work with SP.
+* Added able parameters processing in method frAsaDataSet.ExecSQL.
++ Added method frAsaDataSet.LocateNext & frAsaStoredProc.LocateNext.
+- Minor bug fixes.
+! frASAComponents is compatible and is tested with the NativeDB 1.90a.
++ Added package for Delphi6
+* The principle of operation of a property Fields [""] is changed.
+ Now if it returns null that is empty value, instead of it return
+ the empty string ("").
+
+09.02.2001
+ver 1.12
+- Minor bug fixes.
+! Compatible with FR 2.4 Release .
+
+15.01.2001
+ver 1.11
+- Fixed strange bug in a case of parameters definition in Master-Detal.
+
+27.12.2000
+ver 1.1
+! frASAComponents is compatible and is tested with the NativeDB 1.87b
++ Public property frAsaDataSet.StillInProc for SP returns
+  Multi Result Set
++ Method frAsaDataSet.Resume for SP returns Multi Result Set
++ Method frAsaDataSet.Locate
++ Published property frAsaSession.TrimBlanks
++ Published property frAsaSession.KeepConnection
++ Public property Fields.IsNull[]
+
+13.11.2000
+ver 1.0
+ Start version frASAComponents.

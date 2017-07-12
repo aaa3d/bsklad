@@ -1,0 +1,73 @@
+
+q. how can I save the RawMail text ?
+
+a. do something like:
+
+	sakmsg1.Create;
+	sakmsg1.ClearRawMailAfterParse := False;
+	...
+	sakpop1.RetrieveMessage(sakmsg1, 1);
+	...
+	sakmsg1.RawMail.SaveToFile('foo.txt');
+	sakMsg1.Free;
+
+   the same with IMAP
+
+---------------------------------------------------------
+
+q. I can't delete emails with POP3, what's up ?
+
+a. you should read the pop rfc (in docs), short version:
+   emails are deleted only when you disconnect from the
+   pop server, until then, they are only marked as deleted...
+   also, have in mind that the numbering of messages start 
+   with 1, and if you have three messages, delete the number 
+   two, then in the next session the older number three is
+   now the number two.
+   see SakPOP.DeleteMessage()
+
+   the same with IMAP (except you have the Expunge command)
+
+---------------------------------------------------------
+
+q. I create a sakmsg, populate it, send it, then populate
+   it again, but when I send the second message, in reality
+   I'm sending the first message...
+
+a. yup, this is intentional.
+   you must create and free the sakmsg after used.
+   this is done this way, so you can send the same message
+   many times without recreating the envelope (the rfc822 
+   format) each time.
+
+---------------------------------------------------------
+
+q. I want to have xyz feature ...
+
+a. sure, you have the source, you can do it...
+   (don't expect me to implement a feature for you)
+   after that, if you want that I include your changes in 
+   the next version, send me a patch, if not is fine with me.
+
+---------------------------------------------------------
+
+q. how can I make a patch ?
+
+a. you have to have the original SakEmail sources in a
+   SakEmail.original directory at the same level as
+   the sakemail directory you are modifying.
+   then copy the files diff.exe and makediff.bat to
+   a one level directory up, run makediff.
+
+   this result in a patch.txt that you can send to me.
+
+   BUT, DON'T send me the patch.txt attached, just
+   include it in the body of the email.
+
+---------------------------------------------------------
+
+q. how can I know what version of sakemail I have ?
+
+a. look in the changelog.txt file, the last number
+
+---------------------------------------------------------

@@ -1,0 +1,73 @@
+:Base RAP.HLP>main
+:Title RAP Help
+1 RAP Reference
+2 What is RAP
+3 Overview of Features=Overview_of_Features
+3 Overview of the Interface
+4 The Calc Tab=The_Calc_Tab
+4 The Code Explorer=The_Code_Explorer
+4 The Code Editor=The_Code_Editor
+4 The Code Toolbox=The_Code_Toolbox
+4 The Message Window=The_Message_Window
+4 The Variables View=The_Variables_View
+4 The Events View=The_Events_View
+4 The Module View=The_Module_View
+4 Context-Sensitive Help=Context_Sensitive_Help
+2 Quick Start Tutorials
+3 Color-coding a DBText Component=Quick_Start_Tutorial@rap.hlp>tutorial
+3 Concatenating Fields=Concatenating_Fields_Tutorial@rap.hlp>tutorial
+3 Dynamic Duplexing=Dynamic_Duplexing_Tutorial@rap.hlp>tutorial
+3 Adding New Functions to RAP=Adding_New_Functions_to_RAP_Tutorial@rap.hlp>tutorial
+3 Extending the RAP RTTI=Extending_the_RAP_RTTI_Tutorial@rap.hlp>tutorial
+3 Printing a Description of AutoSearch Criteria=Printing_a_Description_of_AutoSearch_Criteria_Tutorial@rap.hlp>tutorial
+3 Displaying Delphi Forms From RAP=Displaying_Delphi_Forms_From_RAP_Tutorial@rap.hlp>tutorial
+2 Programming with RAP
+3 Procedures and Functions
+4 Declaring Local Variables=Declaring_Local_Variables
+4 Declaring Local Constants=Declaring_Local_Constants
+4 Calling Procedures and Functions=Calling_Procedures_and_Functions
+4 Procedure and Function Parameters=Procedure_and_Function_Parameters
+3 Events
+4 Coding an Event Handler=Coding_an_Event_Handler
+4 Compiling Event Handlers=Compiling_Event_Handlers
+3 Globals: The Module View
+4 Programs in RAP=Programs_in_RAP
+4 Declaring Global Variables=Declaring_Global_Variables
+4 Declaring Global Constants=Declaring_Global_Constants
+4 Declaring Global Procedures and Functions=Declaring_Global_Procedures_and_Functions
+3 The Code Toolbox
+4 Overview of the Code Toolbox=The_Code_Toolbox
+4 Data Tab=Data_Tab
+4 Objects Tab=Objects_Tab
+4 Language Tab=Language_Tab
+3 Debugging Options
+4 CodeSite Support
+5 CodeSite Support=CodeSite_Support
+5 CodeSite Functions=Codesite_Functions@rap.hlp>members
+5 Using the CodeSite Functions=Using_the_CodeSite_Functions
+5 Conditionally Compiling CodeSite Support=Conditionally_Compiling_CodeSite_Support
+2 Language Reference
+3 RAP Language Overview=RAP_Language_Overview
+3 Standard Routines
+4 String Functions=String_Functions@rap.hlp>members
+4 Conversion Functions=Conversion_Functions@rap.hlp>members
+4 Format Functions=Format_Functions@rap.hlp>members
+4 DateTime Functions=DateTime_Functions@rap.hlp>members
+4 Math Functions=Math_Functions@rap.hlp>members
+4 Utility Functions=Utility_Functions@rap.hlp>members
+3 Classes and Objects
+4 TraSystemFunction=TraSystemFunction
+4 TraRTTI=TraRTTI
+4 TraParamList=TraParamList
+2 Scaling RAP to Your Users' Needs
+3 Scaling RAP to Your Users' Needs=Scaling_RAP_to_Your_Users__Needs
+3 Defining Your Users' View=Defining_Your_Users__View
+3 Including the Calculations Dialog=Including_the_Calculations_Dialog
+3 Including the Calc Tab=Including_the_Calc_Tab
+2 Extending RAP
+3 Pass-through Functions=RAP_Pass_Through_Functions
+3 Adding Functions to the Code Toolbox=Adding_Functions_to_the_Code_Toolbox
+3 Adding Classes and Properties via RTTI=Adding_Classes_and_Properties_via_RTTI
+3 Supporting Set Types Using RTTI=RAP_and_Set_Types
+2 RAP FAQ
+3 RAP Frequently Asked Questions=RAP_Frequently_Asked_Questions

@@ -1,0 +1,59 @@
+Changes in FastReport 3.0 (in compare with version 2.5)
+
+Core: 
+
+- Rewritten class architecture. 
+- Storing reports in XML format. 
+- Precise object's coordinates and sizes. 
+- Full WYSIWYG (now for text objects too). 
+- New object - diagonal line. 
+- New fill types, shadow. 
+- Text rotation 0..360 degrees. 
+- Paragraph gap. 
+- Memo object supports simple html-tags (font color, b, i, u, sub, sup). 
+- Object's properties ParentFont, Printable. 
+- Improved stretching (StretchMode, ShiftMode properties). 
+- Group and Data-band properties - KeepTogether, KeepFooter. 
+- Band property KeepChild. 
+- Access to DB fields via TfrxDBDataSet. TfrxIBODataSet for IB_Objects. 
+- Styles. 
+- Text flow. 
+- URLs, Anchors.
+- Dot matrix reports. 
+
+Script: 
+- One script in the report (like an unit in the Delphi). 
+- Dramatically increased performance. 
+- New events for FR objects. 
+- Standard Pascal features: variables, constants, procedures, 
+  functions (nested allowed) with var/const/default parameters, 
+  all standard operators and statements (includind case, try/finally/except, with), 
+  types (int, float, bool, char, string, multi-dimensional array, enum, variant), 
+  classes (with methods, events, properties, index and default properties). 
+- Strict type checking. 
+- Multi-language architecture allows you to use many languages (Pascal, C++, Basic, Java). 
+- Access to any object inside your application (in case you've allowed this). 
+  Standard libraries to access to base classes, controls and forms. 
+  Easily expandable library architecture. 
+- Debugger.
+
+Designer: 
+- New architecture. 
+- Improved interface, ability to dock tool windows. 
+- Improved Object Inspector. 
+- Zooming. 
+- In-place editing. 
+- Rulers, guides. 
+- Better line drawing. 
+- Better bands handling. 
+- Better DB-field selection. 
+- Grid: mm, inches, pixels. 
+- Better Left/Right margin handling. 
+- Wizard for base type reports. 
+- Copy objects to Windows clipboard. 
+- Full Undo/Redo. 
+
+Exports:
+- Improved WYSIWYG TXT, RTF, CSV, HTML, PDF, XLS, XML, JPG, BMP, TIFF 
+  exports is available.
+

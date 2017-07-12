@@ -1,0 +1,1199 @@
+object TppReport
+  AutoStop = False
+  DataPipeline = plCustomer
+  PrinterSetup.BinName = 'Default'
+  PrinterSetup.DocumentName = 'Report'
+  PrinterSetup.PaperName = 'Letter'
+  PrinterSetup.PrinterName = 'Default'
+  PrinterSetup.mmMarginBottom = 6350
+  PrinterSetup.mmMarginLeft = 6350
+  PrinterSetup.mmMarginRight = 6350
+  PrinterSetup.mmMarginTop = 6350
+  PrinterSetup.mmPaperHeight = 279401
+  PrinterSetup.mmPaperWidth = 215900
+  SaveAsTemplate = True
+  Template.FileName = 'D:\Rbldr5\Demos\0. Rap\rap0035.rtm'
+  Template.Format = ftASCII
+  UserName = 'Report'
+  CachePages = True
+  DeviceType = 'Screen'
+  Language = lgEnglish
+  Version = '4.24 Pro'
+  mmColumnWidth = 0
+  object ppTitleBand1: TppTitleBand
+    PrintHeight = phDynamic
+    mmBottomOffset = 0
+    mmHeight = 64558
+    mmPrintPosition = 0
+    object ppVariable3: TppVariable
+      UserName = 'Variable3'
+      Alignment = taCenter
+      CalcOrder = 0
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 16
+      Font.Style = []
+      Transparent = True
+      mmHeight = 6350
+      mmLeft = 794
+      mmTop = 32279
+      mmWidth = 200819
+      BandType = 1
+    end
+    object ppVariable4: TppVariable
+      UserName = 'Variable4'
+      CalcOrder = 1
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Times New Roman'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 3969
+      mmLeft = 1323
+      mmTop = 43392
+      mmWidth = 12965
+      BandType = 1
+    end
+    object ppVariable5: TppVariable
+      UserName = 'Variable5'
+      AutoSize = False
+      CalcOrder = 2
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Times New Roman'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      WordWrap = True
+      mmHeight = 11377
+      mmLeft = 1058
+      mmTop = 49742
+      mmWidth = 194469
+      BandType = 1
+    end
+    object ppLabel6: TppLabel
+      UserName = 'Label6'
+      Caption = 'RAP Demo - Displaying Custom Forms'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Name = 'Arial'
+      Font.Size = 12
+      Font.Style = [fsBold, fsItalic]
+      Transparent = True
+      mmHeight = 4763
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 77523
+      BandType = 1
+    end
+    object ppMemo1: TppMemo
+      UserName = 'Memo1'
+      Caption = 'Memo1'
+      CharWrap = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Times New Roman'
+      Font.Size = 12
+      Font.Style = []
+      Lines.Strings = (
+        
+          'This report demonstrates how to make a custom form available to ' +
+          'the user via a RAP pass-through function. ')
+      Transparent = True
+      mmHeight = 12435
+      mmLeft = 3175
+      mmTop = 8731
+      mmWidth = 131763
+      BandType = 1
+      mmBottomOffset = 0
+      mmOverFlowOffset = 0
+      mmStopPosition = 0
+      mmLeading = 0
+    end
+    object ppLine8: TppLine
+      UserName = 'Line8'
+      Pen.Color = clGray
+      ParentWidth = True
+      Weight = 0.75
+      mmHeight = 3969
+      mmLeft = 0
+      mmTop = 24342
+      mmWidth = 203200
+      BandType = 1
+    end
+  end
+  object ppDetailBand1: TppDetailBand
+    mmBottomOffset = 0
+    mmHeight = 5556
+    mmPrintPosition = 0
+    object ppDBText3: TppDBText
+      UserName = 'DBText3'
+      DataField = 'OrderNo'
+      DataPipeline = plCustomer
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 6350
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText2: TppDBText
+      UserName = 'DBText2'
+      DataField = 'SaleDate'
+      DataPipeline = plCustomer
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 24342
+      mmTop = 529
+      mmWidth = 17198
+      BandType = 4
+    end
+    object ppDBText4: TppDBText
+      UserName = 'DBText4'
+      Alignment = taRightJustify
+      AutoSize = True
+      DataField = 'AmountPaid'
+      DataPipeline = plCustomer
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlack
+      Font.Name = 'Arial'
+      Font.Size = 10
+      Font.Style = []
+      Transparent = True
+      mmHeight = 4233
+      mmLeft = 162984
+      mmTop = 529
+      mmWidth = 18256
+      BandType = 4
+    end
+    object ppLine1: TppLine
+      UserName = 'Line1'
+      ParentHeight = True
+      Position = lpLeft
+      Weight = 0.75
+      mmHeight = 5556
+      mmLeft = 0
+      mmTop = 0
+      mmWidth = 3969
+      BandType = 4
+    end
+    object ppLine2: TppLine
+      UserName = 'Line2'
+      ParentHeight = True
+      Position = lpRight
+      Weight = 0.75
+      mmHeight = 5556
+      mmLeft = 197115
+      mmTop = 0
+      mmWidth = 6085
+      BandType = 4
+    end
+    object ppLine4: TppLine
+      UserName = 'Line4'
+      Pen.Color = clGray
+      Position = lpBottom
+      Weight = 0.75
+      mmHeight = 3969
+      mmLeft = 42333
+      mmTop = 794
+      mmWidth = 109538
+      BandType = 4
+    end
+  end
+  object ppGroup1: TppGroup
+    BreakName = 'CustNo'
+    DataPipeline = plCustomer
+    KeepTogether = True
+    UserName = 'Group1'
+    mmNewColumnThreshold = 0
+    mmNewPageThreshold = 0
+    object ppGroupHeaderBand1: TppGroupHeaderBand
+      PrintHeight = phDynamic
+      mmBottomOffset = 0
+      mmHeight = 22490
+      mmPrintPosition = 0
+      object ppShape2: TppShape
+        UserName = 'Shape2'
+        Brush.Color = clSilver
+        ParentHeight = True
+        ParentWidth = True
+        StretchWithParent = True
+        mmHeight = 22490
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 203200
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        AutoSize = True
+        DataField = 'Company'
+        DataPipeline = plCustomer
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 5027
+        mmLeft = 1058
+        mmTop = 794
+        mmWidth = 19579
+        BandType = 3
+        GroupNo = 0
+      end
+      object ppRegion1: TppRegion
+        UserName = 'Region1'
+        Brush.Style = bsClear
+        Caption = 'Region1'
+        ParentWidth = False
+        Pen.Style = psClear
+        Transparent = True
+        mmHeight = 12435
+        mmLeft = 1058
+        mmTop = 6085
+        mmWidth = 124090
+        BandType = 3
+        GroupNo = 0
+        mmBottomOffset = 0
+        mmOverFlowOffset = 0
+        mmStopPosition = 0
+        object ppVariable1: TppVariable
+          UserName = 'Variable1'
+          CalcOrder = 0
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Name = 'Arial'
+          Font.Size = 10
+          Font.Style = []
+          Transparent = True
+          mmHeight = 4233
+          mmLeft = 1058
+          mmTop = 7144
+          mmWidth = 14288
+          BandType = 3
+          GroupNo = 0
+        end
+        object ppVariable2: TppVariable
+          UserName = 'Variable2'
+          CalcOrder = 1
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Name = 'Arial'
+          Font.Size = 10
+          Font.Style = []
+          Transparent = True
+          mmHeight = 4233
+          mmLeft = 1058
+          mmTop = 12435
+          mmWidth = 14288
+          BandType = 3
+          GroupNo = 0
+        end
+      end
+    end
+    object ppGroupFooterBand1: TppGroupFooterBand
+      mmBottomOffset = 0
+      mmHeight = 18785
+      mmPrintPosition = 0
+      object ppLine3: TppLine
+        UserName = 'Line3'
+        ParentWidth = True
+        Weight = 0.75
+        mmHeight = 2117
+        mmLeft = 0
+        mmTop = 0
+        mmWidth = 203200
+        BandType = 5
+        GroupNo = 0
+      end
+      object ppDBCalc1: TppDBCalc
+        UserName = 'DBCalc1'
+        Alignment = taRightJustify
+        AutoSize = True
+        DataField = 'AmountPaid'
+        DataPipeline = plCustomer
+        DisplayFormat = '$#,0.00;-$#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        ResetGroup = ppGroup1
+        mmHeight = 4233
+        mmLeft = 153459
+        mmTop = 2117
+        mmWidth = 27517
+        BandType = 5
+        GroupNo = 0
+      end
+      object ppLine5: TppLine
+        UserName = 'Line5'
+        Weight = 1
+        mmHeight = 2117
+        mmLeft = 153459
+        mmTop = 1058
+        mmWidth = 27781
+        BandType = 5
+        GroupNo = 0
+      end
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        Alignment = taRightJustify
+        Caption = 'Total'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 24342
+        mmTop = 2117
+        mmWidth = 7408
+        BandType = 5
+        GroupNo = 0
+      end
+      object ppLine6: TppLine
+        UserName = 'Line6'
+        Pen.Color = clGray
+        Position = lpBottom
+        Weight = 0.75
+        mmHeight = 4233
+        mmLeft = 34925
+        mmTop = 2117
+        mmWidth = 116417
+        BandType = 5
+        GroupNo = 0
+      end
+      object ppLine7: TppLine
+        UserName = 'Line7'
+        Weight = 1
+        mmHeight = 1588
+        mmLeft = 153459
+        mmTop = 1852
+        mmWidth = 27781
+        BandType = 5
+        GroupNo = 0
+      end
+    end
+  end
+  object TdaDataModule
+    object TdaBDEQueryDataView
+      Left = 10
+      Top = 10
+      Width = 242
+      Height = 305
+      UserName = 'Query_Customer'
+      AutoSearchTabOrder = 0
+      object plCustomer: TppChildBDEPipeline
+        AutoCreateFields = False
+        UserName = 'plCustomer'
+        object TppField
+          FieldAlias = 'Custno'
+          FieldName = 'CustNo'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 0
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Company'
+          FieldName = 'Company'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 1
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Addr1'
+          FieldName = 'Addr1'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 2
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Addr2'
+          FieldName = 'Addr2'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 3
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'City'
+          FieldName = 'City'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 4
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'State'
+          FieldName = 'State'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 5
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Zip'
+          FieldName = 'Zip'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 6
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Country'
+          FieldName = 'Country'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 7
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Phone'
+          FieldName = 'Phone'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 8
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Fax'
+          FieldName = 'FAX'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 9
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Taxrate'
+          FieldName = 'TaxRate'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 10
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Contact'
+          FieldName = 'Contact'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 11
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Lastinvoicedate'
+          FieldName = 'LastInvoiceDate'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 12
+          TableName = 'customer.db'
+        end
+        object TppField
+          FieldAlias = 'Orderno'
+          FieldName = 'OrderNo'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 13
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Custno (2)'
+          FieldName = 'CustNo_1'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 14
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Saledate'
+          FieldName = 'SaleDate'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 15
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shipdate'
+          FieldName = 'ShipDate'
+          FieldLength = 0
+          DataType = dtDateTime
+          DisplayWidth = 18
+          Position = 16
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Empno'
+          FieldName = 'EmpNo'
+          FieldLength = 0
+          DataType = dtInteger
+          DisplayWidth = 10
+          Position = 17
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shiptocontact'
+          FieldName = 'ShipToContact'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 18
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shiptoaddr1'
+          FieldName = 'ShipToAddr1'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 19
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shiptoaddr2'
+          FieldName = 'ShipToAddr2'
+          FieldLength = 30
+          DisplayWidth = 30
+          Position = 20
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shiptocity'
+          FieldName = 'ShipToCity'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 21
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shiptostate'
+          FieldName = 'ShipToState'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 22
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shiptozip'
+          FieldName = 'ShipToZip'
+          FieldLength = 10
+          DisplayWidth = 10
+          Position = 23
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shiptocountry'
+          FieldName = 'ShipToCountry'
+          FieldLength = 20
+          DisplayWidth = 20
+          Position = 24
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shiptophone'
+          FieldName = 'ShipToPhone'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 25
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Shipvia'
+          FieldName = 'ShipVIA'
+          FieldLength = 7
+          DisplayWidth = 7
+          Position = 26
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Po'
+          FieldName = 'PO'
+          FieldLength = 15
+          DisplayWidth = 15
+          Position = 27
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Terms'
+          FieldName = 'Terms'
+          FieldLength = 6
+          DisplayWidth = 6
+          Position = 28
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Paymentmethod'
+          FieldName = 'PaymentMethod'
+          FieldLength = 7
+          DisplayWidth = 7
+          Position = 29
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Itemstotal'
+          FieldName = 'ItemsTotal'
+          FieldLength = 0
+          DataType = dtCurrency
+          DisplayWidth = 10
+          Position = 30
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Taxrate (2)'
+          FieldName = 'TaxRate_1'
+          FieldLength = 0
+          DataType = dtDouble
+          DisplayWidth = 10
+          Position = 31
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Freight'
+          FieldName = 'Freight'
+          FieldLength = 0
+          DataType = dtCurrency
+          DisplayWidth = 10
+          Position = 32
+          TableName = 'orders.db'
+        end
+        object TppField
+          FieldAlias = 'Amountpaid'
+          FieldName = 'AmountPaid'
+          FieldLength = 0
+          DataType = dtCurrency
+          DisplayWidth = 10
+          Position = 33
+          TableName = 'orders.db'
+        end
+      end
+      object TdaSQL
+        DatabaseName = 'DBDEMOS'
+        DatabaseType = dtParadox
+        DataPipelineName = 'plCustomer'
+        Description = 'Customer'
+        SQLText.Strings = (
+          'SELECT customer.CustNo, customer.Company, '
+          '       customer.Addr1, customer.Addr2, '
+          '       customer.City, customer.State, '
+          '       customer.Zip, customer.Country, '
+          '       customer.Phone, customer.FAX, '
+          '       customer.TaxRate, customer.Contact, '
+          '       customer.LastInvoiceDate, orders.OrderNo, '
+          '       orders.CustNo, orders.SaleDate, '
+          '       orders.ShipDate, orders.EmpNo, '
+          '       orders.ShipToContact, orders.ShipToAddr1, '
+          '       orders.ShipToAddr2, orders.ShipToCity, '
+          '       orders.ShipToState, orders.ShipToZip, '
+          '       orders.ShipToCountry, orders.ShipToPhone, '
+          '       orders.ShipVIA, orders.PO, orders.Terms, '
+          '       orders.PaymentMethod, orders.ItemsTotal, '
+          '       orders.TaxRate, orders.Freight, '
+          '       orders.AmountPaid'
+          'FROM "customer.db" customer'
+          '      INNER JOIN "orders.db" orders ON '
+          '     (orders.CustNo = customer.CustNo)'
+          'ORDER BY customer.CustNo')
+        object TdaField
+          Alias = 'Custno'
+          DataType = dtDouble
+          FieldAlias = 'Custno'
+          FieldName = 'CustNo'
+          TableName = 'customer.db'
+          SQLFieldName = 'CustNo'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Company'
+          FieldAlias = 'Company'
+          FieldName = 'Company'
+          TableName = 'customer.db'
+          SQLFieldName = 'Company'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Addr1'
+          FieldAlias = 'Addr1'
+          FieldName = 'Addr1'
+          TableName = 'customer.db'
+          SQLFieldName = 'Addr1'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Addr2'
+          FieldAlias = 'Addr2'
+          FieldName = 'Addr2'
+          TableName = 'customer.db'
+          SQLFieldName = 'Addr2'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'City'
+          FieldAlias = 'City'
+          FieldName = 'City'
+          TableName = 'customer.db'
+          SQLFieldName = 'City'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'State'
+          FieldAlias = 'State'
+          FieldName = 'State'
+          TableName = 'customer.db'
+          SQLFieldName = 'State'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Zip'
+          FieldAlias = 'Zip'
+          FieldName = 'Zip'
+          TableName = 'customer.db'
+          SQLFieldName = 'Zip'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Country'
+          FieldAlias = 'Country'
+          FieldName = 'Country'
+          TableName = 'customer.db'
+          SQLFieldName = 'Country'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Phone'
+          FieldAlias = 'Phone'
+          FieldName = 'Phone'
+          TableName = 'customer.db'
+          SQLFieldName = 'Phone'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Fax'
+          FieldAlias = 'Fax'
+          FieldName = 'FAX'
+          TableName = 'customer.db'
+          SQLFieldName = 'FAX'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Taxrate'
+          DataType = dtDouble
+          FieldAlias = 'Taxrate'
+          FieldName = 'TaxRate'
+          TableName = 'customer.db'
+          SQLFieldName = 'TaxRate'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Contact'
+          FieldAlias = 'Contact'
+          FieldName = 'Contact'
+          TableName = 'customer.db'
+          SQLFieldName = 'Contact'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Lastinvoicedate'
+          DataType = dtDateTime
+          FieldAlias = 'Lastinvoicedate'
+          FieldName = 'LastInvoiceDate'
+          TableName = 'customer.db'
+          SQLFieldName = 'LastInvoiceDate'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaField
+          Alias = 'Orderno'
+          DataType = dtDouble
+          FieldAlias = 'Orderno'
+          FieldName = 'OrderNo'
+          TableName = 'orders.db'
+          SQLFieldName = 'OrderNo'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Custno (2)'
+          DataType = dtDouble
+          FieldAlias = 'Custno'
+          FieldName = 'CustNo'
+          TableName = 'orders.db'
+          SQLFieldName = 'CustNo_1'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Saledate'
+          DataType = dtDateTime
+          FieldAlias = 'Saledate'
+          FieldName = 'SaleDate'
+          TableName = 'orders.db'
+          SQLFieldName = 'SaleDate'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shipdate'
+          DataType = dtDateTime
+          FieldAlias = 'Shipdate'
+          FieldName = 'ShipDate'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipDate'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Empno'
+          DataType = dtInteger
+          FieldAlias = 'Empno'
+          FieldName = 'EmpNo'
+          TableName = 'orders.db'
+          SQLFieldName = 'EmpNo'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shiptocontact'
+          FieldAlias = 'Shiptocontact'
+          FieldName = 'ShipToContact'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipToContact'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shiptoaddr1'
+          FieldAlias = 'Shiptoaddr1'
+          FieldName = 'ShipToAddr1'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipToAddr1'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shiptoaddr2'
+          FieldAlias = 'Shiptoaddr2'
+          FieldName = 'ShipToAddr2'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipToAddr2'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shiptocity'
+          FieldAlias = 'Shiptocity'
+          FieldName = 'ShipToCity'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipToCity'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shiptostate'
+          FieldAlias = 'Shiptostate'
+          FieldName = 'ShipToState'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipToState'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shiptozip'
+          FieldAlias = 'Shiptozip'
+          FieldName = 'ShipToZip'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipToZip'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shiptocountry'
+          FieldAlias = 'Shiptocountry'
+          FieldName = 'ShipToCountry'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipToCountry'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shiptophone'
+          FieldAlias = 'Shiptophone'
+          FieldName = 'ShipToPhone'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipToPhone'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Shipvia'
+          FieldAlias = 'Shipvia'
+          FieldName = 'ShipVIA'
+          TableName = 'orders.db'
+          SQLFieldName = 'ShipVIA'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Po'
+          FieldAlias = 'Po'
+          FieldName = 'PO'
+          TableName = 'orders.db'
+          SQLFieldName = 'PO'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Terms'
+          FieldAlias = 'Terms'
+          FieldName = 'Terms'
+          TableName = 'orders.db'
+          SQLFieldName = 'Terms'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Paymentmethod'
+          FieldAlias = 'Paymentmethod'
+          FieldName = 'PaymentMethod'
+          TableName = 'orders.db'
+          SQLFieldName = 'PaymentMethod'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Itemstotal'
+          DataType = dtCurrency
+          FieldAlias = 'Itemstotal'
+          FieldName = 'ItemsTotal'
+          TableName = 'orders.db'
+          SQLFieldName = 'ItemsTotal'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Taxrate (2)'
+          DataType = dtDouble
+          FieldAlias = 'Taxrate'
+          FieldName = 'TaxRate'
+          TableName = 'orders.db'
+          SQLFieldName = 'TaxRate_1'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Freight'
+          DataType = dtCurrency
+          FieldAlias = 'Freight'
+          FieldName = 'Freight'
+          TableName = 'orders.db'
+          SQLFieldName = 'Freight'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          Alias = 'Amountpaid'
+          DataType = dtCurrency
+          FieldAlias = 'Amountpaid'
+          FieldName = 'AmountPaid'
+          TableName = 'orders.db'
+          SQLFieldName = 'AmountPaid'
+          TableAlias = 'Orders'
+          TableSQLAlias = 'orders'
+        end
+        object TdaField
+          ChildType = 2
+          Alias = 'Custno'
+          DataType = dtDouble
+          FieldAlias = 'Custno'
+          FieldName = 'CustNo'
+          TableName = 'customer.db'
+          TableAlias = 'Customer'
+          TableSQLAlias = 'customer'
+        end
+        object TdaTable
+          ChildType = 5
+          Alias = 'Customer'
+          TableAlias = 'Customer'
+          TableName = 'customer.db'
+          SQLAlias = 'customer'
+          JoinType = dajtNone
+        end
+        object TdaTable
+          ChildType = 5
+          Alias = 'Orders'
+          TableAlias = 'Orders'
+          TableName = 'orders.db'
+          SQLAlias = 'orders'
+          object TdaTableJoin
+            ChildType = 6
+            object TdaField
+              ChildType = 3
+              Alias = 'Custno'
+              DataType = dtDouble
+              FieldAlias = 'Custno'
+              FieldName = 'CustNo'
+              TableName = 'orders.db'
+              TableAlias = 'Orders'
+              TableSQLAlias = 'orders'
+            end
+            object TdaField
+              ChildType = 4
+              Alias = 'Custno'
+              DataType = dtDouble
+              FieldAlias = 'Custno'
+              FieldName = 'CustNo'
+              TableName = 'customer.db'
+              TableAlias = 'Customer'
+              TableSQLAlias = 'customer'
+            end
+          end
+        end
+      end
+    end
+  end
+  object TraCodeModule
+    ProgramStream = {
+      01060D54726156617250726F6772616D094368696C645479706502110B50726F
+      6772616D4E616D6506095661726961626C65730B50726F6772616D5479706507
+      0B747450726F63656475726506536F75726365068670726F6365647572652056
+      61726961626C65733B0D0A7661720D0A2020206D79486561646572537472696E
+      673A20537472696E673B0D0A2020206D79526563697069656E74537472696E67
+      3A20537472696E673B0D0A2020206D794465736372697074696F6E537472696E
+      673A20537472696E673B0D0A626567696E0D0A0D0A656E643B0D0A0001060A54
+      726150726F6772616D094368696C645479706502130B50726F6772616D4E616D
+      65060E476C6F62616C4F6E4372656174650B50726F6772616D54797065070B74
+      7450726F63656475726506536F757263650C0106000070726F63656475726520
+      476C6F62616C4F6E4372656174653B0D0A7661720D0A20206C69496E6465783A
+      20496E74656765723B0D0A20206C6245786563757465643A20426F6F6C65616E
+      3B0D0A626567696E0D0A20206C69496E646578203A3D20303B0D0A20206D7948
+      6561646572537472696E67203A3D20274D6F6E74686C792053616C6573205265
+      706F7274273B0D0A20206C624578656375746564203A3D204578656375746553
+      746172747570466F726D286D79486561646572537472696E672C206C69496E64
+      6578293B0D0A20200D0A20206966206C624578656375746564207468656E0D0A
+      20202020626567696E0D0A20202020202063617365206C69496E646578206F66
+      0D0A2020202020202020303A0D0A202020202020202020626567696E0D0A0920
+      202020206D79526563697069656E74537472696E67203A3D20274174746E3A20
+      4D61726B6574696E67205465616D2C20273B0D0A20202020202020202020206D
+      794465736372697074696F6E537472696E67203A3D2027202020202020204865
+      72652061726520746865206D6F6E74686C79206669677572657320736F6D656F
+      6E6520646F776E2074686572652061736B656420666F722E2050617373207468
+      6973207265706F72742066726F6D206465736B20746F206465736B20756E7469
+      6C20736F6D656F6E652072656D656D6265727320746865792072657175657374
+      65642069742E273B0D0A2020202020202020656E643B0D0A2020202020202020
+      313A0D0A202020202020202020626567696E0D0A20202020202020202020206D
+      79526563697069656E74537472696E67203A3D20274D792068756D626C652061
+      706F6C6F676965732C20596F757220486967686E6573732C273B0D0A20202020
+      202020202020206D794465736372697074696F6E537472696E67203A3D202720
+      202020202020492072656772657420746F20696E74657275707420796F752C20
+      6275742074686973206C6F776C792070726F6772616D6D6572206272696E6773
+      20796F7520746865206D6F6E74686C792073616C6573207265706F7274207468
+      617420796F752077696C6C206E6F74206C696B652E273B0D0A20202020202020
+      2020656E643B0D0A2020202020202020323A0D0A202020202020202020626567
+      696E0D0A20202020202020202020206D79526563697069656E74537472696E67
+      203A3D2027446561722042726F67616E2C20457468616E2C204A616B652C2052
+      6562656B616820616E64204B6174686C65656E2C273B0D0A2020202020202020
+      2020206D794465736372697074696F6E537472696E67203A3D20272020202020
+      202053696E636520492077696C6C20736F6F6E206265206A6F696E696E672079
+      6F7520617320612056502C20746869732077696C6C206265206D79206C617374
+      206D6F6E74686C79207265706F72742E273B0D0A202020202020202020656E64
+      3B0D0A2020202020202020333A0D0A202020202020202020626567696E0D0A20
+      202020202020202020206D79526563697069656E74537472696E67203A3D2027
+      46494C4520434F5059273B0D0A20202020202020202020206D79446573637269
+      7074696F6E537472696E67203A3D20274D6F6E74686C792053616C6573205265
+      706F7274273B0D0A202020202020202020656E643B0D0A202020202020656E64
+      3B0D0A20202020656E640D0A2020656C736520696620286E6F74206C62457865
+      637574656429207468656E0D0A20202020626567696E0D0A2020202020206D79
+      526563697069656E74537472696E67203A3D20274174746E3A204D61726B6574
+      696E67205465616D2C20273B0D0A2020202020206D794465736372697074696F
+      6E537472696E67203A3D20272020202020202048657265206172652074686520
+      6D6F6E74686C79206669677572657320736F6D656F6E6520646F776E20746865
+      72652061736B656420666F722E20506173732074686973207265706F72742066
+      726F6D206465736B20746F206465736B20756E74696C20736F6D656F6E652072
+      656D656D626572732074686579207265717565737465642069742E273B0D0A20
+      202020656E643B0D0A20200D0A20200D0A656E643B0D0A0001060F5472614576
+      656E7448616E646C65720B50726F6772616D4E616D65060F5661726961626C65
+      314F6E43616C630B50726F6772616D54797065070B747450726F636564757265
+      06536F75726365068070726F636564757265205661726961626C65314F6E4361
+      6C63287661722056616C75653A2056617269616E74293B0D0A626567696E0D0A
+      0D0A202056616C7565203A3D20706C437573746F6D65725B274164647231275D
+      202B2027202027202B2020706C437573746F6D65725B274164647232275D3B0D
+      0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506095661726961626C
+      6531094576656E744E616D6506064F6E43616C63074576656E74494402210001
+      060F5472614576656E7448616E646C65720B50726F6772616D4E616D65060F56
+      61726961626C65324F6E43616C630B50726F6772616D54797065070B74745072
+      6F63656475726506536F75726365069A70726F63656475726520566172696162
+      6C65324F6E43616C63287661722056616C75653A2056617269616E74293B0D0A
+      626567696E0D0A0D0A202056616C7565203A3D20706C437573746F6D65725B27
+      43697479275D202B20272C2027202B20706C437573746F6D65725B27436F756E
+      747279275D202B20272027202B20706C437573746F6D65725B275A6970275D3B
+      0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D650609566172696162
+      6C6532094576656E744E616D6506064F6E43616C63074576656E744944022100
+      01060F5472614576656E7448616E646C65720B50726F6772616D4E616D65061B
+      47726F757048656164657242616E64314265666F72655072696E740B50726F67
+      72616D54797065070B747450726F63656475726506536F7572636506DE70726F
+      6365647572652047726F757048656164657242616E64314265666F7265507269
+      6E743B0D0A7661720D0A20206C446973706C6179416464726573733A20426F6F
+      6C65616E3B0D0A626567696E0D0A20206C446973706C61794164647265737320
+      3A3D20547275653B0D0A2020457865637574654D61737465725265636F726446
+      6F726D28706C437573746F6D65725B27436F6D70616E79275D2C206C44697370
+      6C617941646472657373293B0D0A2020526567696F6E312E56697369626C6520
+      3A3D206C446973706C6179416464726573733B0D0A656E643B0D0A0D436F6D70
+      6F6E656E744E616D65061047726F757048656164657242616E6431094576656E
+      744E616D65060B4265666F72655072696E74074576656E74494402180001060F
+      5472614576656E7448616E646C65720B50726F6772616D4E616D65060F566172
+      6961626C65334F6E43616C630B50726F6772616D54797065070B747450726F63
+      656475726506536F75726365065D70726F636564757265205661726961626C65
+      334F6E43616C63287661722056616C75653A2056617269616E74293B0D0A6265
+      67696E0D0A0D0A202056616C7565203A3D206D79486561646572537472696E67
+      3B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D6506095661726961
+      626C6533094576656E744E616D6506064F6E43616C63074576656E7449440221
+      0001060F5472614576656E7448616E646C65720B50726F6772616D4E616D6506
+      0F5661726961626C65344F6E43616C630B50726F6772616D54797065070B7474
+      50726F63656475726506536F75726365066070726F6365647572652056617269
+      61626C65344F6E43616C63287661722056616C75653A2056617269616E74293B
+      0D0A626567696E0D0A0D0A202056616C7565203A3D206D79526563697069656E
+      74537472696E673B0D0A0D0A656E643B0D0A0D436F6D706F6E656E744E616D65
+      06095661726961626C6534094576656E744E616D6506064F6E43616C63074576
+      656E74494402210001060F5472614576656E7448616E646C65720B50726F6772
+      616D4E616D65060F5661726961626C65354F6E43616C630B50726F6772616D54
+      797065070B747450726F63656475726506536F75726365066270726F63656475
+      7265205661726961626C65354F6E43616C63287661722056616C75653A205661
+      7269616E74293B0D0A626567696E0D0A0D0A202056616C7565203A3D206D7944
+      65736372697074696F6E537472696E673B0D0A0D0A656E643B0D0A0D436F6D70
+      6F6E656E744E616D6506095661726961626C6535094576656E744E616D650606
+      4F6E43616C63074576656E74494402210000}
+  end
+end

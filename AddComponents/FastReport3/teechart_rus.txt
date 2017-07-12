@@ -1,0 +1,13 @@
+Установка FastReport с другой версией TeeChart
+
+1. Откройте файл "FastReport 3\Source\frxReg.inc" в текстовом редакторе
+("FastReport 3\Lib\frxReg.inc" для FastReport Basic и Standard).
+Уберите комментарий со строки с нужной версией TeeChart
+({$DEFINE TeeChart45}, {$DEFINE TeeChart55}, {$DEFINE TeeChart6}, {$DEFINE TeeChart7})
+
+2. Откройте файл "FastReport 3\FastScript\fs_iReg.inc" в текстовом редакторе
+("FastReport 3\Lib\fs_iReg.inc" для FastReport Basic и Standard).
+Уберите комментарий со строки с нужной версией TeeChart
+({$DEFINE TeeChart45}, {$DEFINE TeeChart55}, {$DEFINE TeeChart6}, {$DEFINE TeeChart7})
+
+3. Перекомпилируйте пакеты FastScript и FastReport (см. файл "install_rus.txt").

@@ -1,0 +1,15 @@
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\bin\Debug\informer_Net.exe
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\bin\Debug\informer_Net.pdb
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\ResolveAssemblyReference.cache
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\informer_Net.Properties.Resources.resources
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\informer_Net.csproj.GenerateResource.Cache
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\informer_Net.exe
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\informer_Net.pdb
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\bin\Debug\Interop.WMPLib.dll
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\bin\Debug\AxInterop.WMPLib.dll
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\Interop.WMPLib.dll
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\AxInterop.WMPLib.dll
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\informer_Net.csproj.ResolveComReference.cache
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\obj\Debug\informer_Net.Form1.resources
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\bin\Debug\Skybound.Gecko.dll
+C:\bsklad\bsklad2009\informer\informer_Net\informer_Net\informer_Net\bin\Debug\Skybound.Gecko.xml

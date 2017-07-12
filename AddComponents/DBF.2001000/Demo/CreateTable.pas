@@ -1,0 +1,66 @@
+unit CreateTable;
+
+interface
+
+
+uses
+  Windows, Messages, SysUtils, Classes, Graphics, Controls, Forms, Dialogs,
+  Grids, DBGrids, Db, dbf, StdCtrls;
+
+type
+  TCreateTableForm = class(TForm)
+    Button1: TButton;
+    Dbf1: TDbf;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  CreateTableForm: TCreateTableForm;
+
+implementation
+
+{$R *.DFM}
+
+procedure TCreateTableForm.Button1Click(Sender: TObject);
+begin
+  With Dbf1 do begin
+    Close;
+    TableName := 'NewTable.dbf';
+    with FieldDefs do begin
+      Clear;
+      with Add do begin
+        Name := 'Field1';
+        FieldType := 'N';
+        Size:= 3;
+        Prec:= 1;
+      end;
+      with Add do begin
+        Name := 'Field2';
+        FieldType := 'N';
+        Size:= 3;
+        Prec:= 1;
+      end;
+      with Add do begin
+        Name := 'Address';
+        FieldType := 'M';
+        Size:= 3;
+        Prec:= 1;
+      end;
+      with AddFieldDef do begin
+        Name := 'Date';
+        FieldType := 'D';
+      end;
+    end;
+    CreateTable;
+    Open;
+  end;
+end;
+
+end.
+

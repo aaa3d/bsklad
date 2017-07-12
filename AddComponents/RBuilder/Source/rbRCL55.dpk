@@ -1,0 +1,83 @@
+package rbRCL55;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ReportBuilder Components'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  VCLX50,
+  VCL50,
+  VCLSMP50;
+
+contains
+  ppTmplat in 'ppTmplat.pas',
+  ppClass in 'ppClass.pas',
+  ppCtrls in 'ppCtrls.pas',
+  ppEngine in 'ppEngine.pas',
+  ppDsgnCt in 'ppDsgnCt.pas',
+  ppStrtch in 'ppStrtch.pas',
+  ppCache in 'ppCache.pas',
+  ppComm in 'ppComm.pas',
+  ppPrnDev in 'ppPrnDev.pas',
+  ppRichTx in 'ppRichTx.pas',
+  ppRegion in 'ppRegion.pas',
+  ppReport in 'ppReport.pas',
+  ppPrnabl in 'ppPrnabl.pas',
+  ppFilDev in 'ppFilDev.pas',
+  ppMemo in 'ppMemo.pas',
+  ppSubRpt in 'ppSubRpt.pas',
+  ppTmDlg in 'ppTmDlg.pas',
+  ppUtils in 'ppUtils.pas',
+  ppCmpReg in 'ppCmpReg.pas',
+  ppBarCod in 'ppBarCod.pas',
+  ppClasUt in 'ppClasUt.pas',
+  ppProd in 'ppProd.pas',
+  ppDrwCmd in 'ppDrwCmd.pas',
+  ppForms in 'ppForms.pas',
+  ppDB in 'ppDB.pas',
+  ppBands in 'ppBands.pas',
+  ppCDlg in 'ppCDlg.pas',
+  ppDevice in 'ppDevice.pas',
+  ppPrintr in 'ppPrintr.pas',
+  ppArchiv in 'ppArchiv.pas',
+  ppPDlg in 'ppPDlg.pas',
+  ppTypes in 'ppTypes.pas',
+  ppViewr in 'ppViewr.pas',
+  ppRuler in 'ppRuler.pas',
+  ppPrvDlg in 'ppPrvDlg.pas',
+  ppDBJIT in 'ppDBJIT.pas',
+  ppTxPipe in 'ppTxPipe.pas',
+  ppTmEDlg in 'ppTmEDlg.pas',
+  ppVar in 'ppVar.pas',
+  ppDsIntf in 'ppDsIntf.pas',
+  ppMetaB in 'ppMetaB.pas',
+  ppRelatv in 'ppRelatv.pas',
+  ppModule in 'ppModule.pas',
+  ppASDlg in 'ppASDlg.pas',
+  ppASCtrl in 'ppASCtrl.pas',
+  ppEnum in 'ppEnum.pas',
+  ppRTTI in 'ppRTTI.pas';
+
+end.

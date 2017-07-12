@@ -1,0 +1,543 @@
+
+    SakEmail components
+    Copyright © 1997, 1998, 1999, 2000 Sak
+    Sergio A. Kessler
+    web: http://sak.org.ar
+
+    email: 
+	to subscribe: sakemail-request@perio.unlp.edu.ar 
+	              and put 'subscribe' in the subject (without the quotes)
+	              after this, you should receive a confirmation.
+	then, to ask: sakemail@perio.unlp.edu.ar
+
+History:
+
+0.9		
+- First released version
+
+0.9.1b	
+-Fixed when a mail server reply on the connection with 
+ more than one line
+
+0.9.2b	
+- I forget to return a value in functions 
+  retrieveHeader/Message =)
+  and fixed it. Some minor bugs that I don't remember fixed.
+- Added MIME-compliant base64 support (not for use by now).
+  Added examples.
+
+0.9.2.1b
+- Fixed a bug when send a mail and the first line disappear 
+  (thanks to Arun)
+- Now, you could do MySMTP.MsgTo := 'a@doma.com; b@domb.com;c@domc.com';
+  the spaces before/after semicolon doesn't matter (I hope ;)).
+
+0.9.3b
+- Many changes, I added a SakMsg component that make send binary
+  attachments a snap. But have one problem, if you send as 
+  attach a file > 20 Kb, it doesn't work (I don't know why,
+  maybe a problem of sockets). Developed with a version 2.0b of 
+  WSockets and D3.
+
+0.9.3.1b
+- Changed the POP.login to a function that return the number of 
+  new msgs.
+- Added the event OnRetrieveProgress on the SakPOP, and fixed 
+  the example, sorry =)
+- Minor changes to the code.
+
+1.0
+- Developed with WSockets 1.2
+  POP.Login now return a boolean depending id the user is
+  authorized, and POP.Init return the number of new msgs.
+
+1.01
+- Fixed a bug with a bounced mail.
+
+1.02
+- Minor bugs fixed (some variants of boundary)
+14/10/97
+
+1.1.0
+- Warning: WSockets1.2 have some bugs that result in 
+  bad attachments. So I decided to use the sockets of
+  Delphi 3 founded in D3 c/s D3.01 pro and D3.01 c/s.
+  Now all seems to work fine and much more smooth.
+  And of course the interface of SakEmail hasn't changed.
+26/10/97
+
+1.2.0
+- Added the Reply-To field to TSakMsg comp.
+  Now you must use ',' when you want to send the msg. to
+  multiple recipients, i.e.: 'a@doma.com, b@domb.com,c@domc.com'
+  This change is done for better compatibility with other
+  emails clients.
+- Better formatting of the field Date of TSakMsg.
+  Some changes to the code.
+17/11/97
+
+1.2.1
+- Now, all searches are made in case-insensitive, it could
+  prevent some unexpected responses (no one reported, but...).
+  Some changes to the code (again).
+20/11/97
+
+1.2.2
+- Some bugs fixed. (Thanks to Serge Wagener from .lu)
+24/11/97
+
+1.2.3
+- Added the field 'MIME-Version: 1.0'.
+  It seems that is necessary :)
+25/11/97
+
+1.3.0
+- Added compatibility with SCO and VAX servers.
+  Fixed a minor bug with the boundary.
+- Change the generator of the message id.
+- Added the field MessageId and InReplyTo to the TSakMsg
+  component.
+- Added the field In-Reply-To that is added to the message
+  generated when it is <> ''.
+30/11/97
+
+1.3.1
+- Almost rewrote the parsing code. Now is more easy for you
+  if you want hack/modify the code.
+- Better treatment of emails with html inside.
+15/12/97
+
+1.4
+- Added support for UUCoded attachments.
+- Added a small delay when sending the email, seems that some 
+  servers can't deglut the info too fast, causing problems with 
+  sockets buffers and leading to crash the client machine, I 
+  don't know if is a Borland bug or Microsoft bug.
+  (thanks to Don Higgins).
+19/12/97
+
+1.4.1
+- Fixed a bug that send double '<' and '>' (ie. <<ser@dom.com>>)
+  when the full user name is used. Check the new SMTP demo.
+  Thanks to Serge Wagener for locate this bug, track it down and
+  send me the fix.
+2/2/98
+
+1.5.0
+- Added the Canceled property to TSakPOP and to TSakSMTP.
+  Due to this addition now RetrieveAllMessages is a function
+  that return the number of msgs. retrieved and SendMessage is
+  a boolean function (maybe someone has pressed the cancel btn).
+- Fixed a bug when the subject field is too large.
+9/2/98
+
+1.5.1
+- Fixed a bug with a message within a message (recursive msgs).
+18/2/98
+
+1.5.2
+- Fixed a bug what happens when after the field 'To:' appear a
+  blank line(Thanks to Osvaldo Fillia). Fixed a bug when sending 
+  email to more than two address (the separator is still ',').
+9/3/98
+
+1.6.0
+- Sometimes the filenames of an attachment contain invalid
+  chars making very dificult to open a TSaveDialog (you have
+  noted this ?), now SakEmail deletes the invalid chars.
+- Applied a patch from Matjaz Bravc, that resolve the 
+  problem of localized dates, letting you choose (in design 
+  time) if you want localized dates (NOT recommended) or 
+  standards dates (english) via the LocalizedDates boolean 
+  property in the TSakSMTP comp. Thanks also to Serge Dosyukov 
+  for sending me a fix.
+- Also I applied another patch of Gregor Duchalski that cure 
+  a bug with PChar when this unit is used under NT. 
+- It seems that some machines need more delay when sendig a 
+  msg (see previous posting 19/12/97), thanks to Matjaz Bravc.
+- I discover a bug in the transparency code, it is fixed 
+  now.
+  Did you see the benefits of Open Source Software ? :)
+26/3/98
+
+1.6.1
+- Added a FUNCFileName private variable to manage the complete
+  path of the attached file. I receive problems reports with 
+  this, it work now ?.
+- Reduced the line sleep to 30 (tell me if this value doesn't
+  work for you).
+27/4/98
+
+1.7.0
+- Fixed a memory leak, thanks to Don Higgins.
+- Moved the string esErrorInFormatOfMsg to a property of 
+  SakPOP.
+- Because some people need to use IP addresses instead of 
+  Host names, I've added a new property IPAddress to SakPOP and 
+  SakSMTP. If both are filled, then the Host name	will be used, 
+  thanks to Roger F. Reghin for reporting this. The side effect 
+  for this is that YOUR app must check if the host is a host 
+  name or a IP address, in my app I remove the periods and try
+  to convert the result to a float (long integers don't work,
+  but float accept chars 'e') if it doesn't work I assume that 
+  is a host name (someone has a better and simple idea ?).
+- Added the property FileStream to the class TAtachedFile 
+  and the procedure SaveToStream, this was done by Brian Sheperd
+- The address separator (in the TO: field) is ',' and ';' 
+  now (before it was ',' only).
+
+1.7.1
+- Roger F. Reghin has sended me a pair of nice patches that 
+  resolve in a good behavior when the destination address is
+  something like "Roger Reghin" <rreghin@hotmail.com> and some
+  servers says that they couldn't relay that mail, etc.
+  Also Roger has made the IPAddress property obsolete (do not 
+  use it, use Host instead), SakEmail will resolve the host
+  properly no matter if it is a host name or a IP address.
+  So in the next version I will remove the IPAddress property.
+  Thank you, Roger.
+
+1.8.0
+- Well, it seems that I made a mistake, I investigated the 
+  previous behavior and it is a fault of the SMTP (RFC 821), so 
+  I fixed it.
+- The IPAddress property has been removed, use Host.
+  Goeran Strehl (asem) has sended me a patch that fix a memory
+  leak and one problem with the object inspector and the Text 
+  property of a SakMsg.
+  Dmitry Bondarenko say that some servers do not send the msg 
+  size after the RETR command, so he fix that issuing a LIST n
+  command first (work nicely).
+- Added the property CC (Carbon Copy) to the SakMsg object.
+
+1.8.1
+- Added the property ReturnPath to the SakMsg comp.
+  Minor changes to the scanning code for the filename of 
+  attachments.
+
+1.8.2
+- Fixed a bug with the filename of attachments (thanks to
+  Taufer Pavel Ing.).
+- Added the function IsIPAddress from hou yg (the actual code
+  don't work if the server is 265.net :)
+  Fixed a minor bug with html pages like attachments.
+  Some fucking email server return a bounded message declaring
+  the boundary like 'boundary = ' and not 'boundary=' wich
+  is clear in the RFC, fixed.
+
+1.8.3
+- A obscure bug was found by HuangYeJun from china, in the
+  RetrieveHeaders function if the retrieved text was larger
+  than 1024 bytes and the crlf.crlf fall in the middle of 
+  two chunks, the function is blocked.
+  I don't use this function, btw.
+
+1.8.3.1
+- Just cleaned up a bit the FindUUAtachs function. Not bug 
+  or enhancements release. Serge Wagener put me to work >:|
+
+1.8.4
+- Dmitry Bondarenko (again) has found a bug in wich I do not 
+  respect the RFC, wich say that replys from the SMTP server 
+  could be multi-line, and the previous version just manage 
+  as far as two lines. He also send me a nice patch, so the 
+  bug is fixed.
+- Craig Manley added a ExtraHeaders property, please, use with
+  care, it's just not valid to put inside it whatever thing.
+- The CC header was not being added to the headers that were 
+  being sent, so Craig fixed it.
+- Warning: I've put try/except in the TSakPOP.Connect and
+  TSMTP.Connect function around the line FSocket.Open, so
+  you will need to write something like:
+      myPOP.Connect;
+      if POPError then ...
+  in your code, the old way was:
+      try
+        myPOP.Connect;
+      except
+	.....
+      end;
+
+  If you are strongly opossed to this change, drop me a line
+  and tell me why (I'm in doubts).
+
+1.8.5
+- Greg Nixon added the priority property. The default priority
+  for each msg created will be prNormal, so you don't need
+  to change your code any bit.
+
+1.8.6
+- Ulf Sturegren has added D4 compatibility, not many changes to
+  the source (one letter), but he found the error.
+- Hou yg has sent to me a revisited IsIPAddress function, so
+  I put the newer function in, infortunely my reply to him
+  doesn't want to go.
+
+1.8.7
+- Ok, I discovered a weird bug, some old emailers (navigator 2)
+  does not format the message in multipart mode if people send
+  an attach, without writing any text and with no MIME settings.
+  Fixed. This could be serious, I recommend upgrading.
+
+1.8.8
+- A small fix with the CC field. Some stupid mail servers put
+  tabs in some fields (CC:, TO:) when they want to make a new
+  line,	the correct is to put at least a space in the beginning 
+  of the line, added a little code to "fix" that.
+
+1.8.9
+- Some 'moderns' pop3 servers doesn't support the LAST command,
+  so I've added a little code to cope with this and added a 
+  boolean property ServerSupportLastCmd. See TSakPOP.Init for 
+  more details.
+  Reported by Jan Najvarek.
+
+1.9.0
+- Kaufman Alex has added two properties to the SakMsg object,
+  the ContentType and the Headers property, that should be self
+  explaining (I modified a little the code he sended me, btw).
+
+1.9.1
+- I rewrote and greatly simplified the code that deal with the 
+  multiple address in the TO: field and remove some possible
+  bugs in it.
+
+1.9.2
+- Alex discovered and fix a bug when a file attached is not 
+  enclosed between quotes, resulting in the filename without 
+  the first and last character.
+
+1.9.3
+- Better detection of the boundary in multipart messages.
+  Fixed a bug when the attached file is empty.
+
+1.9.4
+- Chris Günther send me *lots* of memory leaks fixes, very good
+  job, Chris. 
+- Some weird PGP messages are now processed well.
+- Yang Qiandong from china fixed a compiler hint and a warning.
+- Modified TSakSMTP.FReceiveTextFromSocket as suggested by Greg
+  Nixon.
+- Dmitry Bondarenko send me a patch that fixes some issues with
+  the LAST command (that some servers don't implement) and other
+  patch	that fixes a problem when servers add spare words in the
+  tail of the answer.
+- Some minor changes suggested by Matthew Vincent.
+- Support for _big_ attachments files (me).
+- Make the code more modular and simple (still is not very 
+  modular).
+
+1.10.0
+- Move some stuff to a sak_util unit.
+- Support for quoted-printable msgs, thanks to Chris Günther.
+- Fix the BCC field.
+- New property sakMsg.ContentTransferEncoding.
+
+2.0.0
+- Major reestructure of the files and the source code.
+- Simplifyied sakPOP3.pas a _lot_
+- Support encapsulated messages (message/rfc822).
+- Nested multipart messages are processed fine.
+- Attachs with quoted-printable are processed fine.
+- Many bugs fixes.
+
+2.0.1
+- A fiasco, sorry.
+
+2.0.2
+- Fixed a bug in the sak_CleanUpAddress.
+- Do the rigth job if the ContentType is 'plain/text' and 
+  the encoding is base64.
+- Redone sak_ExtractAddress and sak_ExtractAlias.
+- New 'Sender' property in SakMsg (normally not used,
+  so do not use it, unless you know what you are doing)
+  'Thanks' to Alex Kaufman for this.
+
+2.0.3
+- A *severe* bug with multiple addresses was fixed.
+
+2.0.4
+- Fixed bogus Message-number (Message-id is the correct)
+  Thanks to Peter Honan
+- Added SizeInBytes property to the SakMsg component.
+  (petition of Alex Kaufman)
+- Fixed a minor bug in TSakPOP.RetrieveHeaders.
+  Fix from Alex.
+- Added RetrieveMessageOnlyHeaders and 
+- RetrieveAllMessagesOnlyHeaders.
+
+2.0.5
+- Fix when the mail server reply is like <cr><cr><lf>
+  (two cr).
+- Fix function IsIpAddress.
+- Both fixes by Alessandro Rossi.
+
+2.0.6
+- Fix a bug in the sak_Base64Decode function when the
+  data to decode is null (I found it in the hard way).
+- Andy Charalambous make it sure you can send more than
+  one email without disconnecting and connecting again.
+- And Chris 'Memory Hunter' Günther killed some memory
+  leaks (again).
+
+2.2.0
+- the f* sleep line that was bothering us for years is 
+  gone, gone, gone. Thanks to Syed Ahmed.
+- a getUIDL method of SakPOP. Thanks to Alex Kaufman.
+- a UIDL property on SakMsg. (me)
+- a SakPOP.GetUIDLsOnRetrieve boolean property 
+  (default false) (me)
+- change some 'Exception.Create()' to 
+  'raise Exception.Create()' Thanks to Anton Saburov.
+- change SakPOP.Init from function to procedure (me)
+- new SakPOP.NewMsgsCount property (me)
+- changed SakPOP.Password to SakPOP.UserPassword (me)
+- changed SakPOP.ErrorInFormatOfMsg to 
+  SakPOP.StrErrorInFormatOfMsg
+- OnLookup event on SakPOP and SakSMTP. 
+  Thanks to Syed Ahmed.
+- OnConnecting event on SakPOP and SakSMTP (me).
+- OnReceiveTextFromSocket event on SakPOP and SakSMTP (me).
+ (mostly for debug)
+- OnSendTextToSocket event on SakPOP and SakSMTP (me).
+ (mostly for debug)
+- Headers are retrieved without the mail body 
+  (ugly bug, fix from Alex Kaufman)
+
+2.4.0
+- I've revamped TSakMsg, many funcionality from SakPOP was
+  moved to SakMsg, where it belongs.
+- Now SakMsg has a RawMail property wich you may find useful,
+  now you can do:
+   SakMsg1.RawMail.LoadFromFile('(uidl).mail');
+   SakMsg1.ParseMsg;
+  or
+   SakMsg1.RawMail.LoadFromStream( myStream);
+   SakMsg1.ParseMsg;
+  or
+   SakMsg1.RawMail.SaveToFile( '(uidl).mail');
+  etc, etc...
+- Added a property TSakMsg.ClearRawMailAfterParse for memory
+  saving.
+- the return of the f* sleep line (it causes freezes on 
+  winsock 1.1 systems like win95, win98 has winsock 2 so 
+  there is no problem if you remove the line)
+- lost of the DecodeProgess events :(
+  (sorry, I don't know how to fit this events on the new
+  SakMsg)
+
+2.6.0
+- the sleep() line is dead, it will never come back.
+  Sending an email is a pleasure now.
+- SakMsg has a TextEncoding (8Bit, Base64) property,
+  I think this will be useful to people with others
+  charset than iso-8859-1
+- the base64 routines have been rewritten, they are
+  more OO and faster (they are now in SakMIME.pas).
+- cosmetic changes all over the place.
+
+2.6.1
+- simplifyed ParseMsg2 a lot, it work better now.
+- speed up the search for uucoded attachs
+  (the previous search was very dumb)
+- fixed bug Msg.SizeInBytes always 0
+- added a couple of Application.ProcessMessages to
+  make the app more responsive.
+
+2.6.2
+- moved some functions from sak_utils to SakMIME.
+- make const parameters all over the place.
+- fix the bug that introduces a final crlf in
+  quoted-printable attachs.
+- fix a division by zero if attached file is 0
+  bytes long, fixed by Peter Kollanyi.
+
+2.6.3
+- fix a rare bug when the header of a email (more
+  probably a encapsulated one) has first line/s in
+  blank. Easy and innocuous bug.
+
+2.6.4
+- fix the bug that insert the attachs of type text/*
+  on the body of the email.
+- change the Smtp.SendMessage for Smtp.SendTheMessage
+  to avoid a BCBuilder problem.
+  Both problems reported by Andreas Franzen.
+  SendMessage is still there, but it's now deprecated,
+  I will remove it in the future.
+
+2.6.5
+- moved the ParseMsg activation from SakPOP to SakMsg (where
+  it belong), this means that after setting the RawMail
+  property of SakMsg, this does a ParseMsg automatically.
+  before:
+	SakMsg1.RawMail := ...
+	SakMsg1.ParseMsg;
+  now:
+	SakMsg1.RawMail := ...
+  hope I'm not breaking too much code out there ...   :)
+- some changes in the way attachments are processed (now
+  the html part is separated correctly and images within
+  the html are recognized)
+- RetrieveMessage() and RetrieveMessageOnlyHeaders() now
+  take an additional parameter, a TSakMsg var, so people
+  can change some parameters before parsing, see the source
+  in SakPOP3.pas (the old way is still supported, but they
+  will be removed in the future)
+- bug fixes that I do not remember.
+
+
+3.0.0
+- moved code around.
+- removed deprecated functions (I told you about this)
+- new SakAttFile unit.
+- Base64Encode( AttFile), Base64Decode( AttFile), UUDecode( AttFile)
+  has been moved to the TAtachedFile object, so you can do
+  AttFile.Base64Encode, AttFile.Base64Decode, etc
+- SakSMTP have lost EncodeStart, EncodeProgess and EncodeEnd events
+  as a consequence of the previous change.
+- SakPOP.Canceled and SakSMTP.Canceled properties have been made
+  read-only and SakPOP.Cancel and SakSMTP.Cancel procedures (or methods)
+  have been added.
+- add a SakMsg.FillRawMail method that will fill the RawMail property
+  with a rfc822 message based on the properties of SakMsg.
+- changed SakSMTP.Quit & SakPOP.Quit to Disconnect
+- deleted TAttachedFile.FileStream (redundant), use BodyBin
+- removed the function sak_getTempFileName (as it should no be trusted)
+  use function sak_GetTempPath
+
+- the new SakIMAP component !, this make a pleasure to work with
+  incoming emails (as you can have folders, etc).
+  Note: the IMAP component has only been tested with the Uni. of
+        Washington server, but it should work with any *STANDARD COMPLIANT*
+        server.
+        Anyways, the code of this component is very simple, so if you
+        have problems, a look in the source code can enligthen you.
+
+3.0.1
+- fixed a brown paper type of bug.
+
+3.0.2
+- support the case where attachs do not come from files (Lars Karlslund)
+- minor bugfix in UUDecode function (Lars Karlslund)
+- if the SakMsg.Username is empty, do a VRFY command at the smtp server 
+  to try to get the full user name (sergio)
+- function TSakIMAP.GetFolderList (Peter Nagel)
+- function TSakIMAP.GetHierarchyDelim (Peter Nagel)
+- frustrated intent (ie. commented out) to remove memory leaks in POP, 
+  SMTP & IMAP destroy functions (Ronald Moesbergen)
+
+3.0.3
+- actually create (and free) the FolderList in sakIMAP (Neculau Andrei)
+- try to send the FQDM to the HELO command in SMTP (sergio)
+- commented out the VRFY command in SakSMTP, and cut the from address
+  in the From field (in SakMsg), so if the username is empty, the SMTP 
+  server rewrite the from address in a complete way, with username & full 
+  address (sergio)
+- fix a minor bug in TBase64DecodingStream.Write function (Lars Karlslund)
+
+
+
+
+Don't forget to subscribe to the mailing list 
+(see the web pages at http://sak.org.ar)

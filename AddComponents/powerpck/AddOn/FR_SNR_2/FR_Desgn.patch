@@ -1,0 +1,73 @@
+{*****************************}
+{     Fr_Desgn.pas patch      }
+{                             }
+{ add lines marked as '//DIM' }
+{*****************************}
+...
+
+  TfrDesignerForm = class(TfrReportDesigner)
+...
+  private
+    { Private declarations }
+...
+//    procedure SelectionChanged; // DIM (moved to "public" section)
+...
+    UnlimitedHeight: Boolean;
+    frmSnR : TForm;              // DIM
+    procedure SetMenuBitmaps;
+...
+  public
+...
+    procedure SelectionChanged; // DIM (moved from "private" section)
+...
+
+implementation
+...
+uses
+
+...
+
+{$IFDEF Delphi6}
+, Variants
+{$ENDIF}
+, fr_SnR; // DIM
+
+...
+
+procedure TfrDesignerForm.FormCreate(Sender: TObject);
+
+...
+
+  frmSnR := TfrSnrForm.Create(Self); // DIM
+end;
+
+...
+
+
+procedure TfrDesignerForm.Localize;
+begin
+...
+  Search1.Caption  := frLoadStr(SsrSearch); // DIM
+...
+
+
+{$HINTS ON}
+
+// DIM begin
+
+procedure TfrDesignerForm.Search1Click(Sender: TObject);
+begin
+  TfrSnrForm(frmSnR).Show;
+end;
+
+// DIM end
+
+initialization
+  DoInit;
+
+finalization
+  ClearClipBoard;
+  ClipBd.Free;
+  GridBitmap.Free;
+
+end.

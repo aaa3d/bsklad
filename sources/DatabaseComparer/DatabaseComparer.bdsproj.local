@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2009.03.05 09:07:08.593.pas,\\server\Компьютерная служба\aaa - Игорь Сторожев\Borland Studio Projects\Unit5.pas=C:\bsklad\bsklad2009\DatabaseComparer\Unit5.pas</Transaction>
+    <Transaction>2009.03.05 09:07:08.593.dfm,\\server\Компьютерная служба\aaa - Игорь Сторожев\Borland Studio Projects\Unit5.dfm=C:\bsklad\bsklad2009\DatabaseComparer\Unit5.dfm</Transaction>
+    <Transaction>2009.03.05 09:07:17.609.bdsproj,\\server\Компьютерная служба\aaa - Игорь Сторожев\Borland Studio Projects\Project5.bdsproj=C:\bsklad\bsklad2009\DatabaseComparer\DatabaseComparer.bdsproj</Transaction>
+  </Transactions>
+</BorlandProject>

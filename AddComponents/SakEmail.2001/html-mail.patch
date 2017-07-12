@@ -1,0 +1,103 @@
+--- SakMsg.pas	Tue Oct 10 18:12:54 2000
++++ SakMsg.pas.new	Fri Jan 26 23:22:02 2001
+@@ -23,6 +23,10 @@
+ 
+   TSakMsg = class;
+ 
++  // selection for HTML or plain text
++  TMessageType    = (mtPlain,mtHTML);
++  // allow HTML references to attachments be embedded or attached & emebbed
++  THTMLAttachmentType = (atEmbeddedOnly,atWithAttachment);
+   // Priority
+   TPriority = (prHighest, prHigh, prNormal, prLow, prLowest);
+   TTextEncoding = (te8Bit, teBase64);
+@@ -32,6 +36,9 @@
+   TSakMsg = class(TComponent)
+   private
+     { Private declarations }
++    // modification GTM 19/09/2000
++    FMessageType:TMessageType;
++    FHTMLAttachmentType:THTMLAttachmentType;
+     FPriority: TPriority;
+     FUserName: string;
+     FFrom: string;
+@@ -123,6 +130,9 @@
+     property CharSet: string read FCharSet write FCharSet;
+     property ClearRawMailAfterParse: boolean read FClearRawMailAfterParse write FClearRawMailAfterParse default True;
+     property TextEncoding: TTextEncoding read FTextEncoding write FTextEncoding default te8Bit;
++    // modification GTM 19/09/2000
++    property MessageType: TMessageType read FMessageType write FMessageType default mtPlain;
++    property HTMLAttachmentType: THTMLAttachmentType read FHTMLAttachmentType write FHTMLAttachmentType default atEmbeddedOnly;
+     property XMailer: string read FXMailer write FXMailer;
+     procedure FillRawMail;
+ //    property DecodeProgressStep: word read FDecodeProgressStep write FDecodeProgressStep;
+@@ -725,30 +735,50 @@
+ 
+   if AttachedFiles.count = 0 then
+   begin
+-    Headers.Add( 'Content-Type: text/plain; charset=' + CharSet);
+-    Headers.Add( 'Content-Transfer-Encoding: ' + CTF);
++    // GTM MODIFICATION FOR HTML Mail
++   if MessageType = mtHTML then
++      Headers.Add( 'Content-Type: text/html; charset=' + CharSet)
++   else
++   if MessageType = mtPlain then
++      Headers.Add( 'Content-Type: text/plain; charset=' + CharSet);
++   Headers.Add( 'Content-Transfer-Encoding: ' + CTF);
+   end else
+   begin
+-    boundary := sak_GenerateBoundary;
+-    Headers.Add( 'Content-Type: multipart/mixed; boundary="' + boundary + '"');
++   boundary := sak_GenerateBoundary;
++   if ( MessageType = mtHTML ) then
++    begin
++     if ( HTMLAttachmentType = atEmbeddedOnly ) then
++       Headers.Add( 'Content-Type: multipart/related; boundary="' + boundary + '"')
++     else
++     if ( HTMLAttachmentType = atWithAttachment ) then
++       Headers.Add( 'Content-Type: multipart/mixed; boundary="' + boundary + '"')
++    end
++   else
++   if MessageType = mtPlain then
++      Headers.Add( 'Content-Type: multipart/mixed; boundary="' + boundary + '"');
+     boundary := '--' + boundary;
+     Body.Insert( 0, boundary);
+-    Body.Insert( 1, 'Content-Type: text/plain; charset=' + CharSet);
+-    Body.Insert( 2, 'Content-Transfer-Encoding: ' + CTF);
+-    Body.Insert( 3, '');
+-    for i := 0 to AttachedFiles.count-1 do
+-    begin
+-      AttFile := AttachedFiles[ i];
+-      AttFile.Base64Encode;
+-      fn := AttFile.FileName;
+-
+-      Body.Add( boundary);
+-      Body.Add( 'Content-Type: ' + AttFile.MIMEType + '; name="' + fn + '"');
+-      Body.Add( 'Content-Transfer-Encoding: base64');
+-      Body.Add( 'Content-Disposition: attachment; filename="' + fn + '"');
+-      Body.Add( '');
++    // GTM MODIFICATION FOR HTML Mail
++   if MessageType = mtHTML then
++      Body.Insert( 1, 'Content-Type: text/html; charset=' + CharSet)
++   else
++   if MessageType = mtPlain then
++      Body.Insert( 1, 'Content-Type: text/plain; charset=' + CharSet);
+ 
+-      Application.ProcessMessages;
++   Body.Insert( 2, 'Content-Transfer-Encoding: ' + CTF);
++    Body.Insert( 3, '');
++   for i := 0 to AttachedFiles.count-1 do
++   begin
++     AttFile := AttachedFiles[ i];
++     AttFile.Base64Encode;
++     fn := AttFile.FileName;
++        Body.Add( boundary);
++     Body.Add( 'Content-Type: ' + AttFile.MIMEType + '; name="' + fn + '"');
++     Body.Add( 'Content-Transfer-Encoding: base64');
++     Body.Add( 'Content-Disposition: attachment; filename="' + fn + '"');
++     Body.Add( 'Content-Id:<'+fn+ '>');
++     Body.Add( '');
++     Application.ProcessMessages;
+ 
+ {      if FCanceled then
+       begin

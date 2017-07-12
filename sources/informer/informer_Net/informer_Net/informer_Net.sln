@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "informer_Net", "informer_Net\informer_Net.csproj", "{F56788D7-7DD2-4F99-9F23-053C5DD685AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F56788D7-7DD2-4F99-9F23-053C5DD685AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56788D7-7DD2-4F99-9F23-053C5DD685AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56788D7-7DD2-4F99-9F23-053C5DD685AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56788D7-7DD2-4F99-9F23-053C5DD685AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

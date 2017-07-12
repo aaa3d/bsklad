@@ -1,0 +1,16 @@
+File         Description
+-----------  ----------------------------------------
+FRIBONative  DB engine for IB_Objects (native IBO stuff)
+FR_ADN       DB engine for ADONIS ADO
+FR_ADS       DB engine for Advantage
+FR_ASA       DB engine for NativeDB database system
+FR_CTL       DB engine for Sybase - CTLib  
+FR_DAO       DB engine for Direct Access Objects 
+FR_DBISAM    DB engine for DBISAM database system
+FR_DOA       DB engine for Direct Oracle Access 
+FR_FF        DB engine for FlashFiler
+FR_FIB       DB engine for FreeIBComponents
+FR_IBO       DB engine for IB_Objects
+FR_IBO1      DB engine for IB_Objects - other version
+FR_OCI       DB engine for Oracle 8 (NC OCI library)
+FR_SD        DB engine for SQLDirect library

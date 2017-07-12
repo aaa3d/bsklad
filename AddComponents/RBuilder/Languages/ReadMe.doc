@@ -1,0 +1,150 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff1\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f15\fswiss\fcharset0\fprq2{\*\panose 020b0604030504040204}Tahoma;}{\f16\froman\fcharset0\fprq2{\*\panose 00000000000000000000}02020603050405020304;}{\f276\fswiss\fcharset238\fprq2 Tahoma CE;}{\f277\fswiss\fcharset204\fprq2 Tahoma Cyr;}
+{\f279\fswiss\fcharset161\fprq2 Tahoma Greek;}{\f280\fswiss\fcharset162\fprq2 Tahoma Tur;}{\f281\fswiss\fcharset186\fprq2 Tahoma Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;
+\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;
+\red192\green192\blue192;}{\stylesheet{\nowidctlpar\adjustright \f1 \snext0 Normal;}{\s1\nowidctlpar\adjustright \f1 \sbasedon0 \snext0 heading 1;}{\*\cs10 \additive Default Paragraph Font;}}{\*\listtable{\list\listtemplateid176174758\listsimple
+{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelold\levelspace0\levelindent360{\leveltext\'02\'00.;}{\levelnumbers\'01;}\f0\fbias0 }{\listname ;}\listid429591227}{\list\listtemplateid67698703\listsimple{\listlevel\levelnfc0\leveljc0
+\levelfollow0\levelstartat1\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\fi-360\li360\jclisttab\tx360 }{\listname ;}\listid488447168}{\list\listtemplateid-275318078\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat4
+\levelspace0\levelindent0{\leveltext\'02\'00.;}{\levelnumbers\'01;}\fbias0 \fi-360\li648\jclisttab\tx648 }{\listname ;}\listid1937054144}{\list\listtemplateid176174758\listsimple{\listlevel\levelnfc0\leveljc0\levelfollow0\levelstartat1\levelold
+\levelspace0\levelindent360{\leveltext\'02\'00.;}{\levelnumbers\'01;}\f0\fbias0 }{\listname ;}\listid1968777098}}{\*\listoverridetable{\listoverride\listid1968777098\listoverridecount0\ls1}{\listoverride\listid1937054144\listoverridecount0\ls2}
+{\listoverride\listid488447168\listoverridecount0\ls3}{\listoverride\listid488447168\listoverridecount0\ls4}}{\info{\author Preferred Customer}{\operator Preferred Customer}{\creatim\yr2000\mo2\dy1\hr13\min48}{\revtim\yr2000\mo3\dy25\hr14\min2}{\version6}
+{\edmins11}{\nofpages7}{\nofwords1228}{\nofchars7003}{\*\company Micron Electronics, Inc.}{\nofcharsws0}{\vern89}}\widowctrl\ftnbj\aenddoc\hyphcaps0\viewkind4\viewscale100 \fet0\sectd \linex0\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang
+{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}
+{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9
+\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s1\keepn\nowidctlpar\outlinelevel0\adjustright \f1 {\fs32 ReportBuilder 
+\par International Language Support
+\par }\pard\plain \nowidctlpar\adjustright \f1 {\f0\fs20 
+\par }\pard\plain \s1\sb360\sa80\keepn\nowidctlpar\outlinelevel0\adjustright \f1 {\b Message to Official Translators
+\par }\pard \s1\sa80\keepn\nowidctlpar\outlinelevel0\adjustright {\f0 
+If you have created an official translation for ReportBuilder in the past, or are creating one for the current version, then this message is for you. The strings implementation has been modified as described below. All of the str
+ings in this version have been isolated and placed in resource files.  Also, the language translation app has been updated.  The new ReportBuilder Language Translation App can be downloaded from:
+\par }\pard\plain \sb120\sa240\nowidctlpar\adjustright \f1 {\f0\ul\cf2 http://digital-metaphors.com/lang/rbLang.exe
+\par }\pard \sb80\sa80\nowidctlpar\adjustright {\f0 This is a self-extracting zip file.  By default it will attempt to unzip into the \lquote C:\\RB String Translator\rquote  directory.  Once you\rquote 
+ve unzipped the file, run the rbStringTranslator.exe executable. Instructions on how to enter the translation and generate the RC files are given in the user-interface of the application.  Once you\rquote 
+ve completed the translation and generated the RC files, please zip them up and send them to:
+\par }\pard \sb80\sa240\nowidctlpar\adjustright {\f0\ul\cf2 mailto:support@digital-metaphors.com}{\f0 
+\par }\pard\plain \s1\sb80\sa80\keepn\nowidctlpar\outlinelevel0\adjustright \f1 {\f0 We will include your translation in the next release of ReportBuilder.
+\par }\pard\plain \sb120\sa240\nowidctlpar\adjustright \f1 {\f16\fs20 \page }{\b Deploying your new Translation
+\par }\pard \nowidctlpar\adjustright {\f0 You can compile and deploy your translation using the three .bat files in the ..RBuilder\\Languages directory. The first .bat file is:
+\par 
+\par CreateResFromRC.bat
+\par 
+\par This file uses the Borland Resource Compiler located in your Delphi\\Bin directory to compile the RC files into RES files. If you did not accept the default installation path when installing Delphi, you may need to change the path information in this f
+ile regarding the location of your Delphi\\Bin directory.
+\par 
+\par The second file is:
+\par 
+\par CreateDLLFromRes.bat
+\par 
+\par This file compiles the RES files into DLLs.  These DLLs allow ReportBuilder to switch between different languages at Delphi design-time. If you did not acc
+ept the default installation path when installing Delphi, you may need to change the path information in this file regarding the location of your Delphi\\Bin directory.
+\par 
+\par The third and final file is:
+\par 
+\par CopyDLLToLib.bat
+\par 
+\par This file deploys language support by copying the res files of the default language into the RBuilder\\Lib directory and the DLL files into the Windows\\
+System directory.  If English is not your default language, you will need to modify this file to copy the appropriate default language to RBuilder\\Lib.  Also, if you are using Windows NT, you\rquote 
+ll need to change the target directory for the DLL files to Windows\\System32.
+\par }\pard\plain \s1\sb240\sa120\keepn\nowidctlpar\outlinelevel0\adjustright \f1 {\b \page The Language Resource Files
+\par }\pard\plain \nowidctlpar\adjustright \f1 {\f0 With previous versions of ReportBuilder, all strings were stored in a single set of resource files (p
+pLang1.rc and ppLang2.rc.)  These files contained all strings for all languages.  Due to the number of strings ReportBuilder requires, this approach is no longer feasible.  The strings for each language have been moved to separate files.  These files are 
+located in the ..RBuilder\\Languages directory, under a subdirectory named for the given language. Three letter codes are used to differentiate the language DLLs which are installed in the Windows\\System directory. The extensions correlate as follows:
+
+\par 
+\par }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw30 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw30 \cltxlrtb \cellx4491\pard \nowidctlpar\intbl\adjustright {\b\f0 Enume
+rated Type\cell Folder/File Extension\cell }\pard \widctlpar\intbl\adjustright {\b\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt
+\clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx4491\pard \nowidctlpar\intbl\adjustright {\f0 lgDefault\cell dft\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx4491\pard \nowidctlpar\intbl\adjustright {\f0 lgEnglish\cell eng\cell }\pard \widctlpar\intbl\adjustright {
+\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 lgCustom\cell cst\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 lgDanish\cell dan\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard 
+\nowidctlpar\intbl\adjustright {\f0 lgDutch\cell nld\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 lgFrench\cell fra\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {
+\f0 lgGerman\cell deu\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 lgItalian\cell ita\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 lgPortugueseBrazil\cell 
+ptb\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 lgPortuguese\cell ptg\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 lgSpanish\cell esp\cell }\pard 
+\widctlpar\intbl\adjustright {\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw15 \cltxlrtb \cellx4491\pard 
+\nowidctlpar\intbl\adjustright {\f0 lgSpanishMexico\cell esm\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 lgSwedish\cell sve\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\trowd 
+\trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw30 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw30 \cltxlrtb \cellx4491\pard 
+\nowidctlpar\intbl\adjustright {\f0 lgNorwegian\cell nor\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\adjustright {\f0 
+\par Only those languages which are explicitly selected during install will appear in the Languages folder. The \lquote cst\rquote 
+ folder will always appear in the Languages folder because it represents the custom language type. The cst folder contains the resource files
+ which correlate to the lgCustom enumerated type.  The custom language can be modified to contain your own translation, which will then appear in the ReportBuilder user-interface when the Report.Language property is set to lgCustom.
+\par }\pard\plain \s1\sb360\sa240\keepn\nowidctlpar\outlinelevel0\adjustright \f1 {\b \page The Default Language
+\par }\pard\plain \sa120\nowidctlpar\adjustright \f1 {\f0 The Report.Language property defaults to the lgDefault language type.  This type correlates to the language resource files located in the RBuilder\\
+Lib directory and the language DLLs located in the Windows\\System directory (the DLLs with the .dft extension.
+) The .res files are used when compiling stand-alone executables in Delphi.  The DLLs are used to provide language support at Delphi design-time. When ReportBuilder installs, it copies these files to the appropriate directories.  
+\par }\pard \sb240\sa120\nowidctlpar\adjustright {\f0 The language DLLs which appear in Windows\\System:
+\par }\pard \nowidctlpar\adjustright {\f0\fs20 
+\par }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw30 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw30 \cltxlrtb \cellx7627\pard 
+\nowidctlpar\intbl\adjustright {\b\f0 File Name\cell Description\cell }\pard \widctlpar\intbl\adjustright {\b\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrb\brdrs\brdrw15 
+\clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx7627\pard \nowidctlpar\intbl\adjustright {\f0 rbPrint.dft\cell Strings used by ReportBuilder\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\trowd 
+\trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb 
+\cellx7627\pard \nowidctlpar\intbl\adjustright {\f0 rbIDE.dft\cell Strings used by the Report Designer\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 rbDADE.dft\cell Strings used by DADE (the 'Data' tab)
+\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx7627\pard \nowidctlpar\intbl\adjustright {\f0 rbRAP.dft\cell Strings used by RAP (the 'Calc' tab)\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard 
+\sb240\sa240\nowidctlpar\adjustright {\f0 The resource files which appear in RBuilder\\Lib:
+\par }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw30 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw30 \cltxlrtb \cellx7627\pard 
+\nowidctlpar\intbl\adjustright {\b\f0 File Name\cell Description\cell }\pard \widctlpar\intbl\adjustright {\b\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrb\brdrs\brdrw15 
+\clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx7627\pard \nowidctlpar\intbl\adjustright {\f0 rbPrint.res\cell Strings used by ReportBuilder\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\trowd 
+\trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb 
+\cellx7627\pard \nowidctlpar\intbl\adjustright {\f0 rbIDE.res\cell Strings used by the Report Designer\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard \nowidctlpar\intbl\adjustright {\f0 rbDADE.res\cell Strings used by DADE (the 'Data' tab)
+\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx7627\pard \nowidctlpar\intbl\adjustright {\f0 rbRAP.res\cell Strings used by RAP (the 'Calc' tab)\cell }\pard \widctlpar\intbl\adjustright {\f0 \row }\pard 
+\sb240\nowidctlpar\adjustright {\f0 
+\par }\pard\plain \s1\sb360\sa240\keepn\nowidctlpar\outlinelevel0\adjustright \f1 {\f15 \page }{\b Changing the Default Language
+\par }\pard\plain \sa240\nowidctlpar\adjustright \f1 {\f0 You can change the default language used by ReportBuilder by copying the appropriate language files from the RBuilder\\Languages directory to the RBuilder\\Lib and Windows\\System directori
+es respectively.  For the DLL files make sure you change the extension to .dft. The following copy commands issued at the MS-DOS prompt (from within the RBuilder\\Languages\\sve directory) will change the default language to Swedish: 
+\par }\pard \li720\sa120\nowidctlpar\adjustright {\f0 copy rbPrint.res c:\\progra~1\\borland\\delphi5\\ rbuild~1\\lib
+\par copy rbIDE.res c:\\progra~1\\borland\\delphi5\\ rbuild~1\\lib
+\par copy rbDADE.res c:\\progra~1\\borland\\delphi5\\ rbuild~1\\lib
+\par copy rbRAP.res c:\\progra~1\\borland\\delphi5\\ rbuild~1\\lib
+\par }\pard \li720\sb240\sa120\nowidctlpar\adjustright {\f0 copy rbPrint.sve c:\\windows\\system\\rbPrint.dft
+\par }\pard \li720\sa120\nowidctlpar\adjustright {\f0 copy rbIDE.sve c:\\windows\\system\\rbIDE.dft
+\par copy rbDADE.sve c:\\windows\\system\\rbDADE.dft
+\par copy rbRAP.sve c:\\windows\\system\\rbRAP.dft
+\par }\pard \sb240\sa120\nowidctlpar\adjustright {\f0 Note: If you are using Windows NT you will need to copy the \lquote sve\rquote  files to Windows\\System32.
+\par }\pard\plain \s1\sb360\sa120\keepn\nowidctlpar\outlinelevel0\adjustright \f1 {\b\fs20 \page }{\b Creating a Custom Translation
+\par }\pard \s1\sa240\keepn\nowidctlpar\outlinelevel0\adjustright {\f0 You can use the RB String Translator program to create your own custom translation.  In order to do this you would:
+\par {\pntext\pard\plain\s1 \hich\af0\dbch\af0\loch\f0 1.\tab}}\pard \s1\fi-360\li360\sb120\sa240\keepn\nowidctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\ls4\outlinelevel0\adjustright {\f0 
+Run the RB String Translator program and select the \lquote Custom\rquote  language type.  Then translate each of the strings from English to your target language.
+\par {\pntext\pard\plain\s1 \hich\af0\dbch\af0\loch\f0 2.\tab}}\pard \s1\fi-360\li360\sb120\sa240\keepn\nowidctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\ls4\outlinelevel0\adjustright {\f0 
+Use the RB String Translator to generate the four RC files required  by ReportBuilder Pro.  These files are listed below:
+\par }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw30 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw30 \cltxlrtb \cellx7627\pard\plain 
+\nowidctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright \f1 {\b\f0 File Name\cell Description\cell }\pard \widctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\b\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt
+\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx7627\pard \nowidctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }
+\adjustright {\f0 rbPrint.rc\cell Strings used by ReportBuilder\cell }\pard \widctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f0 \row }\trowd \trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb
+\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb \cellx7627\pard 
+\nowidctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f0 rbIDE.rc\cell Strings used by the Report Designer\cell }\pard \widctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f0 \row }\pard 
+\nowidctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f0 rbDADE.rc\cell Strings used by DADE (the 'Data' tab)\cell }\pard \widctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f0 \row }\trowd 
+\trqc\trgaph108\trleft-108\trbrdrt\brdrs\brdrw30\brdrcf11 \trbrdrb\brdrs\brdrw30\brdrcf11 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2068\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \cltxlrtb 
+\cellx7627\pard \nowidctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f0 rbRAP.rc\cell Strings used by RAP (the 'Calc' tab)\cell }\pard \widctlpar\intbl{\*\pn \pnlvlcont\ilvl0\ls0\pnrnot0\pndec }\adjustright {\f0 \row {\pntext
+\pard\plain\s1 \hich\af0\dbch\af0\loch\f0 3.\tab}}\pard\plain \s1\fi-360\li360\sb240\sa240\keepn\nowidctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\ls4\outlinelevel0\adjustright \f1 {\f0 
+Copy these files to the RBuilder\\Languages\\cst folder.
+\par {\pntext\pard\plain\s1 \hich\af0\dbch\af0\loch\f0 4.\tab}}\pard \s1\fi-360\li360\sb240\sa240\keepn\nowidctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\ls4\outlinelevel0\adjustright {\f0 
+Compile the rc files into resource files by issuing the following commands at the MS-DOS prompt (from within the \lquote cst\rquote  folder):
+\par }\pard \s1\li360\sa120\keepn\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\outlinelevel0\adjustright {\f0 c:\\progra~1\\borland\\delphi5\\bin\\brc32 -r rbPrint.rc
+\par c:\\progra~1\\borland\\delphi5\\bin\\brc32 -r rbIDE.rc
+\par c:\\progra~1\\borland\\delphi5\\bin\\brc32 -r rbDADE.rc
+\par c:\\progra~1\\borland\\delphi5\\bin\\brc32 -r rbRAP.rc
+\par }\pard \s1\li360\sb240\sa120\keepn\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\outlinelevel0\adjustright {\f0 After these comma
+nds have executed you should have four resource files in the cst folder: rbPrint.res, rbIDE.res, rbDADE.res and rbRAP.res.
+\par {\pntext\pard\plain\s1 \hich\af0\dbch\af0\loch\f0 5.\tab}}\pard \s1\fi-360\li360\sb240\sa240\keepn\nowidctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\ls4\outlinelevel0\adjustright {\f0 
+Compile the resource files into DLLs.  The following commands will do this step:
+\par }\pard\plain \li360\sa120\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\adjustright \f1 {\f0 c:\\progra~1\\borland\\delphi5\\bin\\dcc32 rbPrint.dpr
+\par c:\\progra~1\\borland\\delphi5\\bin\\dcc32 rbIDE.dpr
+\par c:\\progra~1\\borland\\delphi5\\bin\\dcc32 rbDADE.dpr
+\par c:\\progra~1\\borland\\delphi5\\bin\\dcc32 rbRAP.dpr
+\par }\pard \li360\sb120\sa120\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\adjustright {\f0 After these commands have executed you should have four cst files in the cst folder: rbPrint.cst, rbIDE.cst, rbDADE.cst and rbRAP.cst.
+\par {\pntext\pard\plain\s1 \hich\af0\dbch\af0\loch\f0 6.\tab}}\pard\plain \s1\fi-360\li360\sb240\sa240\keep\keepn\nowidctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\ls4\outlinelevel0\adjustright \f1 {
+\f0 The final step is to copy the new .res files and DLLs to the appropriate location so that they can be utilized by ReportBuilder.  The res files should be copied to the ..RBuilder\\
+Lib directory and the DLLs (the files with the .cst extension.) should be copied to the Windows\\System directory. The following commands will do this step:
+\par }\pard\plain \li360\sb120\sa120\keep\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\adjustright \f1 {\f0 copy rbPrint.res  c:\\progra~1\\borland\\delphi5\\rbuild~1\\lib\\rbPrint.res
+\par }\pard \li360\sa120\keep\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\adjustright {\f0 copy rbIDE.res  c:\\progra~1\\borland\\delphi5\\rbuild~1\\lib\\rbIDE.res
+\par copy rbDADE.res  c:\\progra~1\\borland\\delphi5\\rbuild~1\\lib\\rbDADE.res
+\par copy rbRAP.res  c:\\progra~1\\borland\\delphi5\\rbuild~1\\lib\\rbRAP.res
+\par }\pard \li360\sb240\sa120\keep\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\adjustright {\f0 copy rbPrint.cst  c:\\windows\\system
+\par }\pard \li360\sa120\keep\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\adjustright {\f0 copy rbIDE.cst  c:\\windows\\system
+\par copy rbDADE.cst  c:\\windows\\system
+\par copy rbRAP.cst  c:\\windows\\system
+\par }\pard \li360\sb240\sa120\keep\nowidctlpar{\*\pn \pnlvlcont\ilvl12\ls0\pnrnot0\pndec }\ilvl12\adjustright {\f0 Note: If you are using Windows NT you will need to copy the DLL files to Windows\\System32.
+\par {\pntext\pard\plain\hich\af0\dbch\af0\loch\f0 7.\tab}}\pard \fi-360\li360\sb240\sa120\keep\nowidctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec\pnstart1\pnindent360\pnhang{\pntxta .}}\ls4\adjustright {\f0 
+Create a report within Delphi, select the lgCustom language type and double-click on the report to display the Report Designer.  Your translated strings will be displayed in the interface.
+\par }}

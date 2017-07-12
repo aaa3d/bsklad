@@ -1,0 +1,48 @@
+// Package file for Delphi 5
+
+package FRDAO5;
+
+{$R 'FR_DaoReg.dcr'}
+
+{$DESCRIPTION 'FastReport 2.4 Diamond DAO Components'}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$IMPLICITBUILD ON}
+
+
+requires
+  VCL50,
+  FR5,
+  Diamond5;
+
+contains
+  FR_DAOReg in 'FR_DAOReg.pas',
+  FR_DAODB in 'FR_DAODB.pas',
+  FR_DAOMd in 'FR_DAOMd.pas' {frDAOFieldsLinkForm},
+  FR_DAOTable in 'FR_DAOTable.pas',
+  FR_DAOQueryParam in 'FR_DAOQueryParam.pas' {frDAOParamsForm},
+  FR_DAOQuery in 'FR_DAOQuery.pas',
+  FR_DAOQueryDef in 'FR_DAOQueryDef.pas',
+  FR_DAOQueryDefParam in 'FR_DAOQueryDefParam.pas' {frDAODefParamsForm},
+  FR_DAOMasterDetailTable in 'FR_DAOMasterDetailTable.pas';
+
+end.

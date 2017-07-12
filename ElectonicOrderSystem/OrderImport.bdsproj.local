@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2008.03.11 11:41:29.654.pas,\\server\Компьютерная служба\aaa - Игорь Сторожев\Borland Studio Projects\Unit4.pas=C:\bsklad\bsklad\ElectonicOrderSystem\Unit5.pas</Transaction>
+    <Transaction>2008.03.11 11:41:29.654.dfm,\\server\Компьютерная служба\aaa - Игорь Сторожев\Borland Studio Projects\Unit4.dfm=C:\bsklad\bsklad\ElectonicOrderSystem\Unit5.dfm</Transaction>
+    <Transaction>2008.03.11 11:41:43.197.bdsproj,\\server\Компьютерная служба\aaa - Игорь Сторожев\Borland Studio Projects\Project4.bdsproj=C:\bsklad\bsklad\ElectonicOrderSystem\OrderImport.bdsproj</Transaction>
+  </Transactions>
+</BorlandProject>

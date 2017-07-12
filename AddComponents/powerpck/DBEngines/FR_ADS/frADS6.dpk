@@ -1,0 +1,46 @@
+// Package file for Delphi 6
+
+package frADS6;
+
+{$R *.res}
+{$R 'FR_ADSreg.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'FastReport 2.4 ADS Components'}
+{$IMPLICITBUILD ON}
+
+requires
+  VCL,
+  VCLDB,
+  VCLSMP,
+  FR6,
+  ADSD60;
+
+contains
+  FR_ADSReg in 'FR_ADSReg.pas',
+  FR_ADSDB in 'FR_ADSDB.PAS',
+  FR_ADSMd in 'FR_ADSMd.pas',
+  FR_ADSQuery in 'FR_ADSQuery.pas',
+  FR_ADSQueryParam in 'FR_ADSQueryParam.pas',
+  FR_ADSTable in 'FR_ADSTable.pas';
+
+end.

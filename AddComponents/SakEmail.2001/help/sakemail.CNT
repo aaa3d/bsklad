@@ -1,0 +1,121 @@
+:Base  sakimail.HLP
+:Title Contents Title
+1 Alphabetical classes list
+2 TAttachedFile=TAttachedFile
+3 TAttachedFiles=TAttachedFiles
+3 TBase64DecodingStream=TBase64DecodingStream
+3 TBase64EncodingStream=TBase64EncodingStream
+3 TSakIMAP=TSakIMAP
+3 TSakMsg=TSakMsg
+3 TSakMsgList=TSakMsgList
+3 TSakPOP=TSakPOP
+3 TSakSMTP=TSakSMTP
+2 Alphabetical types list
+3 THTMLAttachmentType - TSessionState
+4 THTMLAttachmentType=THTMLAttachmentType
+4 TMessageType=TMessageType
+4 TOnBeforeRetrieve=TOnBeforeRetrieve
+4 TOnCodeProgressEvent=TOnCodeProgressEvent
+4 TOnCodeStartEvent=TOnCodeStartEvent
+4 TOnDeleteEvent=TOnDeleteEvent
+4 TOnError=TOnError
+4 TOnSendProgressEvent=TOnSendProgressEvent
+4 TPriority=TPriority
+4 TSessionState=TSessionState
+3 TTextEncoding - TToFromSocketEvent
+4 TTextEncoding=TTextEncoding
+4 TToFromSocketEvent=TToFromSocketEvent
+2 Alphabetical procedures list
+3 Register - sak_FormatAddress
+4 Register=Register
+4 sak_CleanUpAddresses=sak_CleanUpAddresses
+4 sak_ConvertCharSet=sak_ConvertCharSet
+4 sak_DeleteHeaders=sak_DeleteHeaders
+4 sak_DelFromStr=sak_DelFromStr
+4 sak_ExtractAddress=sak_ExtractAddress
+4 sak_ExtractAlias=sak_ExtractAlias
+4 sak_FindFieldInHeaders=sak_FindFieldInHeaders
+4 sak_FormatAddress=sak_FormatAddress
+3 sak_GenerateBoundary - sak_StrWord2Int
+4 sak_GenerateBoundary=sak_GenerateBoundary
+4 sak_GetBoundaryOutOfLine=sak_GetBoundaryOutOfLine
+4 sak_GetFieldValueFromLine=sak_GetFieldValueFromLine
+4 sak_GetInternetDate=sak_GetInternetDate
+4 sak_GetMIMEType=sak_GetMIMEType
+4 sak_GetTempPath=sak_GetTempPath
+4 sak_IsIPAddress=sak_IsIPAddress
+4 sak_MakeUniqueID=sak_MakeUniqueID
+4 sak_QuotedPrintableDecode=sak_QuotedPrintableDecode
+4 sak_StrWord2Int=sak_StrWord2Int
+3 sak_UnQuote
+4 sak_UnQuote=sak_UnQuote
+2 Classes and procedures by units
+3 sak_util
+4 Unit description=sak_util
+4 Procedures
+5 sak_CleanUpAddresses=sak_CleanUpAddresses
+5 sak_ConvertCharSet=sak_ConvertCharSet
+5 sak_DeleteHeaders=sak_DeleteHeaders
+5 sak_DelFromStr=sak_DelFromStr
+5 sak_ExtractAddress=sak_ExtractAddress
+5 sak_ExtractAlias=sak_ExtractAlias
+5 sak_FindFieldInHeaders=sak_FindFieldInHeaders
+5 sak_FormatAddress=sak_FormatAddress
+5 sak_GenerateBoundary=sak_GenerateBoundary
+5 sak_GetBoundaryOutOfLine=sak_GetBoundaryOutOfLine
+5 sak_GetFieldValueFromLine=sak_GetFieldValueFromLine
+5 sak_GetInternetDate=sak_GetInternetDate
+5 sak_GetTempPath=sak_GetTempPath
+5 sak_IsIPAddress=sak_IsIPAddress
+5 sak_MakeUniqueID=sak_MakeUniqueID
+5 sak_StrWord2Int=sak_StrWord2Int
+5 sak_UnQuote=sak_UnQuote
+4 Types
+5 TOnCodeProgressEvent=TOnCodeProgressEvent
+5 TOnCodeStartEvent=TOnCodeStartEvent
+5 TOnError=TOnError
+3 SakAttFile
+4 Unit description=SakAttFile
+4 TAttachedFile=TAttachedFile
+4 TAttachedFiles=TAttachedFiles
+3 SakIMAP
+4 Unit description=SakIMAP
+4 TSakIMAP=TSakIMAP
+4 Types
+5 TOnBeforeRetrieve=TOnBeforeRetrieve
+5 TOnDeleteEvent=TOnDeleteEvent
+5 TToFromSocketEvent=TToFromSocketEvent
+3 SakMIME
+4 Unit description=SakMIME
+4 TBase64DecodingStream=TBase64DecodingStream
+4 TBase64EncodingStream=TBase64EncodingStream
+4 Procedures
+5 sak_GetMIMEType=sak_GetMIMEType
+5 sak_QuotedPrintableDecode=sak_QuotedPrintableDecode
+3 SakMsg
+4 Unit description=SakMsg
+4 TSakMsg=TSakMsg
+4 TSakMsgList=TSakMsgList
+4 Types
+5 THTMLAttachmentType=THTMLAttachmentType
+5 TMessageType=TMessageType
+5 TPriority=TPriority
+5 TTextEncoding=TTextEncoding
+3 SakPOP3
+4 Unit description=SakPOP3
+4 TSakPOP=TSakPOP
+4 Types
+5 TOnBeforeRetrieve=TOnBeforeRetrieve
+5 TOnDeleteEvent=TOnDeleteEvent
+5 TSessionState=TSessionState
+5 TToFromSocketEvent=TToFromSocketEvent
+3 SakRegister
+4 Unit description=SakRegister
+4 Procedures
+5 Register=Register
+3 SakSMTP
+4 Unit description=SakSMTP
+4 TSakSMTP=TSakSMTP
+4 Types
+5 TOnSendProgressEvent=TOnSendProgressEvent
+5 TToFromSocketEvent=TToFromSocketEvent

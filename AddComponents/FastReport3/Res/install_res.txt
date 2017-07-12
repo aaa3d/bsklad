@@ -1,0 +1,18 @@
+1. Remove the following files from the FastReport 3\Lib folder:
+- frxrcClass.dcu
+- frxrcDesgn.dcu
+- frxrcInsp.dcu
+- frxrcExports.dcu
+- fs_iconst.dcu
+  
+2. Copy the *.pas files from desired folder to the FastReport 3\Lib folder.
+  For FR3 Professional Edition:
+- frxrcClass.pas -> FastReport 3\Source
+- frxrcDesgn.pas -> FastReport 3\Source
+- frxrcExports.pas -> FastReport 3\Source\ExportPack
+- frxrcInsp.pas -> FastReport 3\Source
+- fs_iconst.pas -> FastReport 3\FastScript
+
+3. Recompile the FastReport packages (see install.txt file,
+  section III or IV). Only fs*.dpk, frx*.dpk, frxe*.dpk packages need to
+  be recompiled ('*' = your Delphi version).

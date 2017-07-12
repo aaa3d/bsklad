@@ -1,0 +1,45 @@
+package dclRBE55;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ReportBuilder Enterprise'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rbBDE55,
+  rbIDE55,
+  rbRCL55,
+  vcljpg50,
+  rbCIDE55;
+
+contains
+  ppRegPro in 'ppRegPro.pas',
+  ppCDShow in 'ppCDShow.pas',
+  ppDsgWin in 'ppDsgWin.pas',
+  ppPropEd in 'ppPropEd.pas',
+  ppFLnkEd in 'ppFLnkEd.pas',
+  ppFldEd in 'ppFldEd.pas',
+  ppJPEG in 'ppJPEG.pas';
+
+end.

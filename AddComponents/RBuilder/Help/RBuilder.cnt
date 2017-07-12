@@ -1,0 +1,98 @@
+:Base RBUILDER.HLP>main
+:Title ReportBuilder Help
+1 ReportBuilder Reference
+2 What's new in ReportBuilder?
+3 Enterprise Edition
+4 RAP (Report Application Pascal)=What_s_New_for_5.0__RAP
+3 Professional Edition
+4 AutoJoin=What_s_New_for_4.2__AutoJoin
+4 Database-Specific End-User Examples=What_s_New_for_4.2__Database_Specific_End_User_Examples
+4 Data Dictionary Builder=Data_Dictionary_Builder
+4 International Language Support (Updated)=What_s_New_for_4.2__International_Language_Support
+4 CrossTab Component=What_s_New_for_4.1__CrossTab_Component
+4 DADE (Data Access Development Environment)=What_s_New_for_4.0__End_User_Solution__Embedded_DataViews_
+4 Data Dictionary component=DataDictionary_Component
+4 Report Explorer component=ReportExplorer_Component
+4 Converting Old End-User Solutions=What_s_New_for_4.0__Converting_Old_End_User_Solutions
+3 Standard Edition
+4 Label Templates=What_s_New_for_4.2__Label_Templates
+4 AutoSearch=What_s_New_for_4.2__AutoSearch
+4 Print Dialog (Updated)=What_s_New_for_4.2__Print_Dialog__Updated_
+4 LookAhead Calculations=What_s_New_for_4.2__LookAhead_Calculations
+4 JPEG & GIF support=What_s_New_for_4.1__JPEG___GIF_support
+4 RTF2 Support via InfoPower=What_s_New_for_4.1__RTF2_support_via_InfoPower_components
+4 New Developer's Guide=What_s_New_for_4.1__New_Developer_s_Guide
+4 Miscellaneous Enhancements=What_s_New_for_4.2__Miscellaneous_Enhancements
+4 Data Tree=What_s_New_for_4.0__Data_Tree
+4 Report Tree=What_s_New_for_4.0__Report_Tree
+4 Report Wizard at Design-Time=What_s_New_for_4.0__Report_Wizard_at_Design_Time
+4 Enhanced File Device Architecture=What_s_New_for_4.0__Enhanced_File_Device_Architecture
+4 Mail/Merge RichText=What_s_New_for_4.0__Mail_Merge_RichText
+4 Master/Detail Support for TextPipeline and JITPipeline=What_s_New_for_4.0__Master_Detail_support_for_TextPipeline_and_JITPipeline
+4 New BarCode Types=What_s_New_for_4.0__New_BarCode_Types
+4 Form Emulation with PageStyles=What_s_New_for_4.0__Form_Emulation_with_PageStyles
+4 Report as Text Device=What_s_New_for_4.0__Report_as_Text_Device
+4 DBPipeline and BDEPipeline enhancements=What_s_New_for_4.0__Field_Support_for_DBPipeline_and_BDEPipeline
+4 TeeChart 4.01 Support=What_s_New_for_4.0__TeeChart_4.01_Support
+4 Converting pre-4.0 Reports...=What_s_New_for_4.0__Converting_pre_4.0_Reports...
+4 Discontinued properties and methods=What_s_New_for_4.0__Discontinued_properties_and_methods
+2 Installing ReportBuilder into Delphi 5
+3 Enterprise Edition=Installing_Delphi_5_Enterprise
+3 Professional Edition=Installing_Delphi_5_Professional
+3 Standard Edition=Installing_Delphi_5_Standard
+2 Installing ReportBuilder into Delphi 4
+3 Enterprise Edition=Installing_Delphi_4_Enterprise
+3 Professional Edition=Installing_Delphi_4_Professional
+3 Standard Edition=Installing_Delphi_4_Standard
+2 Delphi Component Palette
+3 ArchiveReader Component=ArchiveReader_Component
+3 BDEPipeline Component=BDEPipeline_Component
+3 DBPipeline Component=TppDBPipeline_Component
+3 JITPipeline Component=JITPipeline_Component
+3 TextPipeline Component=TextPipeline_Component
+3 DataDictionary Component (Pro Only)=DataDictionary_Component
+3 Report Component=Report_Component
+3 Viewer Component=Viewer_Component
+3 Designer Component (Pro Only)=Designer_Component
+3 ReportExplorer Component (Pro Only)=ReportExplorer_Component
+2 Bands and Groups
+3 ColumnFooterBand Component=ColumnFooterBand_Component
+3 ColumnHeaderBand Component=ColumnHeaderBand_Component
+3 DetailBand Component=DetailBand_Component
+3 FooterBand Component=FooterBand_Component
+3 Group Component=Group_Component
+3 GroupFooterBand Component=GroupFooterBand_Component
+3 GroupHeaderBand Component=GroupHeaderBand_Component
+3 HeaderBand Component=HeaderBand_Component
+3 SummaryBand Component=SummaryBand_Component
+3 TitleBand Component=TitleBand_Component
+3 PageStyle Component=PageStyle_Component
+2 ReportBuilder Component Palette
+3 BarCode Component=BarCode_Component
+3 CrossTab Component (Pro Only)=CrossTab_Component
+3 DBBarCode Component=DBBarCode_Component
+3 DBCalc Component=DBCalc_Component
+3 DBImage Component=DBImage_Component
+3 DBMemo Component=DBMemo_Component
+3 DBRichText Component=DBRichText_Component
+3 DBTeeChart Component=DBTeeChart_Component
+3 DBText Component=DBText_Component
+3 Image Component=Image_Component
+3 DPTeeChart Component=DPTeeChart_Component
+3 Label Component=Label_Component
+3 Line Component=Line_Component
+3 Memo Component=Memo_Component
+3 Region Component=Region_Component
+3 RichText Component=RichText_Component
+3 Shape Component=Shape_Component
+3 SubReport Component=SubReport_Component
+3 SystemVariable Component=SystemVariable_Component
+3 TeeChart Component=TeeChart_Component
+3 Variable Component=Variable_Component
+2 Troubleshooting
+3 Controlling the End-User Application=Controlling_the_End_User_Application
+2 History of ReportBuilder Versions
+3 History of ReportBuilder Versions=History_of_ReportBuilder_Versions
+2 Order ReportBuilder!
+3 Order ReportBuilder!=ReportBuilder_by_Digital_Metaphors
+:Include rap.cnt

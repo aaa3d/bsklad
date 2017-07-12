@@ -1,0 +1,58 @@
+
+  frStAddDialogControls это набор дополнительных компонент для их генератора
+отчетов FastReport 2.4 (www.fast-report.com). Поддерживаются D3, D4, D5.
+
+  Пока   библиотека   содержит   только   два   компонента  frCheckListBox  
+и frRxCheckListBox. Так как оба компонента одновременно сразу вряд ли кто то
+будет использовать, то выбор который из компонентов использовать делается в
+.inc файле включением или отключением define RX_CHECKLISTBOX.
+  В будущем я планирую расширить библиотеку, добавив в нее новые компоненты.
+
+frCheckListBox:
+published
+  Items[]
+  AllowGrayed: Boolean
+public
+  ItemEnabled[Index: Integer]: Boolean
+  Checked[Index: Integer]: Boolean
+  State[Index: Integer]: TCheckBoxState
+  Items.Count
+Method
+  Items.Add(<Строка>)
+  Clear
+  ApllyState(AState: TCheckBoxState; EnabledOnly: Boolean);
+  SaveStates(<Имя ini-файлы>, <Имя секции>)
+  RestoreStates(<Имя ini-файлы>, <Имя секции>)
+
+
+frRxCheckListBox:
+published
+  Items[]
+  AllowGrayed: Boolean
+  AutoScroll: Boolean
+  CheckKind: TCheckKind
+public
+  EnabledItem[Index: Integer]: Boolean
+  Checked[Index: Integer]: Boolean
+  State[Index: Integer]: TCheckBoxState
+  Items.Count
+  CheckedIndex
+Method
+  Items.Add(<Строка>)
+  Clear
+  ApllyState(AState: TCheckBoxState; EnabledOnly: Boolean);
+  SaveStates(<Имя ini-файлы>, <Имя секции>)
+  RestoreStates(<Имя ini-файлы>, <Имя секции>)
+
+  Все  свойства  и  методы  этих  компонент  аналогичны  таким же свойствам и
+методам их предков (CheckListBox и RxCheckListBox). Соответственно помощь по
+этим методам и свойства смотрите там же.
+  Методы  SaveStates   и   RestoreStates  предназначены  для  сохранения  и
+восстановления пометок в ini файле.
+
+
+Ну вот вроде бы пока и все. Если найдете какие либо глюки или есть 
+предложения пишите:
+
+stalker@miac.dp.ua или 2:464/732.4
+Толик Гусин

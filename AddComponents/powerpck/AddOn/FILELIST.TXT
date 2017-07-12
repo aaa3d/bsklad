@@ -1,0 +1,8 @@
+File               Description
+----------------   ----------------------------------------
+FR_AddComponents   CheckListBox and RXCheckListBox controls
+FR_AddFunction     A lot of additional functions (date/time/string etc.)
+FR_AdvPicture      TfrAdvPictureView object (supports gif/jpeg)
+FR_FillRect        TfrFillRectView object
+FR_SNR_2           Search & Replace dialog for FR designer
+PI_CROSS           Enhanced Cross-tab by Pavel Ishenin

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" DotMatrixReport="False" EngineOptions.MaxMemSize="10000000" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="37871,9970438889" ReportOptions.Description.Text="Demonstrates how to break long memos. Set &#34;Stretched&#34; and &#34;AllowSplit&#34; options of the MasterData band and &#34;Stretched&#34; option of the object with long memo." ReportOptions.LastChange="38344,7178983333" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403880003546F7003B00008446174617365747301010C2D00000020446174615365743D225265706F7274446174612E42696F44532220446174615365744E616D653D2242696F220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="5" RightMargin="5" TopMargin="5" BottomMargin="5" Columns="2" ColumnWidth="361" ColumnPositions.Text="0&#13;&#10;105" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="Band1" Height="26,45671" Left="0" Top="18,89765" Width="755,906">
+      <TfrxMemoView Name="Memo1" Left="0" Top="0" Width="748,34694" Height="22,67718" Color="8421376" Font.Charset="1" Font.Color="16777215" Font.Height="-16" Font.Name="Arial" Font.Style="1" HAlign="haCenter" Memo.Text="Fishes" ParentFont="False" VAlign="vaCenter"/>
+    </TfrxReportTitle>
+    <TfrxPageHeader Name="Band2" Height="37,7953" Left="0" Top="68,03154" Width="755,906" PrintOnFirstPage="False">
+      <TfrxMemoView Name="Memo2" Left="0" Top="3,77953" Width="748,34694" Height="15,11812" Color="16777215" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="8" Frame.Width="2" HAlign="haRight" Memo.Text="Favourite fishes of Borland Corp." ParentFont="False"/>
+    </TfrxPageHeader>
+    <TfrxMasterData Name="Band3" Height="105,82684" Left="0" Top="166,29932" Width="755,906" AllowSplit="True" Columns="1" ColumnWidth="200" ColumnGap="20" DataSet="ReportData.BioDS" DataSetName="Bio" RowCount="0" Stretched="True">
+      <TfrxMemoView Name="Memo3" Left="3,77953" Top="7,55906" Width="260,78757" Height="68,03154" Color="16777215" Font.Charset="1" Font.Color="32768" Font.Height="-13" Font.Name="Arial" Font.Style="0" Frame.Typ="15" Memo.Text="Number: [Bio.&#34;Species No&#34;]&#13;&#10;Name: [Bio.&#34;Common Name&#34;]&#13;&#10;Spec name: [Bio.&#34;Species Name&#34;]&#13;&#10;Length (cm): [Bio.&#34;Length (cm)&#34;]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo4" Left="3,77953" Top="79,37013" Width="260,78757" Height="18,89765" StretchMode="smMaxHeight" Color="16777215" DataField="Notes" DataSet="ReportData.BioDS" DataSetName="Bio" Font.Charset="1" Font.Color="128" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="15" HAlign="haBlock" HideZeros="True" Memo.Text="[Bio.&#34;Notes&#34;]" ParentFont="False"/>
+      <TfrxPictureView Name="Picture1" Left="268,34663" Top="7,55906" Width="83,14966" Height="68,03154" DataField="Graphic" DataSet="ReportData.BioDS" DataSetName="Bio" Frame.Typ="15"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="Band4" Height="22,67718" Left="0" Top="332,59864" Width="755,906">
+      <TfrxMemoView Name="Memo5" Left="0" Top="3,77953" Width="748,34694" Height="15,11812" Color="16777215" Font.Charset="1" Font.Color="0" Font.Height="-11" Font.Name="Arial" Font.Style="0" Frame.Typ="4" Frame.Width="2" HAlign="haRight" Memo.Text="[Page#]" ParentFont="False"/>
+    </TfrxPageFooter>
+  </TfrxReportPage>
+</TfrxReport>

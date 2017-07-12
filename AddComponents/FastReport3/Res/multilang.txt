@@ -1,0 +1,14 @@
+Use the RES\multilang.exe wizard to generate multi-language resource file. 
+It will create the frxMultiLang.pas unit with the following contents:
+
+unit frxMultiLang;
+
+interface
+
+procedure SetEnglishResources;
+procedure SetRussianResources;
+
+...
+
+You need to include this unit into your app. To switch the resources, just 
+call one of SetXXXResources methods.

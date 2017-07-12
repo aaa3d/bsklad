@@ -1,0 +1,18 @@
+#include "snr_const.pas"
+
+STRINGTABLE
+{
+  snrCaption,     "Поиск и замена"
+
+  snrSearch,      "Поиск"
+  snrReplace,     "Замена"
+  snrStop,        "Стоп"
+  snrReplaceAll,  "Замен.все"
+  snrClose,       "Закрыть"
+
+  snrCaseInsensitive, "Регистронезависимо"
+  snrSearchInScript,  "Искать в скриптах"
+  snrSearchInMemo,    "Искать в memo"
+
+  snrClear, "Очистить результаты"
+}

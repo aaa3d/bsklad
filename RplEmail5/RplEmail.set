@@ -1,0 +1,36 @@
+Title		"Программа связи через Outlook."
+DataBasePath	"127.0.0.1:c:\base\current\bsklad2005.fdb"
+
+
+
+PocketPath	"c:\"
+CodeShop	1
+MainDescr	Yar9
+BasePAth	"
+EmailAddres	1	"Офис"			bsklad@olimpiya.yaroslavl.ru
+EmailAddres	5	"Олимп-4"		bsklad-ol4@olimpiya.yaroslavl.ru
+EmailAddres	14	"Олимп-7М"		bsklad-ol7@olimpiya.yaroslavl.ru
+#EmailAddres	2	"Олимп-1"		olimp1@olimpiya.yaroslavl.ru
+#REEmailAddres	15	"Олимп-4"		bsklad-ol4@olimpiya.yaroslavl.ru
+
+
+#ADD_TIME - сколько дополнительно минут будет в пакете
+#MAX_LINES_COUNT	- ограничение на количество строк в письме
+#DISABLE_MULTIPLE_INSTANCES	- запрещает запуск несколльких программ одновременно
+ADD_TIME		15
+MAX_LINES_COUNT	10000
+COMMIT_INTERVAL	1000
+DISABLE_MULTIPLE_INSTANCES 1
+
+USE_OUTLOOK_FOR_SEND_MAIL	1
+
+ADMIN_EMAIL	aaa@olimpiya.yaroslavl.ru,kerberos@olimpiya.yaroslavl.ru
+EMAIL_HOST	192.168.0.1
+
+NETSENDUSERSTIMESTART 	08:30
+NETSENDUSERSTIMEEND 		17:00
+
+khgbNETSENDUSER crater
+k,jbNETSENDUSER aaa
+k.jnbNETSENDUSER kerberos
+.ljhNETSENDUSER maryuka

@@ -1,0 +1,9 @@
+Folder       Description
+-----------  ----------------------------------------
+DBEngines    DB engine for  IBO, ADO, Advantage, NativeDB,
+             Sybase, DAO, DBISAM, DOA, FlashFiler, FreeIB,
+             IB_Objects, Oracle (OCI), SQLDirect 
+AddOn        Add-on components for FastReport designer 
+             and report engine
+Export       Export filters RTF, XLS, HTM, BMP, JPG, GIF
+Import       Import filters MS Word, MS Excel

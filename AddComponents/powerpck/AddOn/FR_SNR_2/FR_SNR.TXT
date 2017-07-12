@@ -1,0 +1,20 @@
+Search'N'Replace dialog for FastReport 2.4x
+-------------------------------------------
+Author:  Dmitry Koudryavtsev
+Version: 2.0 beta 3
+Tested:  Delphi 3, 6
+Web:     http://juliasoft.chat.ru
+E-mail:  juliasoft@mail.ru
+Comment: Any comments and suggestions are welcome
+
+- apply patch from fr_desgn.patch to fr_desgn.pas, 
+- apply fr_const.patch to fr_const.pas,
+- add 'Search && Replace' item in main frDesigner menu, 
+- assign OnClick event for Search1Click,
+- copy res/<language>/fr_snr.rc in fr_snr directory
+- run mk.bat; 
+- add fr_snr.pas in your frX.dpk, 
+- compile/install frX.dpk package...
+
+Now, rebuild your application...
+

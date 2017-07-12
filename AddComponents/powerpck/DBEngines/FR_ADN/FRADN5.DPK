@@ -1,0 +1,54 @@
+// Package file for Delphi 5
+
+package frADN5;
+
+{$R *.RES}
+{$R 'FR_ADNreg.dcr'}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'FastReport 2.4 ADN Components'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  Vcl50,
+  Vclx50,
+  vcljpg50,
+  VclSmp50,
+  Vcldb50,
+  ADONIS,
+  ADOXCSP,
+  doqb50,
+  doqbadn,
+  RxCtl5,
+  pkgGifImage,
+  FR5_242R;
+
+contains
+  FR_ADNReg in 'FR_ADNReg.pas',
+  FR_ADNDB in 'FR_ADNDB.pas',
+  FR_ADNQuery in 'FR_ADNQuery.pas',
+  FR_ADNQueryParam in 'FR_ADNQueryParam.pas',
+  FR_ADNTable in 'FR_ADNTable.pas',
+  FR_ADNMd in 'FR_ADNMd.pas' {frADNFieldsLinkForm};
+
+end.

@@ -1,0 +1,11 @@
+unit FR_Const;
+
+...
+
+  SInsertCrosstab = frRes + 2480;
+
+  SsrSearch  = frRes + 2490; // DIM
+
+implementation
+
+end.

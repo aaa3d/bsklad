@@ -1,0 +1,28 @@
+Only Builder 4&5 Projects I am afraid. IBO40_FRIB_C4 & 5.
+
+Built in line with other IBObjects add-on's, it is saved as $(BCB)\Projects\IBO4\FRIBO\*.*
+and uses the $(BCB)\Projects\Bpl, $(BCB)\Projects\Lib, and $(BCB)\Projects\IBO4\inter.
+
+
+If someone can provide Delphi versions I will add them in, but I don't do Delphi.
+
+This is a very rough cut, but it works.
+
+It creates an IB_Connection and an IB_Query component on the FastReport Dialog tool bar.
+
+Both work into Jason's SQLEditor and QueryEditor, so nothing much to learn.
+
+I only needed to be able to create a single on the fly query, and it does that fine.
+
+
+'Bugs' seen so far.
+
+1/ Password needs to be added to the component if you don't want the connection dialog to keep poping up.
+( I need to work out how the get Geoff's password stuff managed )
+
+2/ Insert data field list has duplicate entries, but the real Query one's work fine. 
+
+3/ The connection entry does not always appear in the ObjectInspector entry, but is connected.
+
+4/ It does not do Parameters In as yet ( I said it was rough ).
+

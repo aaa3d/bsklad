@@ -1,0 +1,129 @@
+EHLib history
+
+Version 1.5
+
+  IMPORTANT FOR C++ BUILDER DEVELOPERS
+  ALL COMPLETIONS "EH" ARE REPLACED BY "Eh"
+ 
+ * Help file compiled under english localization settings
+ + Added Delphi 5 support (Packages compiled under trial 
+    version of Delphi 5 (Build 4.32))
+ + Added new component TPrintDBGridEh for printing and preview 
+   of TDBGridEh. 
+ + Added new component TPreviewBox for customizing preview form.
+ + Added new object TPrinterPreview to direct printable stuff to 
+   the preview box.
+
+  In TDBGridEh
+   * Highlighted frozen cells in rowselect mode
+   * Allows press title buttons and move columns by left mouse 
+       button simultaneously.
+
+  In TColumnEh
+   + Added cbsUpDown value in ButtonStyle property.
+   + Added Increment property. Works when ButtonStyle =  cbsUpDown.
+
+ * Some bugfixes.
+
+
+Version 1.03
+
+  New help file that can be inserted in Delphi help system.
+  Included support Borland C++ Builder versions 3 & 4.
+
+  In TDBGridEH
+    + Added dghAutoSortMarking, dghMultiSortMarking 
+        values in TDBGridEhOption type (property OptionsEh).
+         dghAutoSortMarking         Automaticaly marking title 
+                                    by SortMarking images.
+         dghMultiSortMarking        Allow sortmarking multiple columns.
+                                    At runtime use Ctrl + Mouse combination 
+                                    for multisortmarking.
+    + Added event OnSortMarkingChanged : TNotifyEvent;
+    + Added procedure SaveGridLayout(ARegIni: TRegIniFile);
+    + Added procedure RestoreGridLayout(ARegIni: TRegIniFile; 
+                RestoreParams:TDBGridEhRestoreParams);
+    + Added procedure SaveGridLayoutIni(IniFileName: String; 
+                Section: String; DeleteSection: Boolean);
+    + Added procedure RestoreGridLayoutIni(IniFileName: 
+                String; Section: String; RestoreParams:TDBGridEhRestoreParams);
+  In TColumnEH
+    + Added property Checkboxes: Boolean. Determine need show checkboxes 
+       enstead of text. Checkboxes automativcaly true for boolean field.
+       For non boolean fill first line of KeyList for checked checkboxes.
+       Second line for nonchecked.
+
+  * Some bugfixes.
+
+Version 1.02
+
+  In TDBGridEH
+     + Added multyline editing.
+     + Added edit of memo fields.
+     + Added dghHighlightFocus, dghClearSelection, dghFitRowHeightToText
+        values in TDBGridEhOption type (property OptionsEh).
+	dghHighlightFocus              Highlight a focus cell
+        dghClearSelection              Clear selected rows after selecting
+        dghFitRowHeightToText          Fit row height to height of text lines
+     + Added multiselect by the mouse.
+     + Added trace a focus cell by the mouse.
+
+  * Some bugfixes.
+
+Version 1.01
+  In TDBGridEH
+     + Added HorzScrollBar and VertScrollBar properties to control 
+        the scrollbar in grid.
+     + Added OptionsEh properties to specifies various display and behavioral 
+        properties of grid.
+     + Added SaveColumnsLayoutIni and RestoreColumnsLayoutIni procedures to 
+        save and restore some grid parameters in/from ini file.
+     + Added support to show drop down calendar for TDate and TDateTime fields.
+
+  In TColumnEH
+     + Added DblClickNextVal property to set next value for some type of 
+        column on double mouse click.
+     + Added KeyList property to show bitmaps from ImageList depending on 
+        field value and to show text from PickList.
+     + Added ImageList property to show bitmaps depending of field value.
+     + Added MaxWidth, MinWidth property to limit column width.
+     + Added NotinKeyListIndex to show image for null field value.
+  
+  In TDBSumList
+     + Added support to work with no sequenced dataset as with sequenced.
+
+  * Some bugfixes.
+
+Version 1.00 
+  In TDBGridEH
+       PROPERTY ROWSHEIGHT WAS RENAMED TO ROWHEIGHT.
+       EVENT ONDRAWFOTTERCELL WAS RENAMED TO ONDRAWFOOTERCELL.
+     + Added Footer property in TColumnEh object. Now you can sum
+        values without using the TDBSumList component.
+     + Added procedure InvalidateFooter.
+     + Added procedure DefaultDrawFooterCell;
+     + Added function GetFooterValue;
+     + Moved function CellRect to the public section;
+     + Added property SumList : TDBGridEhSumList;
+     + Added event OnSumListRecalcAll : TNotifyEvent;
+     + Added event OnDrawFooterCell : TDrawFooterCellEvent;
+     + Added event OnGetFooterParams : TGetFooterParamsEvent;
+     * Fixed a bug with an exception at design time when a column is 
+        selected in the object inspector and form while TDBGridEH is closing.
+     * Fixed a bug while renaming a Column.Title.Caption in 
+        UseMultyTitle mode.
+     * Fixed bug with unceasing redrawing of the grid if Column.ReadOnly = True
+        for second columns in title on several columns.
+     * Fixed bug that does not redraw data rows for some grid colors.
+   In TDBSumList
+     + Added property Active : Boolean.
+     + Added property ExternalRecalc : Boolean.
+     + Added event OnRecalcAll.
+     + Added procedures Activate, ClearSumValues, Deactivate.
+     * Fixed bug that does not recalculate when changing DataSet.Filter string.
+     * Master/detail support.
+
+
+15-Oct-1998
+  TDBGridEH  v1.01
+  TDBSumList v1.00

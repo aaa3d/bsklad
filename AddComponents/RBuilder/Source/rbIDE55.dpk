@@ -1,0 +1,78 @@
+package rbIDE55;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ReportBuilder Designer'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rbRCL55;
+
+contains
+  ppPgSDlg in 'ppPgSDlg.pas',
+  ppAbout in 'ppAbout.pas',
+  ppFmtDlg in 'ppFmtDlg.pas',
+  ppGrpDlg in 'ppGrpDlg.pas',
+  ppGrdDlg in 'ppGrdDlg.pas',
+  ppTxtDlg in 'ppTxtDlg.pas',
+  ppRichEd in 'ppRichEd.pas',
+  ppClcDlg in 'ppClcDlg.pas',
+  ppShfDlg in 'ppShfDlg.pas',
+  ppMemDlg in 'ppMemDlg.pas',
+  ppPosDlg in 'ppPosDlg.pas',
+  ppBPsDlg in 'ppBPsDlg.pas',
+  ppDatDlg in 'ppDatDlg.pas',
+  ppDemo in 'ppDemo.pas',
+  ppEndUsr in 'ppEndUsr.pas',
+  ppBarDlg in 'ppBarDlg.pas',
+  ppDrlDlg in 'ppDrlDlg.pas',
+  ppIDE in 'ppIDE.pas',
+  ppTB97x in 'ppTB97x.pas',
+  ppTB97,
+  ppDsgner in 'ppDsgner.pas',
+  ppTB97ut,
+  ppMMDlg in 'ppMMDlg.pas',
+  ppTreeVw in 'ppTreeVw.pas',
+  ppNewDlg in 'ppNewDlg.pas',
+  ppVarDlg in 'ppVarDlg.pas',
+  ppCOrDlg in 'ppCOrDlg.pas',
+  ppPgNDlg in 'ppPgNDlg.pas',
+  ppMetaAL in 'ppMetaAL.pas',
+  ppToolWn in 'ppToolWn.pas',
+  ppMetaRW in 'ppMetaRW.pas',
+  ppRptWiz in 'ppRptWiz.pas',
+  ppRWzDlg in 'ppRWzDlg.pas',
+  ppExpDlg in 'ppExpDlg.pas',
+  ppExpFrm in 'ppExpFrm.pas',
+  ppRptExp in 'ppRptExp.pas',
+  ppWizard in 'ppWizard.pas',
+  ppDsgnDB in 'ppDsgnDB.pas',
+  ppLWzDlg in 'ppLWzDlg.pas',
+  ppAvStd in 'ppAvStd.pas',
+  ppLabelDef in 'ppLabelDef.pas',
+  ppLabWiz in 'ppLabWiz.pas',
+  ppAvIntl in 'ppAvIntl.pas',
+  ppRstDlg in 'ppRstDlg.pas';
+
+end.

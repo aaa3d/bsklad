@@ -1,0 +1,182 @@
+version 3.14
+-------------
++ added FastQueryBuilder (button in SQL editor window)
++ added TfrxOverlay.PrintOnTop property
++ added TfrxDMPCommand component to print ESC-sequences. Use Command property
+to set sequence: DMPCommand1.Command := '#27#40' (alternate form '1B28')
++ added TfrxReport.OnRunDialogs script event. Use this event to handle
+report dialogs manually
++ added Description property to all report components
+* changed internal datasets behaviour, now they can be added to any report 
+page without using dialogs
+* changed internal datasets architecture (common class TfrxCustomDatabase,
+QBuilder support)
+- fixed bug with brush styles
+- fixed bug in Report Server with fetch of report from the cache with 
+equal variables
+- fixed bug in XML export filter with fkNumber format of the memo
+
+
+version 3.13
+-------------
++ added "ExportNotPrintable" property in all export filters
++ added "Resolution", "SeparateFiles" properties in BMP, JPEG, TIFF export filters
++ improved TfrxHTTPClient RFC 2068 compatibility (when working with non-FastReport servers)
+- fixed Outline bug in PDF export filter
+- fixed RTL (Hebrew, Arabic language) bug in PDF export filter
+- fixed resolution bug in TIFF export filter
+- bug fixes
+
+
+version 3.12
+-------------
++ added TfrxReport.StoreInDFM property
++ added TfrxShapeView.Curve property
++ added TfrxReport.PreviewOptions.OutlineExpand property
++ added compatibility code in XLS export - TfrxXLSExport.FastExport property,
+set FastExport := False if you have OLE error with Excel
++ added TfrxXLSExport.PageBreaks property
++ improved XLS, PDF, HTML exports 
+- fixed OLE error when exporting to Excel
+- fixed URLs and anchors feature in HTML export
+- fixed bug with font widths in PDF export
+- fixed bug PrintOnParent in exports 
+(Enterprise)
++ added TfrxServerConfig.ReportsList property
++ added 'getvariable' URL parameter for query of internal server variables
++ added internal server variables SERVER_REPORTS_LIST, SERVER_REPORTS_HTML
++ added function TfrxReportClient.GetServerVariable(const VariableName: String): String;
++ improved TfrxReportServer performance
++ added NT service demo (see project \Demos\ClientServer\Service)
++ added online documentation in the Server demo
+- fully rewritten Advanced Client demo (see project \Demos\ClientServer\Client\Advanced)
+- changed reports in Server demo (see project \Demos\ClientServer\Server)
+- changed html files in Server demo (see project \Demos\ClientServer\Server)
+- bug fixes
+- known bug: reports with TfrxRichView (RTF) don't work in Server mode when
+server cache is on. 
+
+
+version 3.11
+-------------
++ added HTML tags support in PDF export
++ added Hebrew, Turkish and Arabic languages in the PDF export filter
++ added property TfrxPDFExport.Background (default = False)
++ added properties TfrxRTFExport.Creator and TfrxPDFExport.Creator
++ improved quality of the PDF export filter
++ password protected reports is now working in client/server mode
+  (IMPORTANT: Do not use this feature in one time with the server authentification)
++ verbose output of the server errors in the HTML mode
+
+- fixed name of the properties TfrxServerConnection.Proxy and TfrxServerConnection.ProxyPort 
+  (press 'ignore' button on load prompt in yours projects for autofix form components)
+- fixed clean of the report cache on TfrxReportServer.Stop method
+- fixed background draw in HTML export filter in server mode
+- many bug fixes
+
+
+version 3.10
+-------------
++ added Swiss, Portuguese, Latvian resources
++ added TfrxReport.OnEndDoc event
++ improved export filters
++ added outline in PDF export filter (TfrxPDFExport.Outline property)
++ added TfrxXLSExport.AsText property
++ added TfrxPDFExport.Author, TfrxPDFExport.Subject properties
++ added "Stream" property in all export filters
++ added TfrxReportServer.OnAfterBuildReport event handler
+- bug fixes
+
+
+version 3.09
+-------------
+- bug fixes
+
+
+version 3.08
+-------------
++ added TfrxMemoView.Clipped property
++ added TfrxReport.OnAfterPrintReport event
++ added baClient to Align property
++ added Danish, Chinese resources
++ now you can use national chars in the script identifier names
++ added TfrxPDFExport.PrintOptimized property
++ improved speed of the Excel export filter
++ added log rotate function in Client/Server version
+- bug fixes
+
+
+version 3.07
+-------------
++ added Delphi2005 packages
++ added TfrxReport.Modified property
++ added TfrxReport.EngineOptions.DestroyForms property
++ added Polish, Swedish, Romanian resources
++ added expressions support to the Cross-tab object
+* changes in aggregate functions call: <> symbols aren't needed anymore
+* changes in IIF function: now it works like macro
+- bug fixes
+
+
+version 3.06
+-------------
++ added BCB packages for FR3 Enterprise
++ added TfrxReportServer.OnGetVariables event handler
++ improved PDF export filter (underlines, languages)
++ improved RTF export filter (Word 2000 compatibility)
+- bug fixes
+
+
+version 3.05
+-------------
++ added TfrxReport.ShowProgress property 
+- bug fixes
+
+
+version 3.04
+-------------
++ added Taiwan, Italian, Slovene, Spanish, Catalon, Dutch resources
++ added "frxPBarcode.pas" unit for PSOFT BarcodeLibrary (http://www.psoft.sk)
++ added DayOf, MonthOf, YearOf functions
++ added "Multi-language wizard" for quick creation of the multi-language
+  resource file
++ added TfrxReport.OldStyleProgress, OnProgressSTart, OnProgress, 
+  OnProgressStop properties
+- bug fixes
+
+
+version 3.03
+-------------
++ added Czech, Turkish resources
++ added TfrxUserDataset.Fields, TfrxUserDataset.OnGetValue properties
++ edition 1.01 of the documentation (page numbers added)
++ added TfrxDataBand.KeepHeader property
+- bug fixes
+
+
+version 3.02
+-------------
++ added Serbian resources
++ added DelphiFastZLib library instead of zlib standard unit to avoid
+  conflict between FR3 and JediVCL
++ added group/ungroup feature in the designer
++ added utility for quick recompiling FR packages
+* changes in the Chart object - require to rebuild your reports that contain 
+  the Chart object!
+- bug fixes
+
+
+version 3.01
+-------------
++ added Ukrainian, Brazil, Hungarian, German, French resources
++ added TfrxReport.EnabledDatasets property
++ added TfrxCrossView.PlainCells property
++ added separate packages for DB and IBO
++ added separate FastScript packages for DB, BDE, IBX, ADO
+* changes in RTF and PDF exports
+- bug fixes
+
+
+version 3.0
+-------------
+- initial release

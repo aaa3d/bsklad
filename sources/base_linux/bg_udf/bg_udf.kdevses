@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!DOCTYPE KDevPrjSession>
+<KDevPrjSession>
+ <DocsAndViews NumberOfDocuments="10" >
+  <Doc0 NumberOfViews="1" URL="file:///root/bg_udf/debug/config.h" >
+   <View0 line="11" Type="Source" />
+  </Doc0>
+  <Doc1 NumberOfViews="1" URL="man:/usr/share/man/man0p/time.h.0p.bz2" >
+   <View0 Type="Documentation" />
+  </Doc1>
+  <Doc2 NumberOfViews="1" URL="file:///root/rfunc/rdatetime.c" >
+   <View0 line="107" Type="Source" />
+  </Doc2>
+  <Doc3 NumberOfViews="1" URL="file:///root/rfunc/rstring.c" >
+   <View0 line="32" Type="Source" />
+  </Doc3>
+  <Doc4 NumberOfViews="1" URL="file:///root/rfunc/win1251.c" >
+   <View0 line="17" Type="Source" />
+  </Doc4>
+  <Doc5 NumberOfViews="1" URL="file:///root/rfunc/rcalc.c" >
+   <View0 line="505" Type="Source" />
+  </Doc5>
+  <Doc6 NumberOfViews="1" URL="file:///root/rfunc/rmisc.c" >
+   <View0 line="67" Type="Source" />
+  </Doc6>
+  <Doc7 NumberOfViews="1" URL="file:///opt/firebird/examples/udf.sql" >
+   <View0 line="0" Type="Source" />
+  </Doc7>
+  <Doc8 NumberOfViews="1" URL="file:///opt/firebird/examples/udflib.c" >
+   <View0 line="135" Type="Source" />
+  </Doc8>
+  <Doc9 NumberOfViews="1" URL="file:///root/bg_udf/src/bg_udf.c" >
+   <View0 line="14" Type="Source" />
+  </Doc9>
+ </DocsAndViews>
+ <pluginList>
+  <kdevdebugger>
+   <breakpointList/>
+  </kdevdebugger>
+  <kdevbookmarks>
+   <bookmarks/>
+  </kdevbookmarks>
+  <kdevvalgrind>
+   <executable path="" params="" />
+   <valgrind path="" params="" />
+   <calltree path="" params="" />
+   <kcachegrind path="" />
+  </kdevvalgrind>
+ </pluginList>
+</KDevPrjSession>

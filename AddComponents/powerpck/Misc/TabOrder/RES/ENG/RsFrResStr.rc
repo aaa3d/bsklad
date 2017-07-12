@@ -1,0 +1,12 @@
+#include "frOrderConst.pas"
+
+STRINGTABLE
+{
+ S_WARNING,   "This works only with form having style ptDialog."
+ S_EXIT,      "Cancel"
+ S_UP_HINT,   "Move up"
+ S_DOWN_HINT, "Move down"
+ S_LAB,       "&Controls listed in tab order :"
+ S_MASTER,    "Tab Order"
+ S_CAPTION,   "Edit Tab Order"
+}

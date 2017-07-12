@@ -1,0 +1,50 @@
+package FR_IBO_D6;
+
+{$R *.res}
+{$R 'FR_IBOReg.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'FastReport 2.4 IBO Components'}
+{$IMPLICITBUILD ON}
+
+requires
+  vcl,
+  rtl,
+  vclx,
+  vcljpg,
+  dbrtl,
+  vcldb,
+  VclSmp,
+  RxCtl6,
+  IBO40CRT,
+  IBO40TRT,
+  IBO40FRT,
+  IBO40VRT,
+  FR6;
+
+contains
+  FR_IBOreg in 'FR_IBOReg.pas',
+  FR_IB_Query in 'FR_IB_Query.pas',
+  FR_IB_Connection in 'FR_IB_Connection.pas',
+  FR_IBOQueryParam in 'FR_IBOQueryParam.pas' {frIBOParamsForm};
+
+end.

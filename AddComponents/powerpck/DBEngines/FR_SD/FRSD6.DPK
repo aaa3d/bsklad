@@ -1,0 +1,46 @@
+// Package file for Delphi 6
+
+package FrSD6;
+
+{$R *.res}
+{$R 'FR_SDReg.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'FastReport 2.4 SQLDirect Components'}
+{$IMPLICITBUILD ON}
+
+requires
+  VCL,
+  VCLDB,
+  VCLSMP,
+  FR6,
+  SqlDir60;
+
+contains
+  FR_SDReg in 'FR_SDReg.pas',
+  FR_SDDB in 'FR_SDDB.pas',
+  FR_SDCommon in 'FR_SDCommon.pas',
+  FR_SDQuery in 'FR_SDQuery.pas',
+  FR_SDParam in 'FR_SDParam.pas' {frSDParamsForm},
+  FR_SD_SP in 'FR_SD_SP.pas';
+
+end.

@@ -1,0 +1,148 @@
+#include "FR_Const.pas"
+
+; ----------------------------------------------------------------------------
+; TRANSLATION TO CZECH
+; Translated: Arpad Toth
+; Date      : 29.12.2000 - První verze
+; Contact   : i.smid@dobruska.cz
+; Comment   : Opravdová èeská verze
+; ----------------------------------------------------------------------------
+
+STRINGTABLE
+{
+;--- DatasetsForm resources --------------------------------------------------
+  frRes + 3000, "Datový správce"
+  frRes + 3001, "&Vlastnosti..."
+  frRes + 3002, "Nová &tabulka..."
+  frRes + 3003, "Nový &dotaz (query)..."
+  frRes + 3004, "&Odstranit"
+  frRes + 3005, "&Ukonèit"
+  frRes + 3006, "Nová &databáze..."
+;--- TablePropForm resources -------------------------------------------------
+  frRes + 3020, "Hlavní"
+  frRes + 3021, "&Jméno"
+  frRes + 3022, "&Položky"
+  frRes + 3023, "&Editor položek..."
+  frRes + 3024, "Ostatní"
+  frRes + 3025, "&Index"
+  frRes + 3026, "Filtrovací &výraz"
+  frRes + 3027, "&Master"
+  frRes + 3028, "Ma&ster položky"
+;--- FieldsEditorForm resources ----------------------------------------------
+  frRes + 3040, "&Pøidat položky..."
+  frRes + 3041, "Pàidat &lookup..."
+  frRes + 3042, "&Oznaèit všechny"
+  frRes + 3043, "&Vymaž"
+  frRes + 3044, "&Ukonèit"
+;--- FieldsListForm resources ------------------------------------------------
+  frRes + 3060, "Dostupné položky"
+;--- LookupFieldForm resources -----------------------------------------------
+  frRes + 3070, "Nová lookup položka"
+  frRes + 3071, "Položka"
+  frRes + 3072, "&Jméno"
+  frRes + 3073, "&Typ"
+  frRes + 3074, "&Velikost"
+  frRes + 3075, "Lookup definice"
+  frRes + 3076, "&Klíè položky"
+  frRes + 3077, "&Dataset"
+  frRes + 3078, "&Lookup klíè"
+  frRes + 3079, "&Návratová"
+;--- QueryPropForm resources -------------------------------------------------
+  frRes + 3090, "Query parametry"
+  frRes + 3091, "Ostatní"
+  frRes + 3092, "&Master dataset"
+  frRes + 3093, "General"
+  frRes + 3094, "&Jméno"
+  frRes + 3095, "&Alias nebo cesta"
+  frRes + 3096, "&SQL"
+  frRes + 3097, "&Editor položek..."
+  frRes + 3098, "E&ditor parametrù..."
+  frRes + 3099, "Naèti SQL ze souboru"
+  frRes + 3100, "Ulož SQL do souboru"
+  frRes + 3101, "SQL builder..."
+;--- ParamsForm resources ----------------------------------------------------
+  frRes + 3110, "Parametry"
+  frRes + 3111, "&Datový typ"
+  frRes + 3112, "&Jméno"
+  frRes + 3113, "&Hodnota:"
+  frRes + 3114, "Žá&dat hodnotu pøed vytvoøením"
+  frRes + 3115, "Pøirazení hodnoty z &master dataset"
+  frRes + 3116, "Pr&omìnná:"
+;--- FieldsLinkForm resources ------------------------------------------------
+  frRes + 3130, "&Detailní položky"
+  frRes + 3131, "&Hlavní položky"
+  frRes + 3132, "&Spojené položky"
+  frRes + 3133, "&Pøidat"
+  frRes + 3134, "&Vymazat"
+;--- ParamsDialogForm resources ----------------------------------------------
+  frRes + 3150, "Vstupní parametry"
+  frRes + 3151, "4 body"
+  frRes + 3152, "8 bodù"
+  frRes + 3153, "Pøispùsobit k møízce"
+  frRes + 3154, "Ukonèit"
+;--- PropForm resources ------------------------------------------------------
+  frRes + 3170, "Vlastnosti"
+  frRes + 3171, "&Text"
+  frRes + 3172, "&Písmo..."
+  frRes + 3173, "Lookup"
+  frRes + 3174, "&Dataset"
+  frRes + 3175, "&Klíèová položka"
+  frRes + 3176, "&List field"
+  frRes + 3177, "Druh"
+  frRes + 3178, "&Edit"
+  frRes + 3179, "&Combo"
+  frRes + 3180, "Look&up"
+  frRes + 3181, "Combo"
+  frRes + 3182, "&Autosize"
+;--- DBPropForm resources ----------------------------------------------------
+  frRes + 3200, "Vlastnosti databáze"
+  frRes + 3201, "Hlavní"
+  frRes + 3202, "Parametry"
+  frRes + 3203, "&Jméno"
+  frRes + 3204, "&Connection string"    ; pro ADO
+  frRes + 3205, "&Jméno souboru"          ; pro IBX
+  frRes + 3206, "&Alias"                ; pro BDE
+  frRes + 3207, "&Ovládaè"
+  frRes + 3208, "Žá&dat pøihlášení"
+;--- SelectTblForm resources -------------------------------------------------
+  frRes + 3220, "Výbìr tabulky"
+  frRes + 3221, "Vybrat z databáze"
+  frRes + 3222, "Vybrat ze souboru"
+  frRes + 3223, "&Databáze"
+  frRes + 3224, "&Tabulka"
+  frRes + 3225, "&Nalistovat..."
+;--- Strings resources -------------------------------------------------------
+  SFields, "Položky"
+  SPath, "Cesta"
+  SRemoveDS, "Vymazat tuto komponentu?"
+  STables, "Tabulky"
+  SFieldType1, "String"
+  SFieldType2, "Smallint"
+  SFieldType3, "Integer"
+  SFieldType4, "Word"
+  SFieldType5, "Boolean"
+  SFieldType6, "Float"
+  SFieldType7, "Currency"
+  SFieldType8, "Date"
+  SFieldType9, "Time"
+  SFieldType10, "Blob"
+  SParamType1, "BCD"
+  SParamType2, "Boolean"
+  SParamType3, "Currency"
+  SParamType4, "Date"
+  SParamType5, "DateTime"
+  SParamType6, "Integer"
+  SParamType7, "Float"
+  SParamType8, "Smallint"
+  SParamType9, "String"
+  SParamType10, "Time"
+  SParamType11, "Word"
+  SDataManager, "Datový manager"
+  SParams, "parametry"
+  SQueryError, "Nevhodné SQL zadání nebo parametrù"
+  STableProps, "Vlastnosti tabulky"
+  SParamDialog, "Dialog parametrù"
+  SInvalidParamValue, "Nevhodná hodnota parametru"
+  SDatabase, "Databáze"
+  SFieldSizeError, "Nevhodná velikost položky"
+}

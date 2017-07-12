@@ -1,0 +1,18 @@
+{  Patch for AdsTable.pas  }
+
+{ 
+  Avoid exception message in master/detail link between 
+  TfrAdsTable (Master) and TfrAdsQuery (Detail) with
+  Master.Active = false ( master is inactive )
+}
+
+procedure TAdsQuery.SetParamsFromCursor;
+...
+            if not moParams[I].Bound then
+            begin
+               { store the value into the local parameter }
+
+               if DataSet.Active then     (*** DIM 01-Feb-2002 ***)
+
+                 moParams[I].AssignField(DataSet.FieldByName( moParams[I].Name ));
+... 

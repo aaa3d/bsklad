@@ -1,0 +1,13 @@
+Installing the FastReport with different TeeChart packages
+
+1. Open the "FastReport 3\Source\frxReg.inc" file in the text editor 
+("FastReport 3\Lib\frxReg.inc" for FastReport Basic and Standard).
+Uncomment a line with required TeeChart version
+({$DEFINE TeeChart45}, {$DEFINE TeeChart55}, {$DEFINE TeeChart6}, {$DEFINE TeeChart7})
+
+2. Open the "FastReport 3\FastScript\fs_iReg.inc" file in the text editor 
+("FastReport 3\Lib\fs_iReg.inc" for FastReport Basic and Standard).
+Uncomment a line with required TeeChart version
+({$DEFINE TeeChart45}, {$DEFINE TeeChart55}, {$DEFINE TeeChart6}, {$DEFINE TeeChart7})
+
+3. Recompile FastScript and FastReport packages (see "install.txt" file).

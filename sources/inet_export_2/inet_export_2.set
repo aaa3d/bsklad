@@ -1,0 +1,10 @@
+DB_SERVER=192.168.0.1:bsklad2009
+--FTP_SERVER=192.168.0.2
+--FTP_USER=aaa
+--FTP_PASS=diamond
+FTP_SERVER=83.145.214.211
+FTP_USER=u1070
+FTP_PASS=t0MAf5pbbm
+EXPORT_CATALOG_ID=1544
+OUT_FILENAME=c:\katalog.xml
+FTP_FILENAME=/domains/727282.ru/public_html/files/katalog.xml

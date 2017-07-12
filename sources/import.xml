@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<umidump version="2.0" xmlns:xlink="http://www.w3.org/TR/xlink"><meta>
+    <site-name><![CDATA[Интернет магазин "Золотой Век"]]></site-name>
+    <domain><![CDATA[golden-vek.ru]]></domain>
+    <lang><![CDATA[ru]]></lang>
+    <source-name><![CDATA[umiDump20]]></source-name>
+    <generate-time>
+      <timestamp>1308117411</timestamp>
+      <rfc>Wed, 15 Jun 2011 09:56:51 +0400</rfc>
+      <utc>2011-06-15T09:56:51+04:00</utc>
+    </generate-time>
+    <branches>
+      <id>75</id>
+    </branches>
+  </meta>
+<pages>
+	<page id="4001" parentId=""  is-active="1"  type-id="69" lang-id="1" domain-id="1">
+      <basetype module="catalog" method="category">Разделы каталога</basetype>
+      <name>ДВП,ДСП,Фанера</name>
+      <properties>
+        <group name="more_params">
+          <title>Дополнительные параметры</title>
+          <property id="61" name="show_submenu" type="boolean">
+            <title>Показывать подменю</title>
+            <value>1</value>
+          </property>
+        </group>
+        <group name="newgroup">
+          <title>Group #newGroup</title>
+          <property id="212" name="price" type="price">
+            <title>Цена</title>
+            <value xlink:href="udata://emarket/price/1820">0</value>
+          </property>
+          <property id="390" name="is-visible" type="boolean">
+            <title>Отображать в меню</title>
+            <value>1</value>
+          </property>
+        </group>
+      </properties>
+    </page>
+	<page xmlns:xlink="http://www.w3.org/TR/xlink" id="4002" parentId="4001" is-active="1" type-id="70" lang-id="1" domain-id="1">
+      <name>ДВП Т гр. А (2745х1220х3,2 / 3,3489 м2)</name>
+      <properties>
+        <group name="catalog_option_props">
+          <title>Опционные свойства</title>
+          <property id="373" name="artikul" type="string">
+            <title>Артикул</title>
+            <value>14868</value>
+          </property>
+          <property id="374" name="ostatok_na_sklade" type="int">
+            <title>Остаток на складе</title>
+            <value>482</value>
+          </property>
+          <property id="375" name="opisanie" type="wysiwyg">
+            <title>Описание</title>
+            <value>Твердая</value>
+          </property>
+        </group>
+        <group name="cenovye_svojstva">
+          <title>Ценовые свойства</title>
+          <property id="212" name="price" type="price">
+            <title>Цена</title>
+            <value xlink:href="udata://emarket/price/1821">155</value>
+          </property>
+        </group>
+        <group name="catalog_stores_props">
+          <title>Склады</title>
+          <property id="214" name="reserved" type="int">
+            <title>Зарезервировано</title>
+            <value>0</value>
+          </property>
+        </group>
+        <group name="fotografii">
+          <title>Фотографии</title>
+          <property id="377" name="osnovnaya_fotografiya" type="img_file">
+            <title>Основная фотография</title>
+            <value path="./images/imgshop/full_2992390_63385260751218.jpg" folder="/images/imgshop" name="full_2992390_63385260751218" ext="jpg" width="548" height="480">/images/imgshop/full_2992390_63385260751218.jpg</value>
+          </property>
+          <property id="378" name="dop_foto_1" type="img_file">
+            <title>Доп. фото №1</title>
+            <value path="./images/imgshop/full_2992390_63385260751218.jpg" folder="/images/imgshop" name="full_2992390_63385260751218" ext="jpg" width="548" height="480">/images/imgshop/full_2992390_63385260751218.jpg</value>
+          </property>
+          <property id="379" name="dop_foto_2" type="img_file">
+            <title>Доп. фото №2</title>
+            <value path="./images/imgshop/full_2992390_63385260757234.jpg" folder="/images/imgshop" name="full_2992390_63385260757234" ext="jpg" width="800" height="467">/images/imgshop/full_2992390_63385260757234.jpg</value>
+          </property>
+        </group>
+        <group name="newgroup">
+          <title>Group #newGroup</title>
+          <property id="390" name="is-visible" type="boolean">
+            <title>Отображать в меню</title>
+            <value>1</value>
+          </property>
+          <property id="61" name="show_submenu" type="boolean">
+            <title>Показывать подменю</title>
+            <value>1</value>
+          </property>
+        </group>
+      </properties>
+    </page>
+	<page xmlns:xlink="http://www.w3.org/TR/xlink" id="4002" parentId="4001" is-active="1" type-id="70" lang-id="1" domain-id="1">
+	  <name>Товар1</name>
+	  <properties>
+		<group name="common">
+		  <title>Основные параметры</title>
+		  <property id="50" name="title" type="string">
+			<title>Поле TITLE</title>
+			<value>Товар1 TITLE</value>
+		  </property>
+		  <property id="51" name="h1" type="string">
+			<title>Поле H1</title>
+			<value>Товар1 H1</value>
+		  </property>
+		  <property id="54" name="meta_keywords" type="string">
+			<title>Поле meta KEYWORDS</title>
+			<value>keyworm первого товара</value>
+		  </property>
+		  <property id="349" name="opisanie" type="wysiwyg">
+			<title>Описание</title>
+			<value>Описание товара11111</value>
+		  </property>
+		</group>
+	  </properties>
+	</page>
+</pages>
+
+</umidump>

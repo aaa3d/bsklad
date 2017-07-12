@@ -1,0 +1,6 @@
+
+(*) = done
+
+- integrate greg's stuff (on a clean fashion)
+- make sure attachments 'codified' in 8bit work well (it actually exist ?).
+

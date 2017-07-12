@@ -1,0 +1,352 @@
+---------------- Использование собственных функций --------------------------
+
+Q: Как подключить свою функцию (например, сумму прописью)?
+A: Используйте обработчик TfrReport.OnUserFunction. Вот простой пример
+   такого обработчика (определяется функция SumPropis):
+
+   procedure TForm1.frReport1UserFunction(const Name: String;
+     p1, p2, p3: Variant; var val: Variant);
+   begin
+     if AnsiCompareText('SUMPROPIS', Name) = 0 then
+       val := My_Convertion_Routine(frParser.Calc(p1));
+   end;
+
+   Теперь функцию можно использовать в любом месте отчета (текст, скрипт)
+   в форме SumPropis(Value).
+
+
+Q: Но такой подход работает только для одного компонента TfrReport. А если
+   я хочу сделать свою функцию доступной везде?
+A: Самый простой вариант - сделать обработчик события OnUserFunction общим
+   для всех компонентов. Если этот вариант не подходит, придется писать
+   библиотеку функций. Простой пример того, как это сделать:
+
+   type
+     TMyFunctionLibrary = class(TfrFunctionLibrary)
+     public
+       constructor Create; override;
+       procedure DoFunction(FNo: Integer; p1, p2, p3: Variant;
+         var val: Variant); override;
+     end;
+
+   constructor TMyFunctionLibrary.Create;
+   begin
+     inherited Create;
+     with List do
+     begin
+       Add('DATEPROPIS');
+       Add('SUMPROPIS');
+     end;
+   end;
+
+   procedure TMyFunctionLibrary.DoFunction(FNo: Integer; p1, p2, p3: Variant;
+     var val: Variant);
+   begin
+     val := 0;
+     case FNo of
+       0: val := My_DateConvertion_Routine(frParser.Calc(p1));
+       1: val := My_SumConvertion_Routine(frParser.Calc(p1));
+     end;
+   end;
+
+   Регистрация библиотеки осуществляется процедурой
+   frRegisterFunctionLibrary(TMyFunctionLibrary);
+   Удаление библиотеки осуществляется процедурой
+   frUnRegisterFunctionLibrary(TMyFunctionLibrary);
+
+
+Q: А как зарегистрировать свою функцию в списке функций (диалог "Вставка
+   функции")?
+A: Используйте процедуру frAddFunctionDesc (модуль FR_Class):
+
+   frAddFunctionDesc(FuncLib, 'SUMPROPIS', 'Мои функции',
+     'SUMPROPIS(<Число>)/Возвращает сумму прописью.');
+
+   Обратите внимание: символ "/" в описании функции обязателен! Он отделяет
+   описание синтаксиса от описания самой функции.
+   FuncLib - это ссылка на библиотеку функций (может быть nil, если библиотека 
+   не используется). Когда библиотека удаляется процедурой
+   frUnRegisterFunctionLibrary, все связанные с ней функции удаляются из
+   списка функций.
+
+
+---------------- Работа с переменными и словарем данных ---------------------
+
+Q: Как программно заполнить список переменных (тот, что на первой странице
+   диалога "Словарь данных")?
+A: Переменные хранятся в TfrReport.Dictionary.Variables. Там же хранятся
+   и категории.
+
+   with frReport1.Dictionary do
+   begin
+     // создаем категорию (пробел перед именем обязателен)
+     Variables[' New category'] := '';
+     // создаем переменную
+     Variables['New Variable'] := 'CustomerData.Customers."CustNo"';
+     Variables['Another Variable'] := 'Page#';
+   end;
+
+Q: Я присвоил переменной строковое значение, например так:
+
+   with frReport1.Dictionary do
+     Variables['Отчетный период'] := 'Март';
+
+   Но при построении отчета я получаю ошибку. Почему?
+A: Потому что FastReport трактует строковые значения, присвоенные переменным
+   из Dictionary, как выражения, которые надо вычислять. Добавьте к строке
+   кавычки:
+
+   with frReport1.Dictionary do
+     Variables['Отчетный период'] := '''' + 'Март' + '''';
+
+   Либо передавайте статичные данные через frVariables.
+
+
+Q: Я не хочу показывать своим юзерам датасеты, лежащие в одном из модулей
+   данных.
+A: Используйте TfrReport.Dictionary.DisabledDatasets:
+
+   with frReport1.Dictionary do
+   begin
+     // отключаем ненужный датасет
+     DisabledDatasets.Add('CustomerData.Bio');
+     // или вообще все датасеты, находящиеся в форме или модуле данных
+     DisabledDatasets.Add('CustomerData*');
+   end;
+
+
+Q: Как передать значение из программы в отчет?
+A: Есть несколько способов. Первый: использовать глобальный объект
+   frVariables (описан в FR_Class):
+
+   frVariables['My variable'] := 10;
+
+   создает переменную My variable со значением 10. Это способ подходит,
+   если в отчет нужно передать статическую информацию (т.е. не меняющуюся
+   в течение построения отчета).
+   Второй способ: использовать событие TfrReport.OnGetValue. Этот способ
+   подходит для передачи в отчет информации, которая может меняться от
+   записи к записи:
+
+   procedure TForm1.frReport1GetValue(ParName: String; var ParValue: Variant);
+   begin
+     if ParName = 'MyField' then
+       ParValue := Table1MyField.Value;
+   end;
+
+   И, наконец, третий способ: программно заполнить список переменных
+   (см. предыдущий вопрос).
+
+   with frReport1.Dictionary do
+   begin
+     Variables['MyVariable'] := 'CustomerData.Customers."CustNo"';
+     Variables['Another Variable'] := '10';
+   end;
+
+
+Q: А можно ли передать значение из отчета обратно в программу?
+A: Можно - используйте объект frVariables. Если в отчете написать в скрипте
+   одного из объектов:
+
+   MyVariable := 10
+
+   то в программе значение MyVariable можно достать так:
+   v := frVariables['MyVariable'];
+
+
+---------------- Скрипт ----------------------------------------------------
+
+Q: А есть ли скрипт у бэнда?
+A: Есть, для этого выделите бэнд и нажмите Ctrl+Enter либо выберите в
+   инспекторе объектов свойство "OnBeforePrint".
+
+
+Q: А у страницы отчета?
+A: Есть ;) Щелкните на пустом месте страницы и выберите в инспекторе
+   свойство "OnBeforePrint". Если страница типа "диалоговая форма", то
+   свойство называется OnActivate.
+
+
+Q: Можно ли из скрипта одного объекта обращаться к свойствам другого?
+A: Можно, через точечную нотацию.
+
+
+Q: А к каким именно свойствам объектов можно обращаться?
+A: К тем, которые отображаются в инспекторе. Кроме того, к некоторым
+   комплексным свойствам типа Font возможно обращение как Font.Name,
+   Font.Size и пр. Свойство Memo также доступно: Memo1.Memo := 'some text'.
+   Если не боитесь залезть в исходники - там можно увидеть полный список
+   того, что доступно из скрипта (методы GetPropValue/SetPropValue).
+
+
+---------------- Прочее ----------------------------------------------------
+
+Q: Окна инспектора и вставки поля БД мешают друг другу.
+A: Расположите их одно под другим. Чтобы свернуть/развернуть окно, сделайте
+   двойной щелчок на заголовке окна. При этом другое окно соответственно
+   изменит свою высоту.
+
+Q: Как поменять местами страницы отчета в дизайнере?
+A: Просто переместите мышкой закладку страницы на нужное место (drag&drop).
+
+
+Q: Хотелось бы видеть все, что необходимо вставлять в отчет (поля БД,
+   переменные) в одном списке.
+A: Ок, установите TfrReport.MixVariablesAndDBFields := True. Это заставит
+   отображаться переменные в списке полей БД. Теперь вставку всего
+   необходимого можно делать из диалога "Вставка поля БД".
+
+
+Q: Я не хочу видеть окно с параметрами экспорта.
+A: Установите необходимые параметры в компоненте (например, для экспорта
+   в текст - в компоненте TfrTextExport из палитры компонент) и отключите
+   диалог с помощью свойства ShowDialog.
+
+
+Q: Почему не работает переменная TotalPages (возвращает 0)?
+A: Для этого отчет должен быть двухпроходным (меню дизайнера
+   Файл|Опции отчета|Два прохода).
+
+
+Q: Я храню форму отчета в BLOb-поле таблицы БД. Когда я загружаю отчет
+   и запускаю дизайнер, он показывает имя отчета как "Untitled".
+A: Перед запуском дизайнера сделайте
+
+   frReport1.FileName := 'Name of my report';
+
+
+Q: Та же ситуация. Хочется переопределить реакцию на нажатие кнопок
+   "Загрузить отчет" и "Сохранить отчет" в дизайнере. Где копать?
+A: У компонента TfrDesigner (тот, что из палитры компонент) есть
+   соответствующие события: OnLoadReport и OnSaveReport. Маленький пример:
+
+  procedure TForm1.frDesigner1LoadReport(Report: TfrReport;
+    var ReportName: String; var Opened: Boolean);
+  begin
+    with MyOpenDialog do
+    begin
+      Opened := ShowModal = mrOk;
+      if Opened then
+      begin
+        Report.LoadFromBlobField(...);
+        ReportName := ...;
+      end;
+    end;
+  end;
+
+  procedure TForm1.frDesigner1SaveReport(Report: TfrReport;
+    var ReportName: String; SaveAs: Boolean; var Saved: Boolean);
+  begin
+    if SaveAs then
+      with MySaveDialog do
+      begin
+        Saved := ShowModal = mrOk;
+        if Saved then
+        begin
+          Report.SaveToBlobField(...);
+          ReportName := ...;
+        end;
+      end
+    else
+      Report.SaveToBlobField(...);
+  end;
+
+
+Q: В QR я могу написать что-нибудь типа QRLabel1.Caption := 'Some text'.
+   Как сделать то же самое в FR?
+A: Объекты FR не являются компонентами (как в QR, RB) и недоступны в
+   программе обычным способом. Используйте следующий код:
+
+  var
+    t: TfrMemoView;
+  begin
+    t := TfrMemoView(frReport1.FindObject('Memo1'));
+    if t <> nil then
+      t.Memo.Text := 'FastReport';
+  end;
+
+
+Q: Хочу определить горячие клавиши в компоненте TfrPreview.
+A: У компонента есть свойство Window: TForm. На Window.OnKeyDown достаточно
+   подвесить собственный обработчик.
+
+
+Q: До приобретения FastReportа мы пользовались бесплатной версией FreeReport,
+   создали много шаблонов отчетов... а теперь они не открываются, пишет
+   "Неверный FRF формат" :(( Неужели все придется переделывать?
+A: Ребята из FreeR "постарались".
+   У файлов отчета надо заменить первый байт (с 17h на 16h), сделать следующие
+   модификации, прочитать все отчеты и сохранить их, потом изменения в коде
+   вернуть назад.
+
+  FR_Class:
+
+  function ReadString(Stream: TStream): String;
+  begin
+  {  if frVersion >= 23 then}
+      Result := frReadString(Stream) {else
+      Result := frReadString22(Stream);}
+  end;
+
+  procedure ReadMemo(Stream: TStream; Memo: TStrings);
+  begin
+  {  if frVersion >= 23 then}
+      frReadMemo(Stream, Memo){ else
+      frReadMemo22(Stream, Memo);}
+  end;
+
+
+  FR_Utils:
+
+  procedure frReadMemo(Stream: TStream; l: TStrings);
+  var
+    s: String;
+    b: Byte;
+    n: Word;
+  begin
+    l.Clear;
+    l.Text := frReadString(Stream); exit;
+    Stream.Read(n, 2);
+    if n > 0 then
+      repeat
+        Stream.Read(n, 2);
+        SetLength(s, n);
+        Stream.Read(s[1], n);
+        l.Add(s);
+        Stream.Read(b, 1);
+      until b = 0
+    else
+      Stream.Read(b, 1);
+  end;
+
+  function frReadString(Stream: TStream): String;
+  var
+    s: String;
+    n: Integer;
+    b: Byte;
+  begin
+    Stream.Read(n, 4);
+    SetLength(s, n);
+    Stream.Read(s[1], n);
+  //  Stream.Read(b, 1);
+    Result := s;
+  end;
+
+
+Q: А как распечатать отчет сразу, без предварительного просмотра?
+A: Вот так:
+
+  frReport1.PrepareReport;
+  frReport1.PrintPreparedReport('', 1, True, frAll);
+  или
+  frReport1.PrintPreparedReportDlg;
+
+
+Q: Как распечатать картинку, находящуюся в файле?
+A: Используйте обработчик события TfrReport.OnBeforePrint:
+
+  if View.Name = 'Picture1' then
+    TfrPictureView(View).Picture.LoadFromFile(...) or
+                                .Assign or
+                                .everything_what_you_want
+

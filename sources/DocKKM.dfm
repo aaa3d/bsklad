@@ -1,0 +1,887 @@
+object Doc_KKM: TDoc_KKM
+  Left = 408
+  Top = 248
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Кассовый отчет'
+  ClientHeight = 697
+  ClientWidth = 1158
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poDefault
+  Scaled = False
+  ShowHint = True
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 1158
+    Height = 29
+    ButtonHeight = 24
+    ButtonWidth = 26
+    Caption = 'ToolBar1'
+    Images = DataModule1.ImageList1
+    TabOrder = 0
+    object ToolButton6: TToolButton
+      Left = 0
+      Top = 2
+      Caption = 'ToolButton6'
+      ImageIndex = 105
+      OnClick = ToolButton6Click
+    end
+    object ToolButton5: TToolButton
+      Left = 26
+      Top = 2
+      Width = 8
+      Caption = 'ToolButton5'
+      ImageIndex = 104
+      Style = tbsSeparator
+    end
+    object Btn_Prow: TToolButton
+      Left = 34
+      Top = 2
+      Hint = 'Провести накладную'
+      Caption = 'Btn_Prow'
+      ImageIndex = 22
+      OnClick = Btn_ProwClick
+    end
+    object Btn_Unprow: TToolButton
+      Left = 60
+      Top = 2
+      Hint = 'Снять с проводки накладную'
+      Caption = 'Btn_Unprow'
+      ImageIndex = 23
+      OnClick = Btn_UnprowClick
+    end
+    object ToolButton8: TToolButton
+      Left = 86
+      Top = 2
+      Width = 8
+      Caption = 'ToolButton8'
+      ImageIndex = 4
+      Style = tbsSeparator
+      Visible = False
+    end
+    object Btn_SAVE: TToolButton
+      Left = 94
+      Top = 2
+      Hint = 'Сохранить счёт (Ctrl+Enter)'
+      Caption = 'Btn_SAVE'
+      ImageIndex = 39
+      OnClick = Btn_SAVEClick
+    end
+    object Btn_Apply: TToolButton
+      Left = 120
+      Top = 2
+      Hint = 'Применить '
+      Caption = 'Btn_Apply'
+      ImageIndex = 38
+      OnClick = Btn_ApplyClick
+    end
+    object ToolButton4: TToolButton
+      Left = 146
+      Top = 2
+      Width = 8
+      Caption = 'ToolButton4'
+      ImageIndex = 3
+      Style = tbsSeparator
+    end
+    object Btn_Print: TToolButton
+      Left = 154
+      Top = 2
+      Hint = 'Печать счёта(F9)'
+      Caption = 'Btn_Print'
+      ImageIndex = 9
+      OnClick = Btn_PrintClick
+    end
+    object Btn_Propertis: TToolButton
+      Left = 180
+      Top = 2
+      Hint = 'История счёта (F12)'
+      Caption = 'Btn_Propertis'
+      ImageIndex = 3
+      OnClick = Btn_PropertisClick
+    end
+    object ToolButton11: TToolButton
+      Left = 206
+      Top = 2
+      Width = 45
+      Caption = 'ToolButton11'
+      ImageIndex = 24
+      Style = tbsSeparator
+    end
+    object Btn_AddFrm: TToolButton
+      Left = 251
+      Top = 2
+      Hint = 'Добавить фирму'
+      Caption = 'Добавить фирму'
+      ImageIndex = 14
+      OnClick = Btn_AddFrmClick
+    end
+    object ToolButton2: TToolButton
+      Left = 277
+      Top = 2
+      Width = 8
+      Caption = 'ToolButton2'
+      ImageIndex = 3
+      Style = tbsSeparator
+    end
+    object ToolButton3: TToolButton
+      Left = 285
+      Top = 2
+      Width = 56
+      Caption = 'ToolButton3'
+      ImageIndex = 3
+      Style = tbsSeparator
+    end
+    object Btn_DelTow: TToolButton
+      Left = 341
+      Top = 2
+      Hint = 'Удалить строку'
+      Caption = 'Btn_DelTow'
+      ImageIndex = 2
+      OnClick = Btn_DelTowClick
+    end
+    object ToolButton7: TToolButton
+      Left = 367
+      Top = 2
+      Width = 8
+      Caption = 'ToolButton7'
+      ImageIndex = 3
+      Style = tbsSeparator
+    end
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 678
+    Width = 1158
+    Height = 19
+    Panels = <
+      item
+        Text = 'Состояние :'
+        Width = 200
+      end
+      item
+        Width = 100
+      end
+      item
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 29
+    Width = 1158
+    Height = 649
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 2
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 1158
+      Height = 169
+      Align = alTop
+      BevelOuter = bvLowered
+      TabOrder = 0
+      object Label3: TLabel
+        Left = 56
+        Top = 8
+        Width = 50
+        Height = 13
+        Caption = 'Магазин :'
+      end
+      object Label8: TLabel
+        Left = 28
+        Top = 64
+        Width = 69
+        Height = 13
+        Caption = 'Примечание :'
+      end
+      object Label11: TLabel
+        Left = 68
+        Top = 36
+        Width = 32
+        Height = 13
+        Caption = 'Дата :'
+      end
+      object PRIM: TMemo
+        Left = 104
+        Top = 60
+        Width = 357
+        Height = 41
+        Lines.Strings = (
+          'Memo1')
+        MaxLength = 250
+        TabOrder = 1
+      end
+      object KKM_DATE: TDateEdit
+        Left = 104
+        Top = 32
+        Width = 121
+        Height = 21
+        NumGlyphs = 2
+        TabOrder = 0
+      end
+      object SHOP: TRxDBLookupCombo
+        Left = 104
+        Top = 6
+        Width = 253
+        Height = 20
+        DropDownCount = 8
+        EscapeClear = False
+        LookupField = 'SHOP_ID'
+        LookupDisplay = 'SHOP_NAME'
+        LookupSource = DataModule1.MainDsShop
+        TabOrder = 2
+      end
+      object Button1: TButton
+        Left = 488
+        Top = 12
+        Width = 229
+        Height = 25
+        Caption = 'Заполнить данные с ФР'
+        TabOrder = 3
+        OnClick = Button1Click
+      end
+      object Button2: TButton
+        Left = 488
+        Top = 56
+        Width = 229
+        Height = 25
+        Caption = 'Заполнить данные из базы данных'
+        TabOrder = 4
+        OnClick = Button2Click
+      end
+      object GroupBox3: TGroupBox
+        Left = 104
+        Top = 108
+        Width = 617
+        Height = 45
+        Caption = 'Оформитель'
+        TabOrder = 5
+        object useR_name: TEdit
+          Left = 60
+          Top = 16
+          Width = 245
+          Height = 21
+          AutoSize = False
+          Enabled = False
+          Font.Charset = RUSSIAN_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -11
+          Font.Name = 'Arial'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+          Text = 'Все'
+        end
+        object BTN_USER: TBitBtn
+          Left = 305
+          Top = 15
+          Width = 24
+          Height = 22
+          Hint = 'Выбрать клиента из справочника контактов (F10)'
+          TabOrder = 1
+          TabStop = False
+          OnClick = BTN_USERClick
+          Glyph.Data = {
+            EE000000424DEE0000000000000076000000280000000F0000000F0000000100
+            0400000000007800000000000000000000001000000000000000000000000000
+            8000008000000080800080000000800080008080000080808000C0C0C0000000
+            FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555555555555
+            555008000000000085505080FFFFFF0505500000000000F0F5500FFFFFFFFF0F
+            055050F00F00FFF0F55050FFFFFFFFF0F550000FFFFFFFFF00000900F00000F0
+            0900090FFFFFFFFF0900000F0000F00F0000550FFFFFFFFF0550550FFF000000
+            0000555000FFFFFFFF005555550000000000}
+        end
+        object cbUserAll: TCheckBox
+          Left = 8
+          Top = 20
+          Width = 49
+          Height = 17
+          Caption = 'Все'
+          Checked = True
+          State = cbChecked
+          TabOrder = 2
+          OnClick = cbUserAllClick
+        end
+        object Button3: TButton
+          Left = 352
+          Top = 12
+          Width = 257
+          Height = 25
+          Caption = 'Заполнить данные из базы данных по кассиру'
+          TabOrder = 3
+          OnClick = Button2Click
+        end
+      end
+    end
+    object Panel3: TPanel
+      Left = 0
+      Top = 169
+      Width = 1158
+      Height = 480
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 1
+      object RxDBGrid2: TRxDBGrid
+        Left = 0
+        Top = 0
+        Width = 1158
+        Height = 480
+        Align = alClient
+        DataSource = DsKKMS
+        TabOrder = 0
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'MS Sans Serif'
+        TitleFont.Style = []
+        OnGetCellParams = RxDBGrid2GetCellParams
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'FRM_NAME'
+            ReadOnly = True
+            Width = 108
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'SALDO1'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'SALDO2'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'PROBITO'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'INKASS'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'RN_SUMM'
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'local_rn_summ'
+            ReadOnly = True
+            Width = 80
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'PO_SUMM'
+            Title.Caption = 'Пробито предоплат'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'PO_SUMM_1'
+            Title.Caption = 'Списано предоплат'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TERMINAL_SUMM'
+            Title.Caption = 'STB'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TERMINAL_SUMM_1'
+            Title.Caption = 'Золотая корона'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'TERMINAL_SUMM_2'
+            Title.Caption = 'Югра'
+            Width = 60
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'error'
+            ReadOnly = True
+            Width = 50
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'control'
+            Title.Caption = 
+              'Контроль (ПРОБИТО_ПО_КАССЕ - (Сумма по накладным+получено предоп' +
+              'лат-списано предоплат-продано повсем картам))'
+            Width = 56
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'info'
+            Width = 829
+            Visible = True
+          end>
+      end
+    end
+  end
+  object IBQuery1: TIBQuery
+    Database = DataModule1.IBDatabase1
+    Transaction = Query1Transaction
+    BufferChunks = 1000
+    CachedUpdates = False
+    Left = 72
+    Top = 241
+  end
+  object MemKKMS: TRxMemoryData
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'FRM_NAME'
+        DataType = ftString
+        Size = 254
+      end
+      item
+        Name = 'KKM_ID'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SALDO1'
+        DataType = ftFloat
+      end
+      item
+        Name = 'SALDO2'
+        DataType = ftFloat
+      end
+      item
+        Name = 'PROBITO'
+        DataType = ftFloat
+      end
+      item
+        Name = 'INKASS'
+        DataType = ftFloat
+      end
+      item
+        Name = 'RN_SUMM'
+        DataType = ftFloat
+      end
+      item
+        Name = 'PO_SUMM'
+        DataType = ftFloat
+      end
+      item
+        Name = 'TERMINAL_SUMM'
+        DataType = ftFloat
+      end
+      item
+        Name = 'info'
+        DataType = ftString
+        Size = 1024
+      end
+      item
+        Name = 'local_rn_summ'
+        DataType = ftFloat
+      end
+      item
+        Name = 'error'
+        DataType = ftString
+        Size = 254
+      end
+      item
+        Name = 'FRM_ID'
+        DataType = ftInteger
+      end
+      item
+        Name = 'kkms_id'
+        DataType = ftInteger
+      end
+      item
+        Name = 'TERMINAL_SUMM_1'
+        DataType = ftFloat
+      end
+      item
+        Name = 'TERMINAL_SUMM_2'
+        DataType = ftFloat
+      end
+      item
+        Name = 'PO_SUMM_1'
+        DataType = ftFloat
+      end>
+    OnCalcFields = MemKKMSCalcFields
+    Left = 266
+    Top = 241
+    object MemKKMSFRM_NAME: TStringField
+      DisplayLabel = 'Фирма'
+      DisplayWidth = 24
+      FieldName = 'FRM_NAME'
+      Size = 254
+    end
+    object MemKKMSKKM_ID: TIntegerField
+      FieldName = 'KKM_ID'
+      Visible = False
+    end
+    object MemKKMSSALDO1: TFloatField
+      DisplayLabel = 'Остаток на начало дня'
+      DisplayWidth = 14
+      FieldName = 'SALDO1'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSSALDO2: TFloatField
+      DisplayLabel = 'Остаток на конец дня'
+      DisplayWidth = 14
+      FieldName = 'SALDO2'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSPROBITO: TFloatField
+      DisplayLabel = 'Пробито'
+      DisplayWidth = 14
+      FieldName = 'PROBITO'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSINKASS: TFloatField
+      DisplayLabel = 'Инкассация'
+      DisplayWidth = 14
+      FieldName = 'INKASS'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSRN_SUMM: TFloatField
+      DisplayLabel = 'Сумма по накладным'
+      DisplayWidth = 14
+      FieldName = 'RN_SUMM'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSPO_SUMM: TFloatField
+      DisplayLabel = 'Сумма предоплат'
+      DisplayWidth = 18
+      FieldName = 'PO_SUMM'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSTERMINAL_SUMM: TFloatField
+      DisplayLabel = 'Пробито по терминалам'
+      DisplayWidth = 25
+      FieldName = 'TERMINAL_SUMM'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSinfo: TStringField
+      DisplayLabel = 'Информация'
+      DisplayWidth = 1229
+      FieldName = 'info'
+      Size = 1024
+    end
+    object MemKKMSlocal_rn_summ: TFloatField
+      DisplayLabel = 'Сумма РН в локальной базе (для контроля связи)'
+      DisplayWidth = 29
+      FieldName = 'local_rn_summ'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSerror: TStringField
+      DisplayLabel = 'Ошибка'
+      DisplayWidth = 305
+      FieldName = 'error'
+      Size = 254
+    end
+    object MemKKMSFRM_ID: TIntegerField
+      FieldName = 'FRM_ID'
+      Visible = False
+    end
+    object MemKKMSkkms_id: TIntegerField
+      FieldName = 'kkms_id'
+    end
+    object MemKKMSTERMINAL_SUMM_1: TFloatField
+      FieldName = 'TERMINAL_SUMM_1'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSTERMINAL_SUMM_2: TFloatField
+      FieldName = 'TERMINAL_SUMM_2'
+      DisplayFormat = '0.00'
+    end
+    object MemKKMSPO_SUMM_1: TFloatField
+      FieldName = 'PO_SUMM_1'
+    end
+    object MemKKMScontrol: TFloatField
+      FieldKind = fkCalculated
+      FieldName = 'control'
+      DisplayFormat = '0.00'
+      Calculated = True
+    end
+  end
+  object DsKKMS: TDataSource
+    DataSet = MemKKMS
+    OnDataChange = DsKKMSDataChange
+    Left = 266
+    Top = 301
+  end
+  object DocTransaction: TIBTransaction
+    Active = False
+    DefaultDatabase = DataModule1.IBDatabase1
+    AutoStopAction = saNone
+    Left = 338
+    Top = 241
+  end
+  object Query1Transaction: TIBTransaction
+    Active = False
+    DefaultDatabase = DataModule1.IBDatabase1
+    AutoStopAction = saNone
+    Left = 68
+    Top = 301
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 500
+    Left = 340
+    Top = 300
+  end
+  object IBQuery3: TIBQuery
+    Database = DataModule1.IBDatabase1
+    Transaction = DataModule1.IBTransaction1
+    BufferChunks = 1000
+    CachedUpdates = False
+    Left = 612
+    Top = 292
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = MemKKMS
+    Left = 176
+    Top = 402
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    StoreInDFM = True
+    OnGetValue = frReport1GetValue
+    Left = 256
+    Top = 402
+    ReportForm = {
+      18000000BB180000180000000001000100FFFFFFFFFF09000000340800009A0B
+      00000000000000000000000000000000000000FFFF00000000FFFF0000000000
+      00000000000000030400466F726D000F000080DC000000780000007C0100002C
+      010000040000000200CB0000000C005265706F72745469746C65310002010000
+      0000BC000000F5020000180000003100000001000000000000000000FFFFFF1F
+      00000000000000000000000000FFFF0000000000020000000100000000000000
+      01000000C800000014000000010000000000000200420100000B004D61737465
+      72446174613100020100000000D0010000F50200001A00000031000500010000
+      00000000000000FFFFFF1F000000000C00667244424461746153657431000000
+      00000000FFFF000000000002000000010000000000000001000000C800000014
+      000000010000000000000200AF0100000D004D61737465724865616465723100
+      02010000000048010000F50200001A0000003100040001000000000000000000
+      FFFFFF1F00000000000000000000000000FFFF00000000000200000001000000
+      0000000001000000C8000000140000000100000000000002001C0200000D004D
+      6173746572466F6F746572310002010000000080020000F50200001800000030
+      00060001000000000000000000FFFFFF1F00000000000000000000000000FFFF
+      000000000002000000010000000000000001000000C800000014000000010000
+      000000000000AE02000005004D656D6F3100020084010000BC00000044010000
+      0C0000004300000001000000000000000000FFFFFF1F2E020000000000010014
+      00CCE0E3E0E7E8ED3A205B53484F505F4E414D455D00000000FFFF0000000000
+      0200000001000000000500417269616C000600000002000000000000000000CC
+      00020000000000FFFFFF00000000020000000000000000004B03000005004D65
+      6D6F3200020014000000BC000000700100000C00000043000000010000000000
+      00000000FFFFFF1F2E02000000000001001F00CAE0F1F1EEE2FBE920EEF2F7E5
+      F220EEF2205B5245504F52545F444154455D00000000FFFF0000000000020000
+      0001000000000500417269616C000600000002000000000000000000CC000200
+      00000000FFFFFF0000000002000000000000000000E203000005004D656D6F33
+      00020014000000C8000000100200000C00000043000000010000000000000000
+      00FFFFFF1F2E02000000000001001900CFF0E8ECE5F7E0EDE8E53A205B524550
+      4F52545F5052494D5D00000000FFFF0000000000020000000100000000050041
+      7269616C000600000002000000000000000000CC00020000000000FFFFFF0000
+      0000020000000000000000007404000005004D656D6F3400020010000000D001
+      0000840000000C00000043000F0001000000000000000000FFFFFF1F2E020000
+      000000010014005B4D656D4B4B4D532E2246524D5F4E414D45225D00000000FF
+      FF00000000000200000001000000000500417269616C00060000000000000000
+      0000000000CC00020000000000FFFFFF00000000020000000000000000000405
+      000005004D656D6F3500020094000000D0010000500000000C00000043000F00
+      01000000000000000000FFFFFF1F2E020301000000010012005B4D656D4B4B4D
+      532E2253414C444F31225D00000000FFFF000000000002000000010000000005
+      00417269616C000600000000000000000001000000CC00020000000000FFFFFF
+      00000000020000000000000000009405000005004D656D6F36000200E4000000
+      D0010000500000000C00000043000F0001000000000000000000FFFFFF1F2E02
+      0301000000010012005B4D656D4B4B4D532E2253414C444F32225D00000000FF
+      FF00000000000200000001000000000500417269616C00060000000000000000
+      0001000000CC00020000000000FFFFFF00000000020000000000000000002506
+      000005004D656D6F3700020034010000D0010000500000000C00000043000F00
+      01000000000000000000FFFFFF1F2E020301000000010013005B4D656D4B4B4D
+      532E2250524F4249544F225D00000000FFFF0000000000020000000100000000
+      0500417269616C000600000000000000000001000000CC00020000000000FFFF
+      FF0000000002000000000000000000B506000005004D656D6F38000200840100
+      00D0010000500000000C00000043000F0001000000000000000000FFFFFF1F2E
+      020301000000010012005B4D656D4B4B4D532E22494E4B415353225D00000000
+      FFFF00000000000200000001000000000500417269616C000600000000000000
+      000001000000CC00020000000000FFFFFF000000000200000000000000000046
+      07000005004D656D6F3900020094000000DC010000500000000C00000043000F
+      0001000000000000000000FFFFFF1F2E020301000000010013005B4D656D4B4B
+      4D532E22524E5F53554D4D225D00000000FFFF00000000000200000001000000
+      000500417269616C000600000000000000000001000000CC00020000000000FF
+      FFFF0000000002000000000000000000D807000006004D656D6F3130000200E4
+      000000DC010000500000000C00000043000F0001000000000000000000FFFFFF
+      1F2E020301000000010013005B4D656D4B4B4D532E22504F5F53554D4D225D00
+      000000FFFF00000000000200000001000000000500417269616C000600000000
+      000000000001000000CC00020000000000FFFFFF000000000200000000000000
+      00006C08000006004D656D6F313100020034010000DC010000500000000C0000
+      0043000F0001000000000000000000FFFFFF1F2E020301000000010015005B4D
+      656D4B4B4D532E22504F5F53554D4D5F31225D00000000FFFF00000000000200
+      000001000000000500417269616C000600000000000000000001000000CC0002
+      0000000000FFFFFF00000000020000000000000000000409000006004D656D6F
+      313200020084010000DC010000500000000C00000043000F0001000000000000
+      000000FFFFFF1F2E020301000000010019005B4D656D4B4B4D532E225445524D
+      494E414C5F53554D4D225D00000000FFFF000000000002000000010000000005
+      00417269616C000600000000000000000001000000CC00020000000000FFFFFF
+      00000000020000000000000000009E09000006004D656D6F3133000200D40100
+      00DC010000500000000C00000043000F0001000000000000000000FFFFFF1F2E
+      02030100000001001B005B4D656D4B4B4D532E225445524D494E414C5F53554D
+      4D5F31225D00000000FFFF00000000000200000001000000000500417269616C
+      000600000000000000000001000000CC00020000000000FFFFFF000000000200
+      0000000000000000380A000006004D656D6F313400020024020000DC01000048
+      0000000C00000043000F0001000000000000000000FFFFFF1F2E020301000000
+      01001B005B4D656D4B4B4D532E225445524D494E414C5F53554D4D5F32225D00
+      000000FFFF00000000000200000001000000000500417269616C000600000000
+      000000000001000000CC00020000000000FFFFFF000000000200000000000000
+      0000C70A000006004D656D6F3135000200D4010000D0010000A80000000C0000
+      0043000F0001000000000000000000FFFFFF1F2E020000000000010010005B4D
+      656D4B4B4D532E22696E666F225D00000000FFFF000000000002000000010000
+      00000500417269616C000600000000000000000000000000CC00020000000000
+      FFFFFF00000000020000000000000000004B0B000006004D656D6F3136000200
+      1000000048010000840000000C00000043000F0001000000000000000000FFFF
+      FF1F2E02000000000001000500D4E8F0ECE000000000FFFF0000000000020000
+      0001000000000500417269616C000600000002000000000000000000CC000200
+      00000000FFFFFF0000000002000000000000000000DB0B000006004D656D6F31
+      370002009400000048010000500000000C00000043000F000100000000000000
+      0000FFFFFF1F2E02000000000001001100CEF1F2E0F2EEEA20EDE020EDE0F7E0
+      EBEE00000000FFFF00000000000200000001000000000500417269616C000600
+      000002000000000000000000CC00020000000000FFFFFF000000000200000000
+      00000000006A0C000006004D656D6F3138000200E40000004801000050000000
+      0C00000043000F0001000000000000000000FFFFFF1F2E020000000000010010
+      00CEF1F2E0F2EEEA20EDE020EAEEEDE5F600000000FFFF000000000002000000
+      01000000000500417269616C000600000002000000000000000000CC00020000
+      000000FFFFFF0000000002000000000000000000F00C000006004D656D6F3139
+      0002003401000048010000500000000C00000043000F00010000000000000000
+      00FFFFFF1F2E02000000000001000700CFF0EEE1E8F2EE00000000FFFF000000
+      00000200000001000000000500417269616C0006000000020000000000000000
+      00CC00020000000000FFFFFF00000000020000000000000000007C0D00000600
+      4D656D6F32300002008401000048010000500000000C00000043000F00010000
+      00000000000000FFFFFF1F2E02000000000001000D00C8EDEAE0F1F1E8F0EEE2
+      E0EDEE00000000FFFF00000000000200000001000000000500417269616C0006
+      00000002000000000000000000CC00020000000000FFFFFF0000000002000000
+      0000000000000D0E000006004D656D6F32310002009400000054010000500000
+      000C00000043000F0001000000000000000000FFFFFF1F2E0200000000000100
+      1200D1F3ECECE020EFEE20EDE0EAEBE0E4EDFBEC00000000FFFF000000000002
+      00000001000000000500417269616C000600000002000000000000000000CC00
+      020000000000FFFFFF00000000020000000000000000009D0E000006004D656D
+      6F3232000200E400000054010000500000000C00000043000F00010000000000
+      00000000FFFFFF1F2E02000000000001001100CFF0EEE1E8F2EE20EFF0E5E4EE
+      EFEBE0F200000000FFFF00000000000200000001000000000500417269616C00
+      0600000002000000000000000000CC00020000000000FFFFFF00000000020000
+      000000000000002D0F000006004D656D6F323300020034010000540100005000
+      00000C00000043000F0001000000000000000000FFFFFF1F2E02000000000001
+      001100D1EFE8F1E0EDEE20EFF0E5E4EEEFEBE0F200000000FFFF000000000002
+      00000001000000000500417269616C000600000002000000000000000000CC00
+      020000000000FFFFFF0000000002000000000000000000AF0F000006004D656D
+      6F32340002008401000054010000500000000C00000043000F00010000000000
+      00000000FFFFFF1F2E0200000000000100030053544200000000FFFF00000000
+      000200000001000000000500417269616C000600000002000000000000000000
+      CC00020000000000FFFFFF00000000020000000000000000003C10000006004D
+      656D6F3235000200D401000054010000500000000C00000043000F0001000000
+      000000000000FFFFFF1F2E02000000000001000E00C7EEEBEEF2E0FF20EAEEF0
+      EEEDE000000000FFFF00000000000200000001000000000500417269616C0006
+      00000002000000000000000000CC00020000000000FFFFFF0000000002000000
+      000000000000BF10000006004D656D6F32360002002402000054010000500000
+      000C00000043000F0001000000000000000000FFFFFF1F2E0200000000000100
+      0400DEE3F0E000000000FFFF0000000000020000000100000000050041726961
+      6C000600000002000000000000000000CC00020000000000FFFFFF0000000002
+      0000000000000000004811000006004D656D6F3237000200D401000048010000
+      A80000000C00000043000F0001000000000000000000FFFFFF1F2E0200000000
+      0001000A00C8EDF4EEF0ECE0F6E8FF00000000FFFF0000000000020000000100
+      0000000500417269616C000600000002000000000000000000CC000200000000
+      00FFFFFF0000000002000000000000000000CD11000006004D656D6F32380002
+      001000000080020000840000000C00000043000F0001000000000000000000C0
+      C0C0002E02000000000001000600C8F2EEE3EE3A00000000FFFF000000000002
+      00000001000000000500417269616C000600000002000000000000000000CC00
+      020000000000FFFFFF00000000020000000000000000006512000006004D656D
+      6F32390002009400000080020000500000000C00000043000F00010000000000
+      00000000C0C0C0002E020301000000010019005B53554D285B4D656D4B4B4D53
+      2E2253414C444F31225D295D00000000FFFF0000000000020000000100000000
+      0500417269616C000600000000000000000001000000CC00020000000000FFFF
+      FF0000000002000000000000000000FD12000006004D656D6F3330000200E400
+      000080020000500000000C00000043000F0001000000000000000000C0C0C000
+      2E020301000000010019005B53554D285B4D656D4B4B4D532E2253414C444F32
+      225D295D00000000FFFF00000000000200000001000000000500417269616C00
+      0600000000000000000001000000CC00020000000000FFFFFF00000000020000
+      000000000000009613000006004D656D6F333100020034010000800200005000
+      00000C00000043000F0001000000000000000000C0C0C0002E02030100000001
+      001A005B53554D285B4D656D4B4B4D532E2250524F4249544F225D295D000000
+      00FFFF00000000000200000001000000000500417269616C0006000000000000
+      00000001000000CC00020000000000FFFFFF0000000002000000000000000000
+      2E14000006004D656D6F33320002008401000080020000500000000C00000043
+      000F0001000000000000000000C0C0C0002E020301000000010019005B53554D
+      285B4D656D4B4B4D532E22494E4B415353225D295D00000000FFFF0000000000
+      0200000001000000000500417269616C000600000000000000000001000000CC
+      00020000000000FFFFFF0000000002000000000000000000C714000006004D65
+      6D6F3333000200940000008C020000500000000C00000043000F000100000000
+      0000000000C0C0C0002E02030100000001001A005B53554D285B4D656D4B4B4D
+      532E22524E5F53554D4D225D295D00000000FFFF000000000002000000010000
+      00000500417269616C000600000000000000000001000000CC00020000000000
+      FFFFFF00000000020000000000000000006015000006004D656D6F3334000200
+      E40000008C020000500000000C00000043000F0001000000000000000000C0C0
+      C0002E02030100000001001A005B53554D285B4D656D4B4B4D532E22504F5F53
+      554D4D225D295D00000000FFFF00000000000200000001000000000500417269
+      616C000600000000000000000001000000CC00020000000000FFFFFF00000000
+      02000000000000000000FB15000006004D656D6F3335000200340100008C0200
+      00500000000C00000043000F0001000000000000000000C0C0C0002E02030100
+      000001001C005B53554D285B4D656D4B4B4D532E22504F5F53554D4D5F31225D
+      295D00000000FFFF00000000000200000001000000000500417269616C000600
+      000000000000000001000000CC00020000000000FFFFFF000000000200000000
+      00000000009A16000006004D656D6F3336000200840100008C02000050000000
+      0C00000043000F0001000000000000000000C0C0C0002E020301000000010020
+      005B53554D285B4D656D4B4B4D532E225445524D494E414C5F53554D4D225D29
+      5D00000000FFFF00000000000200000001000000000500417269616C00060000
+      0000000000000001000000CC00020000000000FFFFFF00000000020000000000
+      000000003B17000006004D656D6F3337000200D40100008C020000500000000C
+      00000043000F0001000000000000000000C0C0C0002E02030100000001002200
+      5B53554D285B4D656D4B4B4D532E225445524D494E414C5F53554D4D5F31225D
+      295D00000000FFFF00000000000200000001000000000500417269616C000600
+      000000000000000001000000CC00020000000000FFFFFF000000000200000000
+      0000000000DC17000006004D656D6F3338000200240200008C02000050000000
+      0C00000043000F0001000000000000000000C0C0C0002E020301000000010022
+      005B53554D285B4D656D4B4B4D532E225445524D494E414C5F53554D4D5F3222
+      5D295D00000000FFFF00000000000200000001000000000500417269616C0006
+      00000000000000000001000000CC00020000000000FFFFFF0000000002000000
+      0000000000006B18000006004D656D6F3339000200D401000080020000A80000
+      000C00000043000F0001000000000000000000C0C0C0002E0200000000000100
+      10005B4D656D4B4B4D532E22696E666F225D00000000FFFF0000000000020000
+      0001000000000500417269616C000600000000000000000000000000CC000200
+      00000000FFFFFF000000000200000000000000FEFEFF040000000A0020436174
+      65676F72793100000000090053484F505F4E414D45000000000B005245504F52
+      545F44415445000000000B005245504F52545F5052494D000000000000000000
+      000000}
+  end
+end

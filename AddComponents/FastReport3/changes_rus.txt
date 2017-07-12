@@ -1,0 +1,182 @@
+version 3.14
+-------------
++ поддержка FastQueryBuilder (вызов из окна редактирования SQL запроса)
++ добавлено свойство TfrxOverlay.PrintOnTop
++ добавлен компонент TfrxDMPCommand для печати ESC-последовательностей. 
+Используйте свойство Command для печати последовательности:
+DMPCommand1.Command := '#27#40' (или '1B28')
++ добавлено событие для скрипта TfrxReport.OnRunDialogs. Используйте его
+для ручного управления показом диалогов отчета
++ добавлено свойство Description всем компонентам отчета
+* изменено поведение внутренних наборов данных, теперь они могут быть
+добавлены на любую страницу отчета (без использования диалоговых форм)
+* изменена архитектура движков БД (общий класс TfrxCustomDatabase,
+поддержка QBuilder)
+- исправлен баг со стилями заливки <> bsSolid
+- исправлена ошибка в сервере отчетов при выборке из кеша отчетов с 
+одинаковыми переменными
+- исправлена ошибка в экспорте XML с типом формата fkNumber
+
+
+version 3.13
+-------------
++ добавлено свойство "ExportNotPrintable" во все фильтры экспорта
++ добавлены свойства "Resolution", "SeparateFiles" в фильтры экспорта BMP, JPEG и TIFF
++ улучшена совместимость TfrxHTTPClient с RFC 2068
+- исправлена ошибка построения Outline при экспорте в PDF формат
+- исправлена ошибка в PDF экспорте при работе с RTL языками (Иврит, Арабский)
+- исправлена ошибка формирования заголовка файла при экспорте в TIFF формат
+- багофиксы
+
+
+version 3.12
+-------------
++ добавлено свойство TfrxReport.StoreInDFM
++ добавлено свойство TfrxShapeView.Curve
++ добавлено свойство TfrxReport.PreviewOptions.OutlineExpand
++ добавлено свойство TfrxXLSExport.FastExport,
+установите FastExport := False усли у Вас возникает ошибка OLE error при экспорте в Excel
++ добавлено свойство TfrxXLSExport.PageBreaks                             
++ улучшены фильтры экспорта XLS, PDF, HTML
+- исправлена ошибка OLE error при экспорте в Excel
+- исправлен экспорт URL ссылок и якорей (anchors) в HTML экспорте
+- исправлена ошибка расчета ширин символов при экспорте в PDF
+- исправлена ошибка PrintOnParent в фильтрах экспорта 
+(Enterprise)
++ добавлено свойство TfrxServerConfig.ReportsList
++ добавлен параметр строки URL запроса 'getvariable' для получения значений внутренних переменных сервера
++ добавлены внутренние переменные сервера SERVER_REPORTS_LIST, SERVER_REPORTS_HTML
++ добавлена функция TfrxReportClient.GetServerVariable(const VariableName: String): String;
++ улучшена производительность TfrxReportServer
++ добавлен пример использования сервера в качестве сервиса NT (см. проект \Demos\ClientServer\Service)
++ полностью переписан пример Advanced Client (см. проект \Demos\ClientServer\Client\Advanced)
++ изменены примеры отчетов в примере Server (см. проект \Demos\ClientServer\Server)
++ изменены html файлы в примере Server (см. проект \Demos\ClientServer\Server)
++ добавлена on-line документация в примере Server (см. \Demos\ClientServer\Server\htdocs\Documentation)
+- известные ошибки: отчеты содержащие TfrxRichView (RTF) не работают в режиме сервера при включенном кешировании
+
+
+version 3.11
+-------------
++ добавлена поддержка тегов HTML в PDF экспорте
++ добавлена поддержка языков Hebrew, Turkish, Arabic в PDF экспорте
++ добавлено свойство TfrxPDFExport.Background (default = False)
++ добавлены свойства TfrxRTFExport.Creator и TfrxPDFExport.Creator
++ улучшено качество PDF экспорта
++ добавлена поддержка password protected отчетов в режиме client/server
+  (Внимание: Не используйте эту возможность совместно с глобальной аутентификацией на сервере)
++ подробный отчет об ошибках при построении отчета на сервере при HTTP подключении 
+
+- исправлено наименование свойств TfrxServerConnection.Proxy и TfrxServerConnection.ProxyPort 
+  (нажмите кнопку 'ignore' при загрузке проекта для автоматического исправления полей в компонентах)
+- исправлена ошибка очистки кеша при останове сервера
+- исправлена ошибка отрисовки фона в HTML экспорте на сервере
+- багофиксы
+
+
+version 3.10
+-------------
++ добавлены Swiss, Portuguese, Latvian ресурсы
++ добавлено событие TfrxReport.OnEndDoc
++ улучшения в фильтрах экспорта
++ добавлен outline в экспорте PDF (св-во TfrxPDFExport.Outline)
++ добавлено свойство TfrxXLSExport.AsText
++ добавлены свойства TfrxPDFExport.Author, TfrxPDFExport.Subject
++ добавлено свойство "Stream" в фильтры экспорта
++ добавлено свойство TfrxReportServer.OnAfterBuildReport
+- багофиксы
+
+
+version 3.09
+-------------
+- багофиксы
+
+
+version 3.08
+-------------
++ добавлено свойство TfrxMemoView.Clipped
++ добавлено событие TfrxReport.OnAfterPrintReport
++ добавлено baClient в свойство Align
++ добавлены Danish, Chinese ресурсы
++ возможно использование русских имен в скрипте
++ добавлено свойство TfrxPDFExport.PrintOptimized
++ увеличена скорость работы фильтра экспорта в формат Excel export
++ добавлена функция "Log rotate" в версии Client/Server
+- багофиксы
+
+
+version 3.07
+-------------
++ добавлены пакеты Delphi2005
++ добавлено свойство TfrxReport.Modified
++ добавлено свойство TfrxReport.EngineOptions.DestroyForms
++ добавлены Polish, Swedish, Romanian ресурсы
++ добавлена поддержка выражений в кросс-таб объект
+* изменения в вызове агрегатных функций: символы <> больше не нужны
+* изменения в функции IIF: теперь она работает как макрос
+- багофиксы
+
+
+version 3.06
+-------------
++ добавлены пакеты BCB для FR3 Enterprise
++ добавлено событие TfrxReportServer.OnGetVariables
++ улучшения в фильтре экспорта в PDF
++ улучшения в фильтре экспорта в RTF
+- багофиксы
+
+
+version 3.05
+-------------
++ добавлено свойство TfrxReport.ShowProgress 
+- багофиксы
+
+
+version 3.04
+-------------
++ добавлены Taiwan, Italian, Slovene, Spanish, Catalon, Dutch ресурсы
++ добавлен модуль "frxPBarcode.pas" для PSOFT BarcodeLibrary 
+  (http://www.psoft.sk)
++ добавлены функции DayOf, MonthOf, YearOf
++ добавлен "Multi-language wizard" для быстрого создания многоязыкового файла
+  ресурсов
++ добавлены свойства TfrxReport.OldStyleProgress, OnProgressSTart, OnProgress, 
+  OnProgressStop
+- багофиксы
+
+
+version 3.03
+-------------
++ добавлены Czech, Turkish ресурсы
++ добавлены свойства TfrxUserDataset.Fields, TfrxUserDataset.OnGetValue
++ редакция 1.01 документации (добавлены номера страниц)
++ добавлено свойство TfrxDataBand.KeepHeader
+- багофиксы
+
+
+version 3.02
+-------------
++ добавлены Serbian ресурсы
++ добавлена библиотека DelphiFastZLib (вместо стандартной zlib) для устранения
+  конфликта между FR3 и JediVCL
++ добавлена функция group/ungroup в дизайнере
++ добавлена утилита для быстрой компиляции пакетов FR
+* изменения в объекте Chart - необходимо переделать отчеты, содержащие
+  этот объект!
+- багофиксы
+
+
+version 3.01
+-------------
++ добавлены Ukrainian, Brazil, Hungarian, German, French ресурсы
++ добавлено свойство TfrxReport.EnabledDatasets
++ добавлено свойство TfrxCrossView.PlainCells
++ добавлены отдельные пакеты для DB и IBO
++ добавлены отдельные пакеты FastScript для DB, BDE, IBX, ADO
+* изменения в фильрах экспорта RTF и PDF
+- багофиксы
+
+
+version 3.0
+-------------
+- релиз

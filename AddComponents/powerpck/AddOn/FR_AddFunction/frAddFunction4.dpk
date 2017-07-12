@@ -1,0 +1,40 @@
+package frAddFunction4;
+
+{$R 'frFunction.dcr'}
+
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'FastReport 2.4 Add Function Library'}
+{$IMPLICITBUILD ON}
+
+requires
+  Fr4;
+
+contains
+  frFunction in 'frFunction.pas',
+  frFuncStr in 'frFuncStr.pas',
+  frFuncNum in 'frFuncNum.pas',
+  frFuncDate in 'frFuncDate.pas',
+  frFuncSQL in 'frFuncSQL.pas', 
+  frFConst in 'frFConst.pas';
+
+end.

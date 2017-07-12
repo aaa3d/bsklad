@@ -1,0 +1,7 @@
+File               Description
+----------------   ----------------------------------------
+FR_E_RTF_RS        Enhanced RTF export filter
+FR_E_XLS           XLS export filter (D5+ only)
+FR_E_XLS1          Another XLS export filter (D5+ only)
+FR_ImprExp         Improved RTF and HTM export filters
+FR_E_BMP           Export into JPG, BMP, GIF formats

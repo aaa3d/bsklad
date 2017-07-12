@@ -1,0 +1,60 @@
+﻿<object xmlns:xlink="http://www.w3.org/TR/xlink" id="1821" name="&#x414;&#x412;&#x41F; &#x422; &#x433;&#x440;. &#x410; 
+(2745&#x445;1220&#x445;3,2 / 3,3489 &#x43C;2)" type-id="70" type-guid="catalog-object" ownerId="9">
+  <properties>
+    <group name="catalog_option_props">
+      <title>Опционные свойства</title>
+      <property id="373" name="artikul" type="string">
+        <title>Артикул</title>
+        <value>14868</value>
+      </property>
+      <property id="374" name="ostatok_na_sklade" type="int">
+        <title>Остаток на складе</title>
+        <value>482</value>
+      </property>
+      <property id="375" name="opisanie" type="wysiwyg">
+        <title>Описание</title>
+        <value>Твердая</value>
+      </property>
+    </group>
+    <group name="cenovye_svojstva">
+      <title>Ценовые свойства</title>
+      <property id="212" name="price" type="price">
+        <title>Цена</title>
+        <value xlink:href="udata://emarket/price/1821">155</value>
+      </property>
+    </group>
+    <group name="catalog_stores_props">
+      <title>Склады</title>
+      <property id="214" name="reserved" type="int">
+        <title>Зарезервировано</title>
+        <value>0</value>
+      </property>
+    </group>
+    <group name="fotografii">
+      <title>Фотографии</title>
+      <property id="377" name="osnovnaya_fotografiya" type="img_file">
+        <title>Основная фотография</title>
+        <value path="./images/imgshop/full_2992390_63385260751218.jpg" folder="/images/imgshop" name="full_2992390_63385260751218" ext="jpg" width="548" height="480">/images/imgshop/full_2992390_63385260751218.jpg</value>
+      </property>
+      <property id="378" name="dop_foto_1" type="img_file">
+        <title>Доп. фото №1</title>
+        <value path="./images/imgshop/full_2992390_63385260751218.jpg" folder="/images/imgshop" name="full_2992390_63385260751218" ext="jpg" width="548" height="480">/images/imgshop/full_2992390_63385260751218.jpg</value>
+      </property>
+      <property id="379" name="dop_foto_2" type="img_file">
+        <title>Доп. фото №2</title>
+        <value path="./images/imgshop/full_2992390_63385260757234.jpg" folder="/images/imgshop" name="full_2992390_63385260757234" ext="jpg" width="800" height="467">/images/imgshop/full_2992390_63385260757234.jpg</value>
+      </property>
+    </group>
+    <group name="newgroup">
+      <title>Group #newGroup</title>
+      <property id="390" name="is-visible" type="boolean">
+        <title>Отображать в меню</title>
+        <value>1</value>
+      </property>
+      <property id="61" name="show_submenu" type="boolean">
+        <title>Показывать подменю</title>
+        <value>1</value>
+      </property>
+    </group>
+  </properties>
+</object>

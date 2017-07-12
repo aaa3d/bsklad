@@ -1,0 +1,4 @@
+File               Description
+----------------   ----------------------------------------
+FR_WordImport      Import report template from MS Word document
+FR_XLImport        Import report template from MS Excel document

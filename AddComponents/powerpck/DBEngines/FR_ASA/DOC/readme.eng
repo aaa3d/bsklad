@@ -1,0 +1,105 @@
+
+  frAsaComponents - it is component for use in dialogs of 
+best FastReport (www.fast-report.com). It based on the NativeDB 
+(www.nativedb.com) - best library of a native components for access to SAW 
+and ASA.
+
+  All the published properties from AsaSession, AsaDataSet, AsaStoredProc 
+are availablis in frAsaSession, frAsaDataSet, frAsaStoredProc for use its
+in the OI. 
+Public properties: EOF, RecordCount, IsEmpty, FieldCount, StillInProc, 
+Fields.
+Methods: Open, Close, ExecSQL, Next, Prior, First, Last, Resume,
+Locate, LocateNext, ExecProc.
+
+ In frAsaDataSet, frAsaStoredProc as the new methods for more are added 
+convenient operation with them in script GetString, GetInteger, GetFloat
+
+GetString(<Name of field|Number of field>)  - > Returns value by the way strings (String)
+GetInteger(<Name of field|Number of field>) - > Returns value by the way integers (LongInt)
+GetFloat(<Name of field|Number of field>)   - > Returns value by the way numbers with, floating 
+                                                by comma (Double)
+If the value empty, GetString returns empty string (""), 
+GetInteger and GetFloat return a zero (0).
+
+
+Features Locate (LocateNext) in frAsaDataSet (frAsaStoredProc)
+- Search only on one field
+- In quality LocateOption, it is necessary to specify in quotes of a constant
+loCaseInsensitive, loPartialKey.
+For example:
+TestAsaDataSet.Locate(Edit1.Text, Edit2.Text, 'loCaseInsensitive,loPartialKey')
+or:
+TestAsaDataSet.Locate(Edit1.Text, Edit2.Text, 'loCaseInsensitive' )
+If you want to search without parameters: 
+TestAsaDataSet.Locate(Edit1.Text, Edit2.Text, '')
+
+  frAsaDataSet and frAsaStoredProc have a property Fields which availablis both
+on an index of a field, and till its name. 
+  Five properties are adhered to a property Fields:
+DisplayLabel,  DisplayWidth,  Visible, FieldName, IsNull. By which as it is
+possible to be converted under number and on the name, for example:
+
+{ Part of script FR }
+begin
+
+ Memo2.Lines.Add(TestAsaDataSet.Fields.FieldName[1]);
+ Memo3.Lines.Add(TestAsaDataSet.Fields[1]);
+ Memo4.Lines.Add(TestAsaDataSet.Fields.DisplayLabel[1]);
+ Memo5.Lines.Add(TestAsaDataSet.Fields.DisplayWidth[1]);
+ Memo6.Lines.Add(TestAsaDataSet.Fields.Visible[1]);
+ Memo7.Lines.Add(TestAsaDataSet.Fields.IsNull[1]);
+
+ Memo2.Lines.Add(TestAsaDataSet.Fields.FieldName['TEST']);
+ Memo3.Lines.Add(TestAsaDataSet.Fields['TEST']);
+ Memo4.Lines.Add(TestAsaDataSet.Fields.DisplayLabel['TEST']);
+ Memo5.Lines.Add(TestAsaDataSet.Fields.DisplayWidth['TEST']);
+ Memo6.Lines.Add(TestAsaDataSet.Fields.Visible['TEST']);
+ Memo6.Lines.Add(TestAsaDataSet.Fields.IsNull['TEST']);
+  
+end
+
+And the properties DisplayLabel, DisplayWidth, Visible can in the script
+assign new values, for example:
+
+
+{ Part of script FR} 
+begin
+ TestAsaDataSet.Fields.Visible[1] := not TestAsaDataSet.Fields.Visible[1];
+ TestAsaDataSet.Fields.DisplayLabel[1] := Edit2.Text;
+ TestAsaDataSet.Fields.DisplayWidth[1] := Edit2.Text;
+
+ TestAsaDataSet.Fields.Visible[Edit1.Text] := not TestAsaDataSet.Fields.Visible[Edit1.Text];
+ TestAsaDataSet.Fields.DisplayLabel[Edit1.Text] := Edit2.Text;
+ TestAsaDataSet.Fields.DisplayWidth[Edit1.Text] := Edit2.Text;
+end
+
+
+frAsaStoredProc:
+
+  Components frAsaStoredProc was entered into the library, for this purpose
+what was possible to start SP which return out-parameters, though certainly
+and anyone other of SP it too knows how to execute as well as usual
+AsaStoredProc.
+  The editor of parameters for frAsaStoredProc was accordingly extended,
+possibility there was added to specify sort (ParamType) parameter. For want
+of execution SP, by the methods Open or ExecProc, the parameters of sort
+Input and InputOutput are treated only. For obtaining value of the
+out-parameter it is necessary to use a
+method GetOutParam(< a Name of the parameter > | < Number of the parameter >). 
+If the out-parameter empty, i.e. equal null, empty string return.
+For example:
+
+{ Part of script FR} 
+begin
+ Label1.Caption := TestAsaStoredProc.GetOutParam('p1');
+ Label1.Caption := TestAsaStoredProc.GetOutParam(1);
+end
+
+
+---
+
+Author: Tolik Gusin aka Stalker
+e_mail: stalker@miac.dp.ua
+
+

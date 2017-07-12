@@ -1,0 +1,5 @@
+File               Description
+----------------   ----------------------------------------
+FR_LZW             Add-on for compressing .frp files
+TabOrder           Add-on for editing tab order of dialog controls
+QR2FR              Simple QR->FR converter

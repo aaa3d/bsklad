@@ -1,0 +1,42 @@
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\cst\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\dan\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\deu\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\eng\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\esp\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\esm\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\fra\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ita\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\nld\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\nor\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ptb\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ptg\rbPrint.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\sve\rbPrint.rc
+
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\cst\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\dan\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\deu\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\eng\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\esm\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\esp\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\fra\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ita\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\nld\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\nor\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ptb\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ptg\rbIDE.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\sve\rbIDE.rc
+
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\cst\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\dan\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\deu\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\eng\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\esm\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\esp\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\fra\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ita\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\nld\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\nor\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ptb\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\ptg\rbRAP.rc
+c:\progra~1\borland\delphi5\bin\brc32 -r c:\progra~1\borland\delphi5\rbuild~1\langua~1\sve\rbRAP.rc
+

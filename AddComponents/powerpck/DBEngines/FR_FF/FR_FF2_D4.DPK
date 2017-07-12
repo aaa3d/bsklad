@@ -1,0 +1,47 @@
+// Package file for Delphi 4
+
+package FR_FF2_D4;
+
+{$R 'FR_FFreg.dcr'}
+{$I FR.inc}
+
+{$DESCRIPTION 'FastReport 2.4 FF Components'}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$IMPLICITBUILD ON}
+
+requires
+  VCL40,
+  VCLDB40,
+  VCLSMP40
+{$IFDEF QBUILDER}, DOQB40    {$ENDIF}
+, FR4;
+
+contains
+  FR_FFReg        in 'FR_FFReg.pas',
+  FR_FFDB         in 'FR_FFDB.pas',
+  FR_FFMd         in 'FR_FFMd.pas',
+  FR_FFQuery      in 'FR_FFQuery.pas',
+  FR_FFQueryParam in 'FR_FFQueryParam.pas',
+  FR_FFTable      in 'FR_FFTable.pas';
+
+end.

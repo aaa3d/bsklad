@@ -1,0 +1,39 @@
+Title		"Программа связи через Outlook Олимпия"
+#DataBasePath	"crater:/sklad/sklad_2005/data/bsklad2005.gdb"
+DataBasePath	"127.0.0.1:c:\base\current\bsklad2005.fdb"
+
+#DataBasePath	"crater:D:\CommonPrograms\Sklad_2005\Data\BSKLAD2005.GDB"
+#ADD_TIME - сколько дополнительно минут будет в пакете
+#MAX_LINES_COUNT	- ограничение на количество строк в письме
+#DISABLE_MULTIPLE_INSTANCES	- запрещает запуск несколльких программ одновременно
+ADD_TIME		15
+MAX_LINES_COUNT	10000
+COMMIT_INTERVAL	1000
+DISABLE_MULTIPLE_INSTANCES 1
+
+
+PocketPath	"D:\"
+CodeShop	1
+MainDescr	Yar8
+BasePAth	"
+
+EmailAddres	1	"Олимп-aaa"		aaa@olimpiya.yaroslavl.ru
+EmailAddres	2	"Олимпaaa"		aaa@olimpiya.yaroslavl.ru
+
+USE_OUTLOOK_FOR_SEND_MAIL	0
+
+SENDED_MAIL_DIRECTORY		c:\temp
+
+REEmailAddres	15	"Олимп-4"		aaa@olimpiya.yaroslavl.ru
+
+GETRE=1
+GETRE 1
+
+ADMIN_EMAIL	aaa@olimpiya.yaroslavl.ru
+EMAIL_HOST	192.168.0.1
+
+NETSENDUSERSTIMESTART 	09:30
+NETSENDUSERSTIMEEND 		20:00
+
+NETSENDUSER aaa
+NETSENDUSER maryuka

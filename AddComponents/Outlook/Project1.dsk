@@ -1,0 +1,238 @@
+[MainWindow]
+Create=1
+Visible=1
+State=2
+Left=512
+Top=7
+Width=640
+Height=106
+MaxLeft=0
+MaxTop=0
+MaxWidth=1288
+MaxHeight=106
+ClientWidth=1280
+ClientHeight=60
+
+[WatchWindow]
+Create=1
+Visible=1
+State=0
+Left=6
+Top=535
+Width=390
+Height=301
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=382
+ClientHeight=274
+
+[ProjectManager]
+LargeButtons=1
+Column0Width=75
+Column1Width=125
+Column2Width=125
+
+[BreakpointWindow]
+Create=1
+Visible=1
+State=0
+Left=393
+Top=375
+Width=453
+Height=197
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=445
+ClientHeight=170
+Column0Width=100
+Column1Width=60
+Column2Width=240
+Column3Width=40
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=108
+Width=282
+Height=705
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=274
+ClientHeight=681
+SplitPos=84
+
+[AlignmentPalette]
+Create=1
+Visible=1
+State=0
+Left=262
+Top=107
+Width=156
+Height=82
+MaxLeft=-4
+MaxTop=-4
+ClientWidth=150
+ClientHeight=60
+
+[HistoryLists\hiWatchExpression]
+Count=19
+H0=strtofloat(userdatum)
+H1=Date
+H2=OutLook.ContactCount
+H3=indextable.eof
+H4=data.kundentable.databasename
+H5=kundetable.databasename
+H6=database1.connected
+H7=kundentable.active
+H8=kundenedit.ortetable.active
+H9=ortetable.active
+H10=ortetable.open
+H11=remoteoptions.sendstring.text
+H12=help
+H13=sendstring.text
+H14=Liste.Cells[1,Liste.RowCount]
+H15=Liste.Cells[1,liste.row]
+H16=StatusMonitor.DestApp.text
+H17=HelpStr
+H18=HelpNum
+
+[HistoryLists\hiEvalExpression]
+Count=4
+H0=checklizenz.lizenz1.flag0
+H1=kundentable.database.connected
+H2=kundentable.database.open
+H3=KundenTable
+
+[HistoryLists\hiOpenFile]
+Count=21
+H0=c:\projecte\3dtext\project1.dpr
+H1=c:\projecte\tlizenz easy dial\lizenz.pas
+H2=c:\projecte\welcomeed-mccom\welcome.dpr
+H3=c:\projecte\outlook connection\outlooktools.pas
+H4=c:\projecte\easy dial\standard\dial.pas
+H5=c:\download\sonst\limit on lan\appctrl.pas
+H6=c:\projecte\remote dial c-s\client.dpr
+H7=c:\projecte\remote dial c-s\server.dpr
+H8=c:\download\tapi\exceltele\samples\delphi\tapiout\tapiout.dpr
+H9=c:\projecte\kopie von easy dial becker\statusmonitorunit.dfm
+H10=c:\download\net\tmailslot\demo\server\server.dpr
+H11=c:\projecte\dinfo\klicktelunit.pas
+H12=c:\projecte\call center 2\answerdemo.dpr
+H13=c:\projecte\call center 2\lizenz\project1.dpr
+H14=c:\download\tapi\d_tapi\tapitest.dpr
+H15=c:\projecte\dinfo\test\project1.dpr
+H16=c:\projecte\berger\isdndialerunit.pas
+H17=c:\eigene dateien\alcatel_tapi_watch\isdndialer.dpr
+H18=c:\projecte\berger\kinfo.dpr
+H19=c:\projecte\rundholz\excel\exceldem.dpr
+H20=c:\download\isdn\isdn-obj\demo\call con\holdretrieve.dpr
+
+[HistoryLists\hiRunParams]
+Count=2
+H0=/p
+H1=/m
+
+[HistoryLists\hiUnitAlias]
+Count=1
+H0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+
+[HistoryLists\hiLibUnitAliases]
+Count=1
+H0=WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;
+
+[HistoryLists\hiSearchMasks]
+Count=0
+
+[Closed Files]
+File_0=SourceModule,'c:\download\sonst\userdlg\CorGlBtn.pas',0,1,125,1,138,0,0
+File_1=SourceModule,'C:\Projecte\TLizenz Easy Dial\Lizenz.pas',0,1,224,44,243,0,0
+File_2=SourceModule,'c:\download\tb97\TB97.pas',0,1,3922,1,3936,0,0
+File_3=SourceModule,'c:\download\sonst\limit on lan\AppCtrl.pas',0,1,329,1,335,0,0
+File_4=SourceModule,'C:\Projecte\Easy Dial\Standard\OutlookInfoUnit.pas',0,1,105,1,108,1,1
+File_5=SourceModule,'C:\Projecte\Easy Dial\Standard\DataUnit.pas',0,1,104,5,117,0,0
+File_6=SourceModule,'C:\Projecte\Easy Dial\Standard\kinfo20.pas',0,1,942,1,929,1,1
+File_7=SourceModule,'C:\Projecte\Easy Dial\Standard\optionsUnit.pas',0,1,416,1,425,1,0
+File_8=SourceModule,'C:\Projecte\Easy Dial\standard\statusmonitorUnit.pas',0,1,1036,31,1038,1,0
+
+[Modules]
+Module0=C:\Projecte\OutlookTools Sample\Unit1.pas
+Module1=c:\projecte\outlook connection\OutLookTools.pas
+Module2=C:\Projecte\OutlookTools Sample\Project1.dpr
+Count=3
+EditWindowCount=1
+
+[C:\Projecte\OutlookTools Sample\Unit1.pas]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=1
+
+[c:\projecte\outlook connection\OutLookTools.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Projecte\OutlookTools Sample\Project1.dpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+Create=1
+Visible=1
+State=0
+Left=647
+Top=125
+Width=616
+Height=485
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=608
+ClientHeight=458
+SplitPos=50
+MessagePane=1
+ViewCount=2
+CurrentView=0
+View0=0
+View1=1
+
+[View0]
+Module=C:\Projecte\OutlookTools Sample\Unit1.pas
+CursorX=32
+CursorY=89
+TopLine=87
+LeftCol=1
+
+[View1]
+Module=c:\projecte\outlook connection\OutLookTools.pas
+CursorX=1
+CursorY=112
+TopLine=111
+LeftCol=1
+
+[Watches]
+Count=19
+Watch0='callingpartynumber',256,0,11,1
+Watch1='mainWindow.kundenTable.FieldByName(''Tel'').asString',256,0,11,1
+Watch2='found',256,0,11,1
+Watch3='HelpNum',256,0,18,1
+Watch4='HelpStr',256,0,18,1
+Watch5='StatusMonitor.DestApp.text',256,0,18,1
+Watch6='Liste.Cells[1,liste.row]',256,0,18,1
+Watch7='Liste.Cells[1,Liste.RowCount]',256,0,18,1
+Watch8='sendstring.text',256,0,18,1
+Watch9='help',256,0,18,1
+Watch10='remoteoptions.sendstring.text',256,0,18,1
+Watch11='kundenedit.ortetable.active',256,0,18,1
+Watch12='kundentable.active',256,0,18,1
+Watch13='database1.connected',256,0,18,1
+Watch14='data.kundentable.databasename',256,0,18,1
+Watch15='indextable.eof',256,0,18,1
+Watch16='OutLook.ContactCount',256,0,18,1
+Watch17='Date',256,0,18,1
+Watch18='strtofloat(userdatum)',256,0,18,1
+
+[Breakpoints]
+Count=0
+

@@ -1,0 +1,18 @@
+#include "snr_const.pas"
+
+STRINGTABLE
+{
+  snrCaption,     "Search and Replace"
+
+  snrSearch,      "Search"
+  snrReplace,     "Replace"
+  snrStop,        "Stop"
+  snrReplaceAll,  "Replace All"
+  snrClose,       "Close"
+
+  snrCaseInsensitive, "Case insensitive"
+  snrSearchInScript,  "Search in script"
+  snrSearchInMemo,    "Search in memo"
+
+  snrClear, "Clear results"
+}

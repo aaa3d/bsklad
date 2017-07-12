@@ -1,0 +1,36 @@
+De parte de: "Greg Martin" <gregory.martin@abm-ltd.co.uk>
+Fecha: Wed, 20 Sep 2000 11:56:49 +0100
+Asunto: [sakemail] [sakemail] New TMSG Component with HTML and start of Help File
+Responder a: "sakemail@perio.unlp.edu.ar" <sakemail@perio.unlp.edu.ar>
+Enviado a: "" <sakemail@perio.unlp.edu.ar>
+__________________________________________________________
+
+Hi All,
+
+Attached is the component I have modified to include two new properties.
+
+MessageType     - which allows you to select HTML or plain text.
+AttachmentType - which allows you to set how attachments are displayed in
+the HTML document.
+
+Please backup your original copy if you decide to use this update, as I
+accept no responsibility for anything etc.etc.etc.
+
+Also added is a new line, "ContentID"  which is written in the attachment
+header giving the name of the file.
+
+For example if you attach an imaged called hello.bmp then you can reference
+this in the HTML message as
+
+<B>This is a hello world HTML Message</B>
+<P>
+<img src="cid:hello.bmp">
+<P>
+
+I have also attached the shell of a new helpfile for the Saki mail units, if
+you would like to contribute to any of the units properties or methods,
+please post in here first to say which item you will do, then email the
+completed task as a text file and I will paste it in.
+
+Regards,
+Greg

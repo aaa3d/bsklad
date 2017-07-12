@@ -1,0 +1,337 @@
+---------------- Using own functions ----------------------------------------
+
+Q: How I can add my own function?
+A: Use TfrReport.OnUserFunction event. Here is simple example:
+
+   procedure TForm1.frReport1UserFunction(const Name: String;
+     p1, p2, p3: Variant; var val: Variant);
+   begin
+     if AnsiCompareText('SUMTOSTR', Name) = 0 then
+       val := My_Convertion_Routine(frParser.Calc(p1));
+   end;
+
+   After this, you can use SumToStr function in any place of report
+   (in any expression or script).
+
+
+Q: Ok, but it works only for one TfrReport component. I want to use
+   my function everywhere (in all TfrReport components).
+A: Make OnUserFunction event handler common for all components. If you
+   can't do this, you should create function library:
+
+   type
+     TMyFunctionLibrary = class(TfrFunctionLibrary)
+     public
+       constructor Create; override;
+       procedure DoFunction(FNo: Integer; p1, p2, p3: Variant;
+         var val: Variant); override;
+     end;
+
+   constructor TMyFunctionLibrary.Create;
+   begin
+     inherited Create;
+     with List do
+     begin
+       Add('DATETOSTR');
+       Add('SUMTOSTR');
+     end;
+   end;
+
+   procedure TMyFunctionLibrary.DoFunction(FNo: Integer; p1, p2, p3: Variant;
+     var val: Variant);
+   begin
+     val := 0;
+     case FNo of
+       0: val := My_DateConvertion_Routine(frParser.Calc(p1));
+       1: val := My_SumConvertion_Routine(frParser.Calc(p1));
+     end;
+   end;
+
+   To register function library, call
+   frRegisterFunctionLibrary(TMyFunctionLibrary);
+   To unregister library, call
+   frUnRegisterFunctionLibrary(TMyFunctionLibrary);
+
+
+Q: How I can add my function to function list (in expression builder)?
+A: Use frAddFunctionDesc procedure (FR_Class unit):
+
+   frAddFunctionDesc(FuncLib, 'SUMTOSTR', 'My functions',
+     'SUMTOSTR(<Number>)/Converts number to its verbal presentation.');
+
+   Note: "/" symbol is required! It separates function syntax from its
+   description.
+   FuncLib is reference to your function library (can be nil if you don't
+   use function library). When function library is unregistered, all its
+   function will be automatically removed from function list.
+
+
+---------------- Working with variables -------------------------------------
+
+Q: How I can fill variables list (in data dictionary) programmatically?
+A: All variables and categories from data dictionary stored in
+   TfrReport.Dictionary.Variables.
+
+   with frReport1.Dictionary do
+   begin
+     // creating category (space in category name required!)
+     Variables[' New category'] := '';
+     // creating variables
+     Variables['New Variable'] := 'CustomerData.Customers."CustNo"';
+     Variables['Another Variable'] := 'Page#';
+   end;
+
+Q: I define my variable and assign string to it:
+
+   with frReport1.Dictionary do
+     Variables['Month'] := 'March';
+
+   But when I run report, I get an error. Why?
+A: Because FastReport assumes that string values, assigned to the data
+   dictionary variables, are expressions which it should parse and calculate.
+   Use additional quotes:
+
+   with frReport1.Dictionary do
+     Variables['Month'] := '''' + 'March' + '''';
+
+   Or, use frVariables to transfer static data to the report.
+
+
+Q: I don't want to show some datasets in data dictionary.
+A: Use TfrReport.Dictionary.DisabledDatasets:
+
+   with frReport1.Dictionary do
+   begin
+     // turn of this dataset
+     DisabledDatasets.Add('CustomerData.Bio');
+     // or, turn off entire datamodule/form
+     DisabledDatasets.Add('CustomerData*');
+   end;
+
+
+Q: How I can transfer data to the report?
+A: There is several methods to do this. First is to use global object
+   frVariables (defined in FR_Class unit):
+
+   frVariables['My variable'] := 10;
+
+   This code creates new variable with 'My variable' name and value = 10.
+   This method is best to transfer static data to the report.
+
+   Second method is to use TfrReport.OnGetValue event. You can use this
+   method to transfer dynamic data, i.e. data which changes from record
+   to record.
+
+   procedure TForm1.frReport1GetValue(ParName: String; var ParValue: Variant);
+   begin
+     if ParName = 'MyField' then
+       ParValue := Table1MyField.Value;
+   end;
+
+   Finally, third method is to define variable from dictionary
+   programmatically (see previous question):
+
+   with frReport1.Dictionary do
+   begin
+     Variables['MyVariable'] := 'CustomerData.Customers."CustNo"';
+     Variables['Another Variable'] := '10';
+   end;
+
+
+Q: Can I transfer data from report to the program?
+A: Use frVariables object. If you write the following code in script of
+   any object in the report:
+
+   MyVariable := 10
+
+   In your program you can use this code to retrieve MyVariable value:
+   v := frVariables['MyVariable'];
+
+
+---------------- Script (FastReport Pascal) ---------------------------------
+
+Q: Does band have a script?
+A: Yes, it does. Select band and press Ctrl+Enter or choose "OnBeforePrint"
+   property in object inspector.
+
+
+Q: Does report page have a script?
+A: Yes, it does too. Select page (click on empty space) and choose
+   "OnBeforePrint" property in object inspector. If page is dialog form,
+   this property called "OnActivate".
+
+
+Q: I have two objects: Memo1 and Memo2. Can I call Memo2 properties and
+   methods from Memo1 script?
+A: Yes, use comma-notation, e.g. ObjectName.PropertyName.
+
+
+Q: Which object's properties can I use in script?
+A: Almost all which you can see in object inspector. Font properties
+   accessible as Font.Name, Font.Size and etc.
+
+
+---------------- Other questions --------------------------------------------
+
+Q: How to change page order in the multi-page report?
+A: Drag page tab to desired position.
+
+
+Q: I want to see all fields and variables I want to insert in the report
+   in one list.
+A: Set TfrReport.MixVariablesAndDBFields := True. All data fields and
+   variables now accessible in the "Insert data field" dialog.
+
+
+Q: I don't want to see export options dialog.
+A: Set all necessary options in the export component (e.g., TfrTextExport)
+   and turn off dialog by setting ShowDialog property to False.
+
+
+Q: Why TotalPages variable does'nt works? It always returns 0.
+A: Set Two-pass option for your report. To do this, open "Report options"
+   dialog in the "File" menu of the designer.
+
+
+Q: I store my report in the BLOb field. When I run designer, it shows that
+   my report has "Untitled" name.
+A: Before run designer, do this:
+
+   frReport1.FileName := 'Name of my report';
+
+
+Q: Same situation. I want to define my reaction of "Open" and "Save"
+   buttons in designer.
+A: Look at TfrDesigner component. It has necessary events: OnLoadReport and
+   OnSaveReport. Here is a small example:
+
+  procedure TForm1.frDesigner1LoadReport(Report: TfrReport;
+    var ReportName: String; var Opened: Boolean);
+  begin
+    with MyOpenDialog do
+    begin
+      Opened := ShowModal = mrOk;
+      if Opened then
+      begin
+        Report.LoadFromBlobField(...);
+        ReportName := ...;
+      end;
+    end;
+  end;
+
+  procedure TForm1.frDesigner1SaveReport(Report: TfrReport;
+    var ReportName: String; SaveAs: Boolean; var Saved: Boolean);
+  begin
+    if SaveAs then
+      with MySaveDialog do
+      begin
+        Saved := ShowModal = mrOk;
+        if Saved then
+        begin
+          Report.SaveToBlobField(...);
+          ReportName := ...;
+        end;
+      end
+    else
+      Report.SaveToBlobField(...);
+  end;
+
+
+Q: In QR, I can write code like QRLabel1.Caption := 'Some text'. How can
+   I do this with FR?
+A: FR objects is not a components (like in QR, RB). Use TfrReport.FindObject
+   method to find object by name:
+
+  var
+    t: TfrMemoView;
+  begin
+    t := TfrMemoView(frReport1.FindObject('Memo1'));
+    if t <> nil then
+      t.Memo.Text := 'FastReport';
+  end;
+
+
+Q: I want to define own hot keys in user preview (TfrPreview component).
+A: This component has Window: TForm property. Assign own event handler
+   to Window.OnKeyDown property.
+
+
+Q: Fast Report 2.4 can not load FreeReport 2.21 files.
+A: Guys from FreeR made wrong modifications. Just change the first byte in
+   the report file to 16h and do the following modifications in source code.
+   After these modifications, load the report and save it. Finally, return
+   back the original code.
+
+  FR_Class:
+
+  function ReadString(Stream: TStream): String;
+  begin
+  {  if frVersion >= 23 then}
+      Result := frReadString(Stream) {else
+      Result := frReadString22(Stream);}
+  end;
+
+  procedure ReadMemo(Stream: TStream; Memo: TStrings);
+  begin
+  {  if frVersion >= 23 then}
+      frReadMemo(Stream, Memo){ else
+      frReadMemo22(Stream, Memo);}
+  end;
+
+
+  FR_Utils:
+
+  procedure frReadMemo(Stream: TStream; l: TStrings);
+  var
+    s: String;
+    b: Byte;
+    n: Word;
+  begin
+    l.Clear;
+    l.Text := frReadString(Stream); exit;
+    Stream.Read(n, 2);
+    if n > 0 then
+      repeat
+        Stream.Read(n, 2);
+        SetLength(s, n);
+        Stream.Read(s[1], n);
+        l.Add(s);
+        Stream.Read(b, 1);
+      until b = 0
+    else
+      Stream.Read(b, 1);
+  end;
+
+  function frReadString(Stream: TStream): String;
+  var
+    s: String;
+    n: Integer;
+    b: Byte;
+  begin
+    Stream.Read(n, 4);
+    SetLength(s, n);
+    Stream.Read(s[1], n);
+  //  Stream.Read(b, 1);
+    Result := s;
+  end;
+
+
+Q: How to print report without preview?
+A: Here is the code:
+
+  frReport1.PrepareReport;
+  frReport1.PrintPreparedReport('', 1, True, frAll);
+   or
+  frReport1.PrintPreparedReportDlg;
+
+
+Q: I want to put a picture on my report. The only problem is that my
+   application is generating this picture. Is there a way to load this
+   picture into the report just before printing?
+
+A: Use TfrReport.OnBeforePrint event:
+
+  if View.Name = 'Picture1' then
+    TfrPictureView(View).Picture.LoadFromFile(...) or
+                                .Assign or
+                                .everything_what_you_want

@@ -1,0 +1,390 @@
+{\rtf1\ansi\ansicpg1251\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f16\fmodern\fcharset204\fprq1{\*\panose 00000000000000000000}Courier 20 Pitch;}{\f39\froman\fcharset238\fprq2 Times New Roman CE;}{\f40\froman\fcharset204\fprq2 Times New Roman Cyr;}{\f42\froman\fcharset161\fprq2 Times New Roman Greek;}
+{\f43\froman\fcharset162\fprq2 Times New Roman Tur;}{\f44\froman\fcharset186\fprq2 Times New Roman Baltic;}{\f51\fmodern\fcharset238\fprq1 Courier New CE;}{\f52\fmodern\fcharset204\fprq1 Courier New Cyr;}{\f54\fmodern\fcharset161\fprq1 Courier New Greek;}
+{\f55\fmodern\fcharset162\fprq1 Courier New Tur;}{\f56\fmodern\fcharset186\fprq1 Courier New Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;
+\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{
+\widctlpar\adjustright \fs20\lang3081\cgrid \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}{\s15\widctlpar\adjustright \fs20\lang1049\cgrid \snext15 \'ce\'e1\'fb\'f7\'ed\'fb\'e9;}{\s16\keepn\nowidctlpar\outlinelevel0\adjustright \b\f16\ul\cf6 
+\sbasedon15 \snext15 \'e7\'e0\'e3\'ee\'eb\'ee\'e2\'ee\'ea 1;}{\*\cs17 \additive \'ce\'f1\'ed\'ee\'e2\'ed\'ee\'e9 \'f8\'f0\'e8\'f4\'f2;}}{\info{\author Gavrilov}{\operator Gavrilov}{\creatim\yr1999\mo11\dy9\hr10\min36}{\revtim\yr2000\mo6\dy16\hr14\min22}
+{\version6}{\edmins148}{\nofpages7}{\nofwords1315}{\nofchars7497}{\*\company Firma RKK}{\nofcharsws0}{\vern113}}\widowctrl\ftnbj\aenddoc\hyphcaps0\viewkind1\viewscale100 \fet0\sectd \linex0\headery709\footery709\colsx709\sectdefaultcl {\*\pnseclvl1
+\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}{\*\pnseclvl5
+\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \s16\qc\keepn\nowidctlpar\outlinelevel0\adjustright \b\f16\ul\cf6 {\fs28 VARIAN ASYNC32 COMPONENT v1.25
+\par (c) VARIAN SOFTWARE SERVICES NL 1996-1997
+\par ALL RIGHTS RESERVED
+\par }\pard\plain \s15\nowidctlpar\adjustright \fs20\lang1049\cgrid {\f2\lang1033\cgrid0 
+\par 
+\par }\pard\plain \s16\keepn\nowidctlpar\outlinelevel0\adjustright \b\f16\ul\cf6 {TCOMM EXCEPTIONS
+\par }\pard\plain \s15\nowidctlpar\adjustright \fs20\lang1049\cgrid {\f2\lang1033\cgrid0 type
+\par   ECommError = class(Exception)
+\par     ErrorCode: Integer;
+\par   end;
+\par 
+\par }{\f52\cgrid0 \'c8\'f1\'ea\'eb\'fe\'f7\'e5\'ed\'e8\'e5}{\f2\lang1033\cgrid0  ECommError }{\f52\cgrid0 \'f1\'ee\'e4\'e5\'f0\'e6\'e8\'f2 \'e4\'ee\'ef\'ee\'eb\'ed\'e8\'f2\'e5\'eb\'fc\'ed\'fb\'e9 \'ea\'ee\'e4 \'ee\'f8\'e8\'e1\'ea\'e8, \'ea\'ee\'f2\'ee\'f0\'fb
+\'e9 \'e2\'ea\'eb\'fe\'f7\'e0\'e5\'f2\'f1\'ff \'e2 \'f1\'e8\'f1\'f2\'e5\'ec\'f3 }{\f2\lang1033\cgrid0 error result }{\f52\cgrid0 \'e4\'eb\'ff}{\f2\lang1033\cgrid0  Windows. }{\f52\cgrid0 \'dd\'f2\'ee \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5 (\'ea\'ee\'e3\'e4\'e0 
+\'ee\'f8\'e8\'e1\'ea\'f3 \'e2\'fb\'f0\'e0\'e1\'e0\'f2\'fb\'e2\'e0\'e5\'f2 \'ea\'ee\'ec\'ef\'ee\'ed\'e5\'ed\'f2)\'f0\'e0\'e2\'ed\'ee \endash 1, \'e4\'f0\'f3\'e3\'e8\'e5 \'ea\'ee\'e4\'fb \'ed\'e5\'e4\'ee\'f1\'f2\'f3\'ef\'ed\'fb.
+\par }{\f2\cgrid0 
+\par }\pard\plain \s16\keepn\nowidctlpar\outlinelevel0\adjustright \b\f16\ul\cf6 {PUBLISHED PROPERTIES
+\par }\pard\plain \s15\nowidctlpar\adjustright \fs20\lang1049\cgrid {\f2\lang1033\cgrid0 
+\par }{\f2\fs22\ul\cf2\lang1033\cgrid0 DeviceName}{\f2\fs22\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 
+\par property DeviceName: string;
+\par 
+\par }{\f52\cgrid0 \'c8\'ec\'ff \'ea\'ee\'ec\'ec\'f3\'ed\'e8\'ea\'e0\'f6\'e8\'ee\'ed\'ed\'ee\'e3\'ee \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'e0}{\f2\lang1033\cgrid0 , Com1, Com2, Lpt1 etc. }{\f52\cgrid0 \'cc\'ee\'e6\'e5\'f2 \'f3\'f1\'f2\'e0\'ed\'e0\'e2\'eb\'e8
+\'e2\'e0\'f2\'fc\'f1\'ff, \'f2\'ee\'eb\'fc\'ea\'ee \'ea\'ee\'e3\'e4\'e0 \'ef\'ee\'f0\'f2 \'e7\'e0\'ea\'f0\'fb\'f2.
+\par }{\f2\cgrid0 
+\par }{\f2\ul\cf2\lang1033\cgrid0 MonitorEvents
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 TCommEventState = (evBreak, evCTS, evDSR, evError, evRing,
+\par   evRlsd, evRxChar, evRxFlag, evTxEmpty);
+\par TCommEventType = set of TCommEventState;
+\par 
+\par property MonitorEvents: TCommEventType;
+\par 
+\par }{\f52\cgrid0 \'d0\'e0\'e7\'f0\'e5\'f8\'e0\'e5\'f2 \'e8\'eb\'e8 \'e7\'e0\'ef\'f0\'e5\'f9\'e0\'e5\'f2 \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'e5\'ed\'ed\'fb\'e5 \'f1\'ee\'e1\'fb\'f2\'e8\'ff:}{\f2\lang1033\cgrid0 
+\par 
+\par evBREAK   - }{\f52\cgrid0 \'ed\'e0 \'e2\'f5\'ee\'e4\'e5 \'e7\'e0\'f4\'e8\'ea\'f1\'e8\'f0\'ee\'e2\'e0\'ed }{\f2\lang1033\cgrid0 break.
+\par evCTS     - CTS (clear-to-send) }{\f52\cgrid0 \'e8\'e7\'ec\'e5\'ed\'e8\'eb \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5.
+\par }{\f2\lang1033\cgrid0 evDSR     - DSR (data-set-ready) }{\f52\cgrid0 \'e8\'e7\'ec\'e5\'ed\'e8\'eb \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5.}{\f2\lang1033\cgrid0 
+\par evERROR   - }{\f52\cgrid0 \'ef\'f0\'ee\'e8\'e7\'ee\'f8\'eb\'e0 \'ee\'f8\'e8\'e1\'ea\'e0 \'f1\'f2\'e0\'f2\'f3\'f1\'e0 \'eb\'e8\'ed\'e8\'e8, \'f2.\'e5.}{\f2\lang1033\cgrid0  CE_FRAME, CE_OVERRUN, CE_RXPARITY.
+\par evRING    - }{\f52\cgrid0 \'ee\'e1\'ed\'e0\'f0\'f3\'e6\'e5\'ed }{\f2\lang1033\cgrid0 ring indicator.
+\par evRLSD    - RLSD (receive-line-signal-detect)}{\f52\cgrid0  \'e8\'e7\'ec\'e5\'ed\'e8\'eb \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5.}{\f2\lang1033\cgrid0 
+\par evRXCHAR  - }{\f52\cgrid0 \'ef\'f0\'e8\'ed\'ff\'f2 \'f1\'e8\'ec\'e2\'ee\'eb (\'e8 \'ef\'ee\'ec\'e5\'f9\'e5\'ed \'e2 \'ef\'f0\'e8\'e5\'ec\'ed\'fb\'e9 \'e1\'f3\'f4\'e5\'f0).
+\par }{\f2\lang1033\cgrid0 evRXFLAG  - }{\f52\cgrid0 \'ef\'f0\'e8\'ed\'ff\'f2 \'f1\'ef\'e5\'f6\'e8\'e0\'eb\'fc\'ed\'fb\'e9 \'f1\'e8\'ec\'e2\'ee\'eb (\'e8 \'ef\'ee\'ec\'e5\'f9\'e5\'ed \'e2 \'ef\'f0\'e8\'e5\'ec\'ed\'fb\'e9 \'e1\'f3\'f4\'e5\'f0). \'dd\'f2\'ee\'f2
+ \'f1\'e8\'ec\'e2\'ee\'eb (}{\f2\lang1033\cgrid0 event character) }{\f52\cgrid0 \'ee\'ef\'f0\'e5\'e4\'e5\'eb\'e5\'ed \'e2 \'f1\'f2\'f0\'f3\'ea\'f2\'f3\'f0\'e5}{\f2\lang1033\cgrid0  DCB }{\f52\cgrid0 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'e0, \'ea\'ee\'f2
+\'ee\'f0\'e0\'ff \'ef\'f0\'e8\'e4\'e0\'e5\'f2\'f1\'ff \'ef\'ee\'f1\'eb\'e5\'e4\'ee\'e2\'e0\'f2\'e5\'eb\'fc\'ed\'ee\'ec\'f3 \'ef\'ee\'f0\'f2\'f3 \'f1 \'ef\'ee\'ec\'ee\'f9\'fc\'fe \'f4\'f3\'ed\'ea\'f6\'e8\'e8 }{\f2\lang1033\cgrid0 SetCommState.
+\par evTXEMPTY \endash  }{\f52\cgrid0 \'ef\'e5\'f0\'e5\'e4\'e0\'ed \'ef\'ee\'f1\'eb\'e5\'e4\'ed\'e8\'e9 \'f1\'e8\'ec\'e2\'ee\'eb \'e8\'e7 \'e2\'fb\'f5\'ee\'e4\'ed\'ee\'e3\'ee \'e1\'f3\'f4\'e5\'f0\'e0}{\f2\lang1033\cgrid0 .
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Baudrate
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 TBaudRate = (cbr110, cbr300, cbr600, cbr1200, cbr2400, cbr4800, cbr9600,
+\par   cbr14400, cbr19200, cbr38400, cbr56000, cbr57600, cbr115200, cbr128000, cbr256000);
+\par 
+\par property BaudRate: TBaudRate;
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Parity
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 TParity = (paNone, paOdd, paEven, paMark, paSpace);
+\par 
+\par property Parity: TParity;
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Stopbits
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 TStopbits = (sb10, sb15, sb20);
+\par 
+\par property Stopbits: TStopbits;
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Databits
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 TDatabits=(da4, da5, da6, da7, da8);
+\par 
+\par property Databits: TDatabits;
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 ReadBufSize
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 property ReadBufSize: Integer;
+\par 
+\par }{\f52\cgrid0 \'c7\'e0\'e4\'e0\'e5\'f2 \'f0\'e5\'ea\'ee\'ec\'e5\'ed\'e4\'f3\'e5\'ec\'fb\'e9 \'f0\'e0\'e7\'ec\'e5\'f0, \'e2 \'e1\'e0\'e9\'f2\'e0\'f5, \'e2\'ed\'f3\'f2\'f0\'e5\'ed\'ed\'e8\'e9 \'e2\'f5\'ee\'e4\'ed\'ee\'e9 \'e1\'f3\'f4\'e5\'f0 \'f3\'f1\'f2
+\'f0\'ee\'e9\'f1\'f2\'e2\'e0.}{\f2\lang1033\cgrid0 
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 WriteBufSize}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property WriteBufSize: Integer;
+\par 
+\par }{\f52\cgrid0 \'c7\'e0\'e4\'e0\'e5\'f2 \'f0\'e5\'ea\'ee\'ec\'e5\'ed\'e4\'f3\'e5\'ec\'fb\'e9 \'f0\'e0\'e7\'ec\'e5\'f0, \'e2 \'e1\'e0\'e9\'f2\'e0\'f5, \'e2\'ed\'f3\'f2\'f0\'e5\'ed\'ed\'e8\'e9 \'e2\'fb\'f5\'ee\'e4\'ed\'ee\'e9 \'e1\'f3\'f4\'e5\'f0 \'f3\'f1
+\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'e0.}{\f2\lang1033\cgrid0 
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 CharsTimeout
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 property CharsTimeout: Integer;
+\par 
+\par }{\f52\cgrid0 \'c7\'e0\'e4\'e0\'e5\'f2 \'ec\'e0\'ea\'f1\'e8\'ec\'e0\'eb\'fc\'ed\'ee\'e5 \'e2\'f0\'e5\'ec\'ff \'e2 \'ec\'f1 \'ec\'e5\'e6\'e4\'f3 \'ef\'f0\'e8\'f5\'ee\'e4\'ee\'ec \'e4\'e2\'f3\'f5 \'f1\'e8\'ec\'e2\'ee\'eb\'ee\'e2. \'cf\'f0\'e8 \'e2\'fb\'ef
+\'ee\'eb\'ed\'e5\'ed\'e8\'e8 \'ee\'ef\'e5\'f0\'e0\'f6\'e8\'e8 }{\f2\lang1033\cgrid0 Read }{\f52\cgrid0 \'e2\'f0\'e5\'ec\'e5\'ed\'ed\'ee\'e9 \'e8\'ed\'f2\'e5\'f0\'e2\'e0\'eb \'ed\'e0\'f7\'e8\'ed\'e0\'e5\'f2\'f1\'ff \'f1 \'ef\'f0\'e8\'e5\'ec\'ee\'ec \'ef
+\'e5\'f0\'e2\'ee\'e3\'ee \'f1\'e8\'ec\'e2\'ee\'eb\'e0. \'c5\'f1\'eb\'e8 \'e8\'ed\'f2\'e5\'f0\'e2\'e0\'eb \'ec\'e5\'e6\'e4\'f3 \'ef\'f0\'e8\'f5\'ee\'e4\'ee\'ec \'eb\'fe\'e1\'fb\'f5 \'e4\'e2\'f3\'f5 \'f1\'e8\'ec\'e2\'ee\'eb\'ee\'e2 \'ef\'f0\'e5\'e2\'fb\'f8
+\'e0\'e5\'f2\'f1\'ff, \'ee\'ef\'e5\'f0\'e0\'f6\'e8\'ff }{\f2\lang1033\cgrid0 Read }{\f52\cgrid0 \'e7\'e0\'e2\'e5\'f0\'f8\'e0\'e5\'f2\'f1\'ff \'e8 \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'fe\'f2\'f1\'ff \'e2\'f1\'e5 \'e1\'f3\'f4\'e5\'f0\'e8\'e7\'ee\'e2\'e0\'ed
+\'ed\'fb\'e5 \'e4\'e0\'ed\'ed\'fb\'e5. \'c7\'ed\'e0\'f7\'e5\'ed\'e8\'e5 \'f0\'e0\'e2\'ed\'ee 0 \endash  \'e7\'ed\'e0\'f7\'e8\'f2, \'f2\'e0\'e9\'ec\'e0\'f3\'f2 \'ed\'e5 \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'f3\'e5\'f2\'f1\'ff.
+\par }{\f2\lang1033\cgrid0 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Options
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 TCommOption = (coParityCheck, coDsrSensitivity, coIgnoreXOff,
+\par   coErrorChar, coNullStrip);
+\par TCommOptions = set of TCommOption;
+\par 
+\par property Options: TCommOptions;
+\par 
+\par coParityCheck:
+\par }{\f52\cgrid0 \'d0\'e0\'e7\'f0\'e5\'f8\'e0\'e5\'f2 \'ef\'f0\'ee\'e2\'e5\'f0\'ea\'f3 \'f7\'e5\'f2\'ed\'ee\'f1\'f2\'e8. \'c5\'f1\'eb\'e8}{\f2\lang1033\cgrid0  TRUE, }{\f52\cgrid0 \'f2\'ee \'f7\'e5\'f2\'ed\'ee\'f1\'f2\'fc \'ef\'f0\'ee\'e2\'e5\'f0\'ff\'e5\'f2
+\'f1\'ff \'e8 \'f1\'ee\'ee\'e1\'f9\'e0\'e5\'f2\'f1\'ff \'ee\'e1 \'ee\'f8\'e8\'e1\'ea\'e0\'f5.
+\par }{\f2\lang1033\cgrid0 
+\par coDsrSensitivity:
+\par }{\f52\cgrid0 \'ce\'ef\'f0\'e5\'e4\'e5\'eb\'ff\'e5\'f2 \'f7\'f3\'e2\'f1\'f2\'e2\'e8\'f2\'e5\'eb\'fc\'ed\'ee\'f1\'f2\'fc \'ea \'f1\'e8\'e3\'ed\'e0\'eb\'f3 }{\f2\lang1033\cgrid0 DSR. }{\f52\cgrid0 \'c5\'f1\'eb\'e8 }{\f2\lang1033\cgrid0 TRUE, }{\f52\cgrid0 
+\'f2\'ee \'e8\'e3\'ed\'ee\'f0\'e8\'f0\'f3\'fe\'f2\'f1\'ff \'e2\'f1\'e5 \'ef\'f0\'e8\'ed\'e8\'ec\'e0\'e5\'ec\'fb\'e5 \'e1\'e8\'f2\'fb, \'ea\'ee\'e3\'e4\'e0 \'ed\'e5\'f2 \'f1\'e8\'e3\'ed\'e0\'eb\'e0 }{\f2\lang1033\cgrid0 DSR.
+\par 
+\par coIgnoreXoff:
+\par }{\f52\cgrid0 \'ce\'ef\'f0\'e5\'e4\'e5\'eb\'ff\'e5\'f2 \'ee\'f1\'f2\'e0\'ed\'ee\'e2\'ea\'f3 \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'e8, \'ea\'ee\'e3\'e4\'e0 \'ef\'f0\'e8\'e5\'ec\'ed\'fb\'e9 \'e1\'f3\'f4\'e5\'f0 \'ef\'ee\'eb\'ee\'ed \'e8 \'e4\'f0\'e0\'e9\'e2\'e5\'f0
+ \'ef\'e5\'f0\'e5\'e4\'e0\'eb }{\f2\lang1033\cgrid0 XoffChar. }{\f52\cgrid0 \'c5\'f1\'eb\'e8 }{\f2\lang1033\cgrid0 TRUE, }{\f52\cgrid0 \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'e0 \'ef\'f0\'ee\'e4\'ee\'eb\'e6\'e0\'e5\'f2\'f1\'ff \'e8 \'ef\'ee\'f1\'eb\'e5 \'fd\'f2\'ee
+\'e3\'ee. \'c5\'f1\'eb\'e8 }{\f2\lang1033\cgrid0 FALSE, }{\f52\cgrid0 \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'e0 \'ed\'e5 \'ef\'f0\'ee\'e4\'ee\'eb\'e6\'e0\'e5\'f2\'f1\'ff, \'ef\'ee\'ea\'e0 \'e2 \'ef\'f0\'e8\'e5\'ec\'ed\'ee\'ec \'e1\'f3\'f4\'e5\'f0\'e5 \'ed\'e5 \'ee
+\'ea\'e0\'e6\'e5\'f2\'f1\'ff }{\f2\lang1033\cgrid0 XonLim }{\f52\cgrid0 \'e1\'e0\'e9\'f2\'ee\'e2 \'e8 \'e4\'f0\'e0\'e9\'e2\'e5\'f0 \'ed\'e5 \'ef\'ee\'f8\'eb\'e5\'f2 }{\f2\lang1033\cgrid0 XonChar.
+\par 
+\par coErrorChar:
+\par }{\f52\cgrid0 \'ce\'ef\'f0\'e5\'e4\'e5\'eb\'ff\'e5\'f2 \'e7\'e0\'ec\'e5\'ed\'f3 \'e1\'e0\'e9\'f2\'ee\'e2, \'ef\'f0\'e8\'ed\'ff\'f2\'fb\'f5 \'f1 \'ee\'f8\'e8\'e1\'ea\'ee\'e9 \'f7\'e5\'f2\'ed\'ee\'f1\'f2\'e8, \'ed\'e0 \'f1\'e8\'ec\'e2\'ee\'eb\'fb, \'e7\'e0
+\'e4\'e0\'ed\'ed\'fb\'e5 \'e2 }{\f2\lang1033\cgrid0 ErrorChar. }{\f52\cgrid0 \'c5\'f1\'eb\'e8 }{\f2\lang1033\cgrid0 TRUE }{\f52\cgrid0 \'e8 }{\f2\lang1033\cgrid0 fParity = TRUE,}{\f52\cgrid0  \'e7\'e0\'ec\'e5\'ed\'e0 \'ef\'f0\'ee\'e8\'f1\'f5\'ee\'e4\'e8
+\'f2}{\f2\lang1033\cgrid0 .
+\par 
+\par coNullStrip:
+\par }{\f52\cgrid0 \'c7\'e0\'e4\'e0\'e5\'f2 \'ee\'f2\'e1\'f0\'e0\'f1\'fb\'e2\'e0\'ed\'e8\'e5 \'ed\'f3\'eb\'e5\'e2\'fb\'f5 \'e1\'e0\'e9\'f2\'ee\'e2. \'c5\'f1\'eb\'e8 }{\f2\lang1033\cgrid0 TRUE,}{\f52\cgrid0  \'f2\'ee \'f1\'e8\'ec\'e2\'ee\'eb\'fb }{
+\f2\lang1033\cgrid0 null }{\f52\cgrid0 \'ee\'f2\'e1\'f0\'e0\'f1\'fb\'e2\'e0\'fe\'f2\'f1\'ff \'ef\'f0\'e8 \'ef\'f0\'e8\'e5\'ec\'e5.
+\par }{\f2\cgrid0 
+\par }{\f2\ul\cf2\lang1033\cgrid0 EventChars
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 XonChar
+\par property XonChar: char;
+\par }{\f52\cgrid0 \'c7\'e0\'e4\'e0\'e5\'f2 \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5 \'f1\'e8\'ec\'e2\'ee\'eb\'e0 }{\f2\lang1033\cgrid0 XON }{\f52\cgrid0 (\'e4\'eb\'ff \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'e8 \'e8 \'ef\'f0\'e8\'e5\'ec\'e0).
+\par }{\f2\lang1033\cgrid0 
+\par XoffChar
+\par property XoffChar: char;
+\par }{\f52\cgrid0 \'c7\'e0\'e4\'e0\'e5\'f2 \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5 \'f1\'e8\'ec\'e2\'ee\'eb\'e0 }{\f2\lang1033\cgrid0 XOFF }{\f52\cgrid0 (\'e4\'eb\'ff \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'e8 \'e8 \'ef\'f0\'e8\'e5\'ec\'e0).}{\f2\lang1033\cgrid0 
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 FlowControl}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 TFlowControl = (fcNone, fcCTS, fcDTR, fcSoftware, fcDefault);
+\par 
+\par property FlowControl: TFlowControl;
+\par 
+\par fcNone                }{\f52\cgrid0 \'ed\'e5\'f2 \'f3\'ef\'f0\'e0\'e2\'eb\'e5\'ed\'e8\'ff \'ef\'ee\'f2\'ee\'ea\'ee\'ec
+\par }{\f2\lang1033\cgrid0 fsCTS                 Rts/Cts }{\f52\cgrid0 \'f3\'ef\'f0\'e0\'e2\'eb\'e5\'ed\'e8\'e5
+\par }{\f2\lang1033\cgrid0 fsDTR \tab \tab     DTR (data-terminal-ready)}{\f52\cgrid0  \'f3\'ef\'f0\'e0\'e2\'eb\'e5\'ed\'e8\'e5}{\f2\lang1033\cgrid0 
+\par fsSoftware            Xon/Xoff }{\f52\cgrid0 \'f3\'ef\'f0\'e0\'e2\'eb\'e5\'ed\'e8\'e5}{\f2\lang1033\cgrid0 
+\par fcDefault             }{\f52\cgrid0 \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'ee\'e2\'e0\'f2\'fc \'f1\'e8\'f1\'f2\'e5\'ec\'ed\'fb\'e5 \'f3\'f1\'f2\'e0\'ed\'ee\'e2\'ea\'e8
+\par }{\f2\lang1033\cgrid0 
+\par }\pard\plain \s16\keepn\nowidctlpar\outlinelevel0\adjustright \b\f16\ul\cf6 {METHODS, PUBLIC PROPERTIES
+\par }\pard\plain \s15\nowidctlpar\adjustright \fs20\lang1049\cgrid {\f2\lang1033\cgrid0 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Enabled}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 function Enabled: Boolean;
+\par 
+\par }{\f52\cgrid0 \'ce\'ef\'e8\'f1\'fb\'e2\'e0\'e5\'f2 \'f1\'ee\'f1\'f2\'ee\'ff\'ed\'e8\'e5 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'e0}{\f2\lang1033\cgrid0 , true=Open, false=Closed
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Open
+\par }{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 procedure Open;
+\par 
+\par }{\f52\cgrid0 \'ce\'f2\'ea\'f0\'fb\'e2\'e0\'e5\'f2 \'ea\'ee\'ec\'ec\'f3\'ed\'e8\'ea\'e0\'f6\'e8\'ee\'ed\'ed\'ee\'e5 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'ee \'e8 \'e7\'e0\'e4\'e0\'e5\'f2 \'e5\'e3\'ee \'ea\'ee\'ed\'f4\'e8\'e3\'f3\'f0\'e0\'f6\'e8\'fe. \'d1
+\'eb\'e5\'e4\'f3\'e5\'f2 \'e2\'fb\'e7\'fb\'e2\'e0\'f2\'fc \'e4\'eb\'ff \'e4\'ee\'f1\'f2\'f3\'ef\'e0 \'ea \'ef\'ee\'f1\'eb\'e5\'e4\'ee\'e2\'e0\'f2\'e5\'eb\'fc\'ed\'ee\'ec\'f3 \'ef\'ee\'f0\'f2\'f3. \'c5\'f1\'eb\'e8 \'e7\'e0\'ef\'f0\'ee\'f8\'e5\'ed\'ee \'ed
+\'e5\'e2\'e5\'f0\'ed\'ee\'e5 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'ee, \'f2\'ee \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'fe\'f2\'f1\'ff \'ea\'ee\'e4\'fb \'ee\'f8\'e8\'e1\'ea\'e8:
+\par }{\f2\lang1033\cgrid0 
+\par 2      File not found.
+\par 3      Invalid file name.
+\par 4      Too many open files.
+\par 5      Access denied.
+\par 100    EOF.
+\par 101    Disk full.
+\par 106    Invalid input.
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Close}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 procedure Close;
+\par 
+\par }{\f52\cgrid0 \'c7\'e0\'ea\'f0\'fb\'e2\'e0\'e5\'f2 \'ea\'ee\'ec\'ec\'f3\'ed\'e8\'ea\'e0\'f6\'e8\'ee\'ed\'ed\'ee\'e5 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'ee.
+\par }{\f2\lang1033\cgrid0 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Write}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 function Write(const Buf; Count: Integer): Integer;
+\par 
+\par Buf}{\f52\cgrid0  \endash  \'eb\'fe\'e1\'e0\'ff \'ef\'e5\'f0\'e5\'ec\'e5\'ed\'ed\'e0\'ff}{\f2\lang1033\cgrid0 . Write }{\f52\cgrid0 \'e7\'e0\'ef\'e8\'f1\'fb\'e2\'e0\'e5\'f2 }{\f2\lang1033\cgrid0 Count }{\f52\cgrid0 \'e8\'eb\'e8 \'ec\'e5\'ed\'fc\'f8\'e5 
+\'e1\'e0\'e9\'f2 \'e8\'e7 \'ef\'e0\'ec\'ff\'f2\'e8, \'ed\'e0\'f7\'e8\'ed\'e0\'ff \'f1 \'ef\'e5\'f0\'e2\'ee\'e3\'ee, \'e7\'e0\'ed\'e5\'f1\'e5\'ed\'ed\'ee\'e3\'ee \'e2 }{\f2\lang1033\cgrid0 Buf. }{\f52\cgrid0 \'c2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'f2\'f1\'ff
+ \'e4\'e5\'e9\'f1\'f2\'e2\'e8\'f2\'e5\'eb\'fc\'ed\'ee\'e5 \'f7\'e8\'f1\'eb\'ee \'e7\'e0\'ef\'e8\'f1\'e0\'ed\'ed\'fb\'f5 \'e1\'e0\'e9\'f2. \'c5\'f1\'eb\'e8 \'ee\'ef\'e5\'f0\'e0\'f6\'e8\'ff \'ed\'e5 \'ef\'f0\'ee\'f8\'eb\'e0, \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0
+\'e5\'f2\'f1\'ff }{\f2\lang1033\cgrid0 -1.
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Read}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 function Read(var Buf; Count: Integer): Integer;
+\par 
+\par Buf}{\f52\cgrid0  \endash  \'eb\'fe\'e1\'e0\'ff \'ef\'e5\'f0\'e5\'ec\'e5\'ed\'ed\'e0\'ff}{\f2\lang1033\cgrid0 . }{\f52\cgrid0 \'d7\'e8\'f2\'e0\'e5\'f2 }{\f2\lang1033\cgrid0 Count}{\f52\cgrid0  \'e8\'eb\'e8 \'ec\'e5\'ed\'fc\'f8\'e5 \'e1\'e0\'e9\'f2\'ee\'e2
+ \'e8\'e7 \'ef\'ee\'f0\'f2\'e0. \'c2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'f2\'f1\'ff \'e4\'e5\'e9\'f1\'f2\'e2\'e8\'f2\'e5\'eb\'fc\'ed\'ee\'e5 \'f7\'e8\'f1\'eb\'ee \'f1\'f7\'e8\'f2\'e0\'ed\'ed\'fb\'f5 \'e1\'e0\'e9\'f2. \'c5\'f1\'eb\'e8 \'ee\'ef\'e5\'f0\'e0\'f6
+\'e8\'ff \'ed\'e5 \'ef\'f0\'ee\'f8\'eb\'e0, \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'f2\'f1\'ff }{\f2\lang1033\cgrid0 -1. }{\f52\cgrid0 \'cd\'e5\'eb\'fc\'e7\'ff \'ef\'fb\'f2\'e0\'f2\'fc\'f1\'ff \'ef\'f0\'ee\'f7\'e8\'f2\'e0\'f2\'fc \'e8\'e7 \'ef\'ee\'f0\'f2
+\'e0, \'e7\'e0\'e4\'e0\'e2\'e0\'ff \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'e5 }{\f2\lang1033\cgrid0 Count}{\f52\cgrid0  \'ef\'f0\'ee\'e8\'e7\'e2\'ee\'eb\'fc\'ed\'ee, \'ed\'e0\'e4\'ee \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'ee\'e2\'e0\'f2\'fc \'ef\'e0\'f0\'e0\'ec\'e5\'f2\'f0 
+}{\f2\lang1033\cgrid0 Count}{\f52\cgrid0  \'e8\'e7 }{\f2\lang1033\cgrid0 "RxCharEvent".
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 InQueCount}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 function InQueCount: Integer;
+\par 
+\par }{\f52\cgrid0 \'d7\'e8\'f1\'eb\'ee \'e1\'e0\'e9\'f2 \'e2 }{\f2\lang1033\cgrid0 ReadBuffer.
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OutQueCount}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 function OutQueCount: Integer;
+\par 
+\par }{\f52\cgrid0 \'d7\'e8\'f1\'eb\'ee \'e1\'e0\'e9\'f2 \'e2 }{\f2\lang1033\cgrid0 WriteBuffer. }{\f52\cgrid0 \'c5\'f1\'eb\'e8 \'ef\'ee\'f1\'eb\'e0\'ed\'fb \'e2\'f1\'e5 \'e1\'e0\'e9\'f2\'fb, \'ef\'f0\'ee\'e8\'f1\'f5\'ee\'e4\'e8\'f2 }{\f2\lang1033\cgrid0 
+OnTxEmpty.
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 PurgeIn}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 procedure PurgeIn;
+\par 
+\par Remove all pending characters from the inputbuffer (read).
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 PurgeOut}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 procedure PurgeOut;
+\par 
+\par }{\f52\cgrid0 \'d3\'e4\'e0\'eb\'ff\'e5\'f2 \'e2\'f1\'e5 \'ee\'e6\'e8\'e4\'e0\'fe\'f9\'e8\'e5 \'ee\'f2\'ef\'f0\'e0\'e2\'ea\'e8 \'f1\'e8\'ec\'e2\'ee\'eb\'fb \'e2 }{\f2\lang1033\cgrid0 outputbuffer (write).
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 SetDTRState}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 procedure SetDTRState(State: Boolean);
+\par 
+\par False \endash  }{\f52\cgrid0 \'f1\'ed\'e8\'ec\'e0\'e5\'f2 }{\f2\lang1033\cgrid0 DTR (data-terminal-ready).
+\par True  - }{\f52\cgrid0 \'f3\'f1\'f2\'e0\'ed\'e0\'e2\'eb\'e8\'e2\'e0\'e5\'f2 }{\f2\lang1033\cgrid0 DTR (data-terminal-ready).
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 SetRTSState}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 procedure SetRTSState(State: Boolean);
+\par 
+\par False - }{\f52\cgrid0 \'f1\'ed\'e8\'ec\'e0\'e5\'f2 }{\f2\lang1033\cgrid0 RTS (request-to-send).
+\par True  - }{\f52\cgrid0 \'f3\'f1\'f2\'e0\'ed\'e0\'e2\'eb\'e8\'e2\'e0\'e5\'f2 }{\f2\lang1033\cgrid0 RTS (request-to-send).
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 SetBreakState}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 procedure SetBREAKState(State: Boolean);
+\par 
+\par False \endash  }{\f52\cgrid0 \'e2\'ee\'f1\'f1\'f2\'e0\'ed\'e0\'e2\'eb\'e8\'e2\'e0\'e5\'f2 \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'f3 \'f1\'e8\'ec\'e2\'ee\'eb\'ee\'e2 \'e8 \'ef\'f0\'e8\'e2\'ee\'e4\'e8\'f2 \'eb\'e8\'ed\'e8\'fe \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'e8 \'e2 
+\'f1\'ee\'f1\'f2\'ee\'ff\'ed\'e8\'e5 }{\f2\lang1033\cgrid0 nonbreak.
+\par True  - }{\f52\cgrid0 \'ef\'f0\'e8\'ee\'f1\'f2\'e0\'ed\'e0\'e2\'eb\'e8\'e2\'e0\'e5\'f2 \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'f3 \'f1\'e8\'ec\'e2\'ee\'eb\'ee\'e2 \'e8 \'ef\'f0\'e8\'e2\'ee\'e4\'e8\'f2 \'eb\'e8\'ed\'e8\'fe \'ef\'e5\'f0\'e5\'e4\'e0\'f7\'e8 \'e2 \'f1
+\'ee\'f1\'f2\'ee\'ff\'ed\'e8\'e5 }{\f2\lang1033\cgrid0 break. 
+\par }{\f52\cgrid0 \'c4\'e0\'ed\'ed\'e0\'ff \'f4\'f3\'ed\'ea\'f6\'e8\'ff \'ed\'e5 \'ee\'f7\'e8\'f9\'e0\'e5\'f2 \'ed\'e5 \'ef\'e5\'f0\'e5\'e4\'e0\'ed\'ed\'fb\'e5 \'e4\'e0\'ed\'ed\'fb\'e5.
+\par }{\f2\cgrid0 
+\par }{\f2\ul\cf2\lang1033\cgrid0 SetXONState}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 procedure SetXONState(State: Boolean);
+\par 
+\par False \endash  }{\f52\cgrid0 \'e2\'fb\'e7\'fb\'e2\'e0\'e5\'f2 \'f2\'ee \'e6\'e5 \'e4\'e5\'e9\'f1\'f2\'e2\'e8\'e5, \'ea\'e0\'ea \'e8 \'ef\'f0\'e8\'e5\'ec \'f1\'e8\'e3\'ed\'e0\'eb\'e0 }{\f2\lang1033\cgrid0 XOFF. 
+\par True  - }{\f52\cgrid0 \'e2\'fb\'e7\'fb\'e2\'e0\'e5\'f2 \'f2\'ee \'e6\'e5 \'e4\'e5\'e9\'f1\'f2\'e2\'e8\'e5, \'ea\'e0\'ea \'e8 \'ef\'f0\'e8\'e5\'ec \'f1\'e8\'e3\'ed\'e0\'eb\'e0}{\f2\lang1033\cgrid0  XON. 
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 CTS}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property CTS: Boolean;
+\par 
+\par True - CTS (clear-to-send) }{\f52\cgrid0 \'e2\'ea\'eb\'fe\'f7\'e5\'ed}{\f2\lang1033\cgrid0 .
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 DSR}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property DSR: Boolean;
+\par 
+\par True - DSR (data-set-ready) }{\f52\cgrid0 \'e2\'ea\'eb\'fe\'f7\'e5\'ed}{\f2\lang1033\cgrid0 .
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 RING}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property RING: Boolean;
+\par 
+\par True - ring indicator }{\f52\cgrid0 \'e2\'ea\'eb\'fe\'f7\'e5\'ed}{\f2\lang1033\cgrid0 .
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 RLSD}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property RLSD: Boolean;
+\par 
+\par True - RLSD (receive-line-signal-detect) }{\f52\cgrid0 \'e2\'ea\'eb\'fe\'f7\'e5\'ed}{\f2\lang1033\cgrid0 .
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 Handle}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property Handle: THandle;
+\par 
+\par }{\f52\cgrid0 \'d1\'f1\'fb\'eb\'ea\'e0 \'ed\'e0 \'e2\'ed\'f3\'f2\'f0\'e5\'ed\'ed\'e8\'e9 \'e4\'e5\'f1\'ea\'f0\'e8\'ef\'f2\'ee\'f0 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'e0 }{\f2\lang1033\cgrid0 (Readonly property).
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 ProviderSubtype}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property ProviderSubtype: Integer;
+\par 
+\par }{\f52\cgrid0 \'c8\'e4\'e5\'ed\'f2\'e8\'f4\'e8\'ea\'e0\'f2\'ee\'f0 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'e0. \'c8\'f1\'ef\'ee\'eb\'fc\'e7\'f3\'e9\'f2\'e5 \'f2\'e0\'ea\'e6\'e5 \'ef\'f0\'e8\'e4\'e0\'e2\'e0\'e5\'ec\'f3\'fe \'f4\'f3\'ed\'ea\'f6\'e8\'fe }{
+\f2\lang1033\cgrid0 GetProviderSubTypeName }{\f52\cgrid0 \'e4\'eb\'ff \'e2\'ee\'e7\'f0\'e0\'f9\'e5\'ed\'e8\'ff \'f1\'f2\'f0\'ee\'ea\'ee\'e2\'ee\'e3\'ee \'ef\'f0\'e5\'e4\'f1\'f2\'e0\'e2\'eb\'e5\'ed\'e8\'ff \'e8\'e4\'e5\'ed\'f2\'e8\'f4\'e8\'ea\'e0\'f2\'ee
+\'f0\'e0}{\f2\cgrid0 .
+\par }{\f2\lang1033\cgrid0 
+\par }{\f52\cgrid0 \'c2\'ee\'e7\'ec\'ee\'e6\'ed\'fb\'e5 \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'ff}{\f2\lang1033\cgrid0 :
+\par PST_FAX            FAX device
+\par PST_LAT            LAT protocol
+\par PST_MODEM          Modem device
+\par PST_NETWORK_BRIDGE Unspecified network bridge
+\par PST_PARALLELPORT   Parallel port
+\par PST_RS232          RS-232 serial port
+\par PST_RS422          RS-422 port
+\par PST_RS423          RS-423 port
+\par PST_RS449          RS-449 port
+\par PST_SCANNER        Scanner device
+\par PST_TCPIP_TELNET   TCP/IP Telnet\'ae protocol
+\par PST_UNSPECIFIED    Unspecified
+\par PST_X25            X.25 standards
+\par 
+\par }\pard\plain \s16\keepn\nowidctlpar\outlinelevel0\adjustright \b\f16\ul\cf6 {EVENTS
+\par }\pard\plain \s15\nowidctlpar\adjustright \fs20\lang1049\cgrid {\f2\lang1033\cgrid0 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnBreak}{\f2\cf2\lang1033\cgrid0 
+\par }{\f2\lang1033\cgrid0 
+\par property OnBreak: TNotifyEvent;
+\par 
+\par }{\f52\cgrid0 \'cd\'e0 \'e2\'f5\'ee\'e4\'e5 \'ee\'e1\'ed\'e0\'f0\'f3\'e6\'e5\'ed }{\f2\lang1033\cgrid0 break.
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnCTS}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property OnCTS: TNotifyEvent;
+\par 
+\par CTS (clear-to-send) }{\f52\cgrid0 \'e8\'e7\'ec\'e5\'ed\'e8\'eb \'f1\'ee\'f1\'f2\'ee\'ff\'ed\'e8\'e5}{\f2\lang1033\cgrid0 .
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnDSR}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property OnDSR: TNotifyEvent;
+\par 
+\par DSR (data-set-ready) }{\f52\cgrid0 \'e8\'e7\'ec\'e5\'ed\'e8\'eb \'f1\'ee\'f1\'f2\'ee\'ff\'ed\'e8\'e5}{\f2\lang1033\cgrid0 .
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnRing}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property OnRing: TNotifyEvent;
+\par 
+\par }{\f52\cgrid0 \'cd\'e0 \'e2\'f5\'ee\'e4\'e5 \'ee\'e1\'ed\'e0\'f0\'f3\'e6\'e5\'ed }{\f2\lang1033\cgrid0 ring indicator.
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnRLSD}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property OnRLSD: TNotifyEvent;
+\par 
+\par RLSD (receive-line-signal-detect)}{\f52\cgrid0  \'e8\'e7\'ec\'e5\'ed\'e8\'eb \'f1\'ee\'f1\'f2\'ee\'ff\'ed\'e8\'e5}{\f2\lang1033\cgrid0 .
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnError}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 TCommErrorEvent = procedure(Sender: TObject; Errors: Integer) of object;
+\par property OnError: TCommErrorEvent;
+\par 
+\par }{\f52\cgrid0 \'cf\'f0\'ee\'e8\'e7\'ee\'f8\'eb\'e0 \'ee\'f8\'e8\'e1\'ea\'e0 \'f1\'f2\'e0\'f2\'f3\'f1\'e0 \'eb\'e8\'ed\'e8\'e8.
+\par }{\f2\lang1033\cgrid0 
+\par CE_BREAK       }{\f52\cgrid0 \'e0\'ef\'ef\'e0\'f0\'e0\'f2\'ed\'ee \'ee\'e1\'ed\'e0\'f0\'f3\'e6\'e5\'ed\'ee \'f1\'ee\'f1\'f2\'ee\'ff\'ed\'e8\'e5 }{\f2\lang1033\cgrid0 break.
+\par CE_DNS         Windows 95 only: A parallel device is not selected.
+\par CE_FRAME       }{\f52\cgrid0 \'e0\'ef\'ef\'e0\'f0\'e0\'f2\'ed\'ee \'ee\'e1\'ed\'e0\'f0\'f3\'e6\'e5\'ed\'ee }{\f2\lang1033\cgrid0 framing error.
+\par CE_IOE         }{\f52\cgrid0 \'ef\'f0\'ee\'e8\'e7\'ee\'f8\'eb\'e0 \'ee\'f8\'e8\'e1\'ea\'e0 \'e2\'e2\'ee\'e4\'e0-\'e2\'fb\'e2\'ee\'e4\'e0
+\par }{\f2\lang1033\cgrid0 CE_MODE        The requested mode is not supported, or the hFile parameter is invalid. If this value is specified, it is the only valid error.
+\par CE_OOP         Windows 95 only: }{\f52\cgrid0 \'ef\'e0\'f0\'e0\'eb\'eb\'e5\'eb\'fc\'ed\'ee\'e5 \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'ee \'f1\'e8\'e3\'ed\'e0\'eb\'e8\'e7\'e8\'f0\'f3\'e5\'f2 \line                \'ee\'e1 \'ee\'f2\'f1\'f3\'f2\'f1\'f2\'e2\'e8
+\'e8 \'e1\'f3\'ec\'e0\'e3\'e8.
+\par }{\f2\lang1033\cgrid0 CE_OVERRUN     }{\f52\cgrid0 \'ef\'f0\'ee\'e8\'e7\'ee\'f8\'eb\'ee \'ef\'e5\'f0\'e5\'ef\'ee\'eb\'ed\'e5\'ed\'e8\'e5 \'e1\'f3\'f4\'e5\'f0\'e0. \'ce\'f7\'e5\'f0\'e5\'e4\'ed\'ee\'e9 \'f1\'e8\'ec\'e2\'ee\'eb \'ef\'ee\'f2\'e5\'f0\'ff\'ed. 
+}{\f2\lang1033\cgrid0 CE_PTO         Windows 95 only: }{\f52\cgrid0 \'ed\'e0 \'ef\'e0\'f0\'e0\'eb\'eb\'e5\'eb\'fc\'ed\'ee\'ec \'f3\'f1\'f2\'f0\'ee\'e9\'f1\'f2\'e2\'f3 \'ef\'f0\'ee\'e8\'e7\'ee\'f8\'e5\'eb \line                \'f2\'e0\'e9\'ec\'e0\'f3\'f2.
+
+\par }{\f2\lang1033\cgrid0 CE_RXOVER      }{\f52\cgrid0 \'ef\'e5\'f0\'e5\'ef\'ee\'eb\'ed\'e5\'ed\'e8\'e5 \'ef\'f0\'e8\'e5\'ec\'ed\'ee\'e3\'ee \'e1\'f3\'f4\'e5\'f0\'e0, \'e8\'eb\'e8 \'ef\'f0\'e8\'f8\'e5\'eb \'f1\'e8\'ec\'e2\'ee\'eb \'ef\'ee\'f1\'eb\'e5 \line 
+               \'f1\'e8\'ec\'e2\'ee\'eb\'e0 }{\f2\lang1033\cgrid0 end-of-file (EOF).
+\par CE_RXPARITY    }{\f52\cgrid0 \'e0\'ef\'ef\'e0\'f0\'e0\'f2\'ed\'ee \'ee\'e1\'ed\'e0\'f0\'f3\'e6\'e5\'ed\'ee \'ed\'e0\'f0\'f3\'f8\'e5\'ed\'e8\'e5 \'f7\'e5\'f2\'ed\'ee\'f1\'f2\'e8. }{\f2\lang1033\cgrid0 
+\par CE_TXFULL      }{\f52\cgrid0 \'ef\'f0\'e8\'eb\'ee\'e6\'e5\'ed\'e8\'e5 \'ef\'fb\'f2\'e0\'e5\'f2\'f1\'ff \'ef\'e5\'f0\'e5\'e4\'e0\'f2\'fc \'f1\'e8\'ec\'e2\'ee\'eb, \'ed\'ee \'e2\'fb\'f5\'ee\'e4\'ed\'ee\'e9 \'e1\'f3\'f4\'e5\'f0 \line                \'ef\'ee
+\'eb\'ee\'ed. }{\f2\lang1033\cgrid0 
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnRxChar}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 TCommRxCharEvent = procedure(Sender: TObject; Count: Integer) of object;
+\par property OnRxChar: TCommRxCharEvent;
+\par 
+\par }{\f52\cgrid0 \'cf\'f0\'e8\'ed\'ff\'f2 \'f1\'e8\'ec\'e2\'ee\'eb \'e8 \'ef\'ee\'ec\'e5\'f9\'e5\'ed \'e2\'ee \'e2\'f5\'ee\'e4\'ed\'ee\'e9 \'e1\'f3\'f4\'e5\'f0. }{\f2\lang1033\cgrid0 Count }{\f52\cgrid0 \'ef\'ee\'ea\'e0\'e7\'fb\'e2\'e0\'e5\'f2, \'f1\'ea\'ee
+\'eb\'fc\'ea\'ee \'e1\'e0\'e9\'f2 \'ef\'f0\'e8\'ed\'ff\'f2\'ee.
+\par }{\f2\lang1033\cgrid0 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnRxFlag}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property OnRxFlag: TNotifyEvent;
+\par 
+\par }{\f2\ul\cf2\lang1033\cgrid0 OnTxEmpty}{\f2\cf2\lang1033\cgrid0 
+\par 
+\par }{\f2\lang1033\cgrid0 property OnTxEmpty: TNotifyEvent;
+\par 
+\par }{\f52\cgrid0 \'cf\'ee\'f1\'eb\'e0\'ed \'ef\'ee\'f1\'eb\'e5\'e4\'ed\'e8\'e9 \'f1\'e8\'ec\'e2\'ee\'eb \'e8\'e7 \'e2\'fb\'f5\'ee\'e4\'ed\'ee\'e3\'ee \'e1\'f3\'f4\'e5\'f0\'e0.
+\par }{\f2\cgrid0 
+\par }}

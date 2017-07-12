@@ -1,0 +1,66 @@
+SINGLE USER SOFTWARE LICENSE AND LIMITED WARRANTY
+
+By clicking on the "Accept" button you are indicating your acceptance of this agreement.  If you do not accept and agree to all of the terms and conditions, click the "Do Not Accept" button and installation of the software will be canceled.
+
+As a proprietary product of Digital Metaphors, ReportBuilder is protected by copyright laws.  At all times Digital Metaphors retains full title to the software. Subject to your acceptance of  and accordance with the terms and conditions stated in this agreement, you shall be granted a single-user software license.  Any previous agreement with Digital Metaphors is superseded by this agreement.
+
+THIS SOFTWARE LICENSE GIVES YOU THE RIGHT TO:
+
+1. Install and use the Software for the sole purposes of designing, developing, testing, and deploying application programs which you create.  You may install a copy of the Software on a computer and freely move the Software from one computer to another, provided that you are the only individual using the Software.  If you are an entity, you must designate one individual within your organization ("Named User") to have the right to use the Software. 
+
+2. Write and compile your own application programs using the Digital Metaphors software contained in this package.  All copies of the software you so write and distribute must include a Digital Metaphors copyright notice, or a valid copyright notice of your own.
+
+3.  Make one copy of the Software for backup or archival purposes or copy the Software to a single permanent storage medium provided you keep the original solely for backup or archival purposes. 
+ 
+4.  Distribute runtime packages for the sole purpose of executing application programs created with Delphi. ReportBuilder runtime packages available for distribution are listed in the ReadMe.doc file that is installed into the main RBuilder directory.
+
+ENGAGING IN ANY OF THE ACTIVITIES LISTED BELOW WILL TERMINATE THE SOFTWARE LICENSE.  IN ADDITION TO SOFTWARE LICENSE TERMINATION, DIGITAL METAPHORS MAY PURSUE CRIMINAL, CIVIL, OR ANY OTHER AVAILABLE REMEDIES.
+
+1. Distribution of any files contained in this software package, other than the runtime packages explicitly listed above, including but not limited to .PAS, .DFM, .DCU files, .DCP files, and design-time packages. 
+
+2. Modification, decompilation, disassembly, reverse engineering or translation of the Software.
+
+3. Removal of proprietary notices, labels or marks from the Software or Software Documentation.
+
+4. Inclusion of the software in a development environment. 
+
+5. Creation of an application that does not differ materially from the Software.
+
+6. Development and/or distribution of a stand-alone reporting application based on the Software.
+
+7. Creation of an application (whether it be freeware, shareware or a commercial product) which competes directly or indirectly with the Software.  
+
+8. Distribution of an application program created using the Software to another developer.  A developer is defined as any person who is executing an application program created using the Software, on a computer which contains an installation of Borland Delphi. In order to execute such an application, the developer must own a license to the Software, and must have installed the Software on the computer.
+
+AGREEMENT PERTAINING TO THE RELEASE OF SOURCE CODE by Digital Metaphors to Recipient:
+
+USE OF SOURCE CODE
+Recipient will not utilize the source for the creation of  software  (whether it be freeware, shareware or a commercial product) which competes directly or indirectly with ReportBuilder or ReportBuilder Pro.  In addition, Recipient will not disclose the source itself, nor the implementations discovered therein, to any party involved in the creation of software which competes directly or indirectly with ReportBuilder or ReportBuilder Pro.
+
+DISTRIBUTION OF SOURCE CODE
+Recipient will not distribute the source.  Specifically this includes all .dcu, .dfm, and .pas files which Digital Metaphors has provided.
+
+CHANGES TO SOURCE CODE
+Digital Metaphors reserves the right to change any part of the source in future versions of the product. These changes may include the removal of classes, properties and methods or the creation of new classes, properties and methods.  
+
+TECHNICAL SUPPORT FOR SOURCE CODE
+Digital Metaphors will not provide support for changes Recipient makes to the source.  Recipient assumes full responsibility for supporting any code or application which results from such modification.  Recipient will not hold Digital Metaphors liable, directly or indirectly, for any changes made to the source, including changes which Recipient has made based on advice or suggestions provided by Digital Metaphors.
+
+SOURCE IS PROVIDED AS IS
+Digital Metaphors makes no warranties, express or implied, with respect to the source and hereby expressly disclaims any and all implied warranties of merchantability and fitness for a particular purpose. In no event shall Digital Metaphors be liable for any direct, indirect, special, or consequential damages in connection with or arising out of the performance or use of any portion of the source.
+
+
+LIMITED WARRANTY/LIMITATION OF REMEMDIES:
+
+Except as specifically  stated in this agreement, the software and software documentation is provided and licensed "as is" without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose.
+
+In no event will Digital Metaphors be liable to you for any damages, including without limitation lost profits or revenues, loss of data, business interruption loss, recovery or substitution costs, or claims by third parties, or other indirect incidental or consequential damages, arising out of the use or inability to use the software, even if Digital Metaphors has been advised of the possibility of such damages.  In no case shall Digital Metaphors' liability exceed the amount of the license fee paid by you for the software.
+
+U.S. GOVERNMENT RESTRICTED RIGHTS:
+
+The Software and Software documentation are provided with Restricted and Limited Rights.  Use, duplication or disclosure by the Government is subject to restrictions as set forth in DFAR 252.227-702(c)(1)(ii) or FAR 52.227-19, as applicable, and additional restrictions set forth in this Agreement. 
+
+GENERAL:
+
+This Agreement is governed by the laws of the State of Texas.  The prevailing party in any action or proceeding brought in connection with a breach of this Agreement will be entitled to reimbursement by the other party for costs and reasonable attorneys' fees.
+

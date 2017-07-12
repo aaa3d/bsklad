@@ -1,0 +1,7 @@
+The application is distributed as shareware. This means: 
+
+1. All copyrights to application are exclusively owned by the author, Alexey Torgashin. 
+
+2. Anyone may use this software during a test period of 15 days. Following this test period or less, if you wish to continue to use application, you must register: visit the application homepage and complete the online registration form.
+
+3. APPLICATION IS DISTRIBUTED "AS IS". NO WARRANTY OF ANY KIND IS EXPRESSED OR IMPLIED. YOU USE AT YOUR OWN RISK. THE AUTHOR WILL NOT BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE. 

@@ -1,0 +1,5 @@
+127.0.0.1:c:\bsklad\database\bsklad2005.fdb;Локальная CURRENT;;
+127.0.0.1:c:\bsklad\database\bsklad2005_orion.fdb;Локальная ORION;;
+127.0.0.1:c:\bsklad\database\BSKLAD_SKLAD.FDB;Локальная SKLAD;;
+192.168.0.5:log_sklad;log_sklad;;
+192.168.0.9:bsklad2009;bsklad 2009 WORK;;

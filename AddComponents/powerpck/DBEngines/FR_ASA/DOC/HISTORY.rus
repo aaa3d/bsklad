@@ -1,0 +1,53 @@
+* Изменено
++ Добавлено
+- Исправлено
+! Замечание
+
+ver 1.22
+02.10.2002
++ Добавлена поддержка Delphi 7.
+! Проверена совместимость с NativeDB 1.92b.
+
+ver 1.21
+14.05.2002
++ К наследникам TfrNativeDataSet добавлены методы 
+  GetString(<Имя поля|Номер поля>), GetInteger(<Имя поля|Номер поля>), 
+  GetFloat(<Имя поля|Номер поля>). Если значение пустое, то  GetString возвращает 
+  пустую строку (""), а GetInteger  и GetFloat возвращают ноль (0).
+! Проверена совместимость с NativeDB 1.91a.
+
+ver 1.2
+22.08.2001
++ Добавлен компонент frAsaStoredProc для работы с SP.
+* В метод frAsaDataSet.ExecSQL добавлена возможная обработка параметров.
++ Добавлен метод frAsaDataSet.LocateNext и frAsaStoredProc.LocateNext.
+- Исправлены мелкие ошибки.
+! frASAComponents приведен в соответствие и протестирован с NativeDB 1.90a.
++ Добавлен пакет для Delphi6
+* Изменен принцип действия свойства Fields['']. Теперь если он возвращает null
+  то есть пустое значение, то вместо него возвращается пустая строка ("").
+
+09.02.2001
+ver 1.12
+- Исправлены мелкие ошибки.
+! Сделана совместимость с FR 2.4 Release.
+
+15.01.2001
+ver 1.11
+- Исправлена ошибка из за который были страшные глюки в Master-Detail при 
+задании параметров.
+
+27.12.2000
+ver 1.1
+! frASAComponents приведен в соответствие и протестирован с NativeDB 1.87b
++ Public property frAsaDataSet.StillInProc для SP возвращающих
+  Multi Result Set
++ Метод frAsaDataSet.Resume для SP возвращающих Multi Result Set
++ Метод frAsaDataSet.Locate
++ Published property frAsaSession.TrimBlanks
++ Published property frAsaSession.KeepConnection
++ Public property Fields.IsNull[]
+
+13.11.2000
+ver 1.0
+ Начальная версия frASAComponents.
