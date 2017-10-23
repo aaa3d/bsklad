@@ -942,7 +942,7 @@ begin
        else
         RN_DOV.EditMask:='';
 
-        decodeDate(date, y, m, d);
+        {decodeDate(date, y, m, d);
         decodetime(time, h, mm, s, mils);
         if (h=29) or (DayofWeek(Date()) = 1)  or ((m = 3) and (d = 8)) or ((m = 2) and (d = 23)) or ((m = 5) and (d = 9)) or ((m = 6) and (d = 12)) or ((m = 1) and (d = 2)) or ((m = 1) and (d = 7)) then        //начало недели - воскресенье
         begin
@@ -954,6 +954,7 @@ begin
                 RN_SKID.Value :=3;
            end
         end;
+        }
 
        Show_wait('»нициализаци€ накладной. ¬се почти готово...',99);
      end else begin
@@ -2018,18 +2019,22 @@ begin
      //провер€ем нет ли дисконта
      if rn_skid.Value > 0 then
      begin
+      {
       decodeDate(date, y, m, d);
       decodetime(time, h, mm,s, mils);
       if (h=29) or (DayofWeek(Date()) = 1) or ((m = 3) and (d = 8)) or ((m = 2) and (d = 23)) or ((m = 5) and (d = 9)) or ((m = 6) and (d = 12)) or ((m = 1) and (d = 2)) or ((m = 1) and (d = 7))  and (DISKONT_NUM='70045605') then        //начало недели - воскресенье
         begin
         end
         else
+      }
         begin
              	if not (Messbox('ѕри изменении накладной дисконт будет аннулирован.'+#13+#10+'ѕродолжить?',MessSubmit,4+48+256)=6) then exit;
              	btn_nodiscont.Click;
         end;
 
+
      end;
+
      {ѕровер€ем, нет ли в накладной уже такого товара}
      if MemRNS.RecordCount>0 then TW_TEMP:=MemRNS.fieldByname('TW_ID').asinteger;
      ISS:=false;

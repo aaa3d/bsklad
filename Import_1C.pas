@@ -68,7 +68,7 @@ begin
     arrFRMName[arrFRMCount]:=QueryWork.FieldByName('FRM_NAME').asstring;
     arrFRMFile[arrFRMCount]:=QueryWork.FieldByName('FRM_FILE').asstring+'.balance';
     FIRMS.Items.Add(arrFRMName[arrFRMCount]);
-
+     {
     if QueryWork.FieldByName('FRM_ID').asinteger = 2669809 then
       FIRMS.Checked[arrFRMCount]:=true;
     if QueryWork.FieldByName('FRM_ID').asinteger = 2646742 then
@@ -81,11 +81,11 @@ begin
       FIRMS.Checked[arrFRMCount]:=true;
     if QueryWork.FieldByName('FRM_ID').asinteger = 2696877 then
       FIRMS.Checked[arrFRMCount]:=true;
-
-    if QueryWork.FieldByName('FRM_ID').asinteger = 2705194 then
+     }
+    if QueryWork.FieldByName('FRM_ID').asinteger = 2705194 then          //ÃÀË
       FIRMS.Checked[arrFRMCount]:=true;
 
-    if QueryWork.FieldByName('FRM_ID').asinteger = 2705144 then
+    if QueryWork.FieldByName('FRM_ID').asinteger = 2705144 then         //ÑÄ
       FIRMS.Checked[arrFRMCount]:=true;
 
     inc(arrFRMCount);

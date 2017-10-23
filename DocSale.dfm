@@ -1472,7 +1472,7 @@ object DOC_SALE: TDOC_SALE
             Left = 141
             Top = 2
             Width = 34
-            Height = 24
+            Height = 12
             Caption = 'Номер :'
             Font.Charset = RUSSIAN_CHARSET
             Font.Color = clWindowText
@@ -1510,7 +1510,7 @@ object DOC_SALE: TDOC_SALE
             Left = 294
             Top = 2
             Width = 36
-            Height = 24
+            Height = 12
             Caption = 'Сумма :'
             Font.Charset = RUSSIAN_CHARSET
             Font.Color = clWindowText

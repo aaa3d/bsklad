@@ -596,7 +596,7 @@ begin
          NDS.enabled:=False;
         end;
 
-
+{
         decodeDate(date, y, m, d);
         decodetime(time, h, mm, s, mils);
         if (h=29) or (DayofWeek(Date()) = 1) or ((m = 3) and (d = 8)) or ((m = 2) and (d = 23)) or ((m = 5) and (d = 9)) or ((m = 6) and (d = 12)) or ((m = 1) and (d = 2)) or ((m = 1) and (d = 7)) then        //начало недели - воскресенье
@@ -609,7 +609,9 @@ begin
                 SALE_SKID.Value :=3;
            end
         end;
+ }
 
+ 
 
      end else
 
@@ -2245,10 +2247,11 @@ begin
      if chkShowOst.Checked then
      if sale_skid.Value > 0 then
      begin
-        if  (h=29) or (DayofWeek(Date()) = 1) or ((m = 3) and (d = 8)) or ((m = 2) and (d = 23)) or ((m = 5) and (d = 9)) or ((m = 6) and (d = 12)) or ((m = 1) and (d = 2)) or ((m = 1) and (d = 7)) and (DISKONT_NUM='70045605') then        //начало недели - воскресенье
+{        if  (h=29) or (DayofWeek(Date()) = 1) or ((m = 3) and (d = 8)) or ((m = 2) and (d = 23)) or ((m = 5) and (d = 9)) or ((m = 6) and (d = 12)) or ((m = 1) and (d = 2)) or ((m = 1) and (d = 7)) and (DISKONT_NUM='70045605') then        //начало недели - воскресенье
         begin
         end
         else
+}
         begin
              	if not (Messbox('При изменении накладной дисконт будет аннулирован.'+#13+#10+'Продолжить?',MessSubmit,4+48+256)=6) then exit;
              	btn_nodiscont.Click;
@@ -3990,7 +3993,7 @@ begin
   end;
 
  if (self.comboDiscont.ItemIndex = 1) then
-        NEW_DISKONT_NUM:='70045605';
+        NEW_DISKONT_NUM:='';
  if (self.comboDiscont.ItemIndex = 2) then
         NEW_DISKONT_NUM:='70044751';
  if (self.comboDiscont.ItemIndex = 3) then
