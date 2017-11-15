@@ -475,8 +475,14 @@ begin
         MP_NAME:='MP.bmp';
       end;
   Except
-    Messbox('Ошибка при чтении файла конфигурации системы BSKLAD!',MessSystem,16);
-    Err_read:=true;
+     on E : Exception do
+     begin
+//       Messbox('Exception class name = '+E.ClassName,MessSystem,16);
+       Messbox('Ошибка при чтении файла конфигурации BSKLAD2009 !'+E.ClassName+ E.Message,MessSystem,16);
+           Err_read:=true;
+     end;
+//    Messbox('Ошибка при чтении файла конфигурации системы BSKLAD!',MessSystem,16);
+
   End;
   if base_path<>'' then
   begin
